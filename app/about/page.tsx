@@ -15,7 +15,7 @@ export default function AboutPage() {
         <section className="border-b border-[#2d2d2d] py-16 md:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <p className="text-xs uppercase tracking-[0.3em] text-[#d4af37] font-semibold mb-4">
+              <p className="text-xs uppercase tracking-[0.3em] text-foreground font-semibold mb-4">
                 Our Story
               </p>
               <h1 className="font-display text-4xl md:text-5xl font-bold text-[#fafafa] mb-6">
@@ -53,7 +53,7 @@ export default function AboutPage() {
                   key={index}
                   className="space-y-4 p-6 rounded-sm border border-[#2d2d2d] hover:border-[#d4af37] smooth-transition bg-[#1a1a1a]/50"
                 >
-                  <h3 className="font-semibold text-[#d4af37] text-lg uppercase tracking-widest">
+                  <h3 className="font-semibold text-foreground text-lg uppercase tracking-widest">
                     {value.title}
                   </h3>
                   <p className="text-[#b0b0b0] leading-relaxed">
@@ -78,7 +78,7 @@ export default function AboutPage() {
               <div className="pt-8">
                 <a
                   href="#"
-                  className="inline-flex items-center gap-2 bg-[#d4af37] text-[#0a0a0a] px-8 py-4 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition"
+                  className="inline-flex items-center gap-2 bg-primary text-[#0a0a0a] px-8 py-4 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition"
                 >
                   Shop Our Collection
                 </a>

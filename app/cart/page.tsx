@@ -31,7 +31,7 @@ export default function CartPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {cartItems.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-20">
-                <ShoppingBag size={64} className="text-[#d4af37] mb-4 opacity-50" />
+                <ShoppingBag size={64} className="text-foreground mb-4 opacity-50" />
                 <h2 className="font-display text-2xl font-bold text-[#fafafa] mb-2">
                   Your cart is empty
                 </h2>
@@ -40,7 +40,7 @@ export default function CartPage() {
                 </p>
                 <Link
                   href="/products"
-                  className="bg-[#d4af37] text-[#0a0a0a] px-8 py-3 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition"
+                  className="bg-primary text-[#0a0a0a] px-8 py-3 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition"
                 >
                   Continue Shopping
                 </Link>
@@ -76,14 +76,14 @@ export default function CartPage() {
                     </div>
                     <div className="flex justify-between font-semibold text-[#fafafa]">
                       <span>Total</span>
-                      <span className="text-[#d4af37]">$0.00</span>
+                      <span className="text-foreground">$0.00</span>
                     </div>
-                    <button className="w-full bg-[#d4af37] text-[#0a0a0a] py-3 px-6 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition">
+                    <button className="w-full bg-primary text-[#0a0a0a] py-3 px-6 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition">
                       Proceed to Checkout
                     </button>
                     <Link
                       href="/products"
-                      className="block text-center text-[#d4af37] hover:text-[#e8d4a0] smooth-transition text-sm font-semibold"
+                      className="block text-center text-foreground hover:text-[#e8d4a0] smooth-transition text-sm font-semibold"
                     >
                       Continue Shopping
                     </Link>

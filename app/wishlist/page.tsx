@@ -34,7 +34,7 @@ export default function WishlistPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {wishlistItems.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-20">
-                <Heart size={64} className="text-[#d4af37] mb-4 opacity-50" />
+                <Heart size={64} className="text-foreground mb-4 opacity-50" />
                 <h2 className="font-display text-2xl font-bold text-[#fafafa] mb-2">
                   Nothing saved yet
                 </h2>
@@ -43,7 +43,7 @@ export default function WishlistPage() {
                 </p>
                 <Link
                   href="/products"
-                  className="bg-[#d4af37] text-[#0a0a0a] px-8 py-3 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition"
+                  className="bg-primary text-[#0a0a0a] px-8 py-3 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition"
                 >
                   Browse Collection
                 </Link>

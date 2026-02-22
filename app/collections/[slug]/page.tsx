@@ -56,7 +56,7 @@ export default function CollectionDetailPage({ params }: CollectionDetailPagePro
         <main className="bg-[#0a0a0a] min-h-screen flex items-center justify-center">
           <div className="text-center">
             <p className="text-[#b0b0b0] text-lg mb-4">Collection not found</p>
-            <Link href="/collections" className="text-[#d4af37] hover:text-[#e8d4a0] smooth-transition">
+            <Link href="/collections" className="text-foreground hover:text-[#e8d4a0] smooth-transition">
               Back to Collections
             </Link>
           </div>
@@ -88,7 +88,7 @@ export default function CollectionDetailPage({ params }: CollectionDetailPagePro
             <div className="absolute inset-0 flex items-end p-8 md:p-12">
               <div className="space-y-3">
                 {seasonLabel && (
-                  <p className="text-xs uppercase tracking-[0.3em] text-[#d4af37] font-semibold">
+                  <p className="text-xs uppercase tracking-[0.3em] text-foreground font-semibold">
                     {seasonLabel}
                   </p>
                 )}
@@ -126,20 +126,20 @@ export default function CollectionDetailPage({ params }: CollectionDetailPagePro
               <div className="space-y-6">
                 <div className="bg-[#1a1a1a] border border-[#2d2d2d] rounded-sm p-6 space-y-4">
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-[#d4af37] font-semibold mb-1">
+                    <p className="text-xs uppercase tracking-widest text-foreground font-semibold mb-1">
                       Season
                     </p>
                     <p className="text-[#fafafa] font-semibold">{seasonLabel || 'All Season'}</p>
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-[#d4af37] font-semibold mb-1">
+                    <p className="text-xs uppercase tracking-widest text-foreground font-semibold mb-1">
                       Items
                     </p>
                     <p className="text-[#fafafa] font-semibold">
                       {collection.products?.length || 0} pieces
                     </p>
                   </div>
-                  <button className="w-full bg-[#d4af37] text-[#0a0a0a] py-3 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition">
+                  <button className="w-full bg-primary text-[#0a0a0a] py-3 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition">
                     Shop Collection
                   </button>
                 </div>

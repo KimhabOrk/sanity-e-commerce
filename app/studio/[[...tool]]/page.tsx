@@ -33,7 +33,7 @@ export default function StudioPage() {
     return (
       <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center p-4">
         <div className="text-center max-w-md">
-          <h1 className="text-3xl font-playfair text-[#d4af37] mb-4">
+          <h1 className="text-3xl font-playfair text-foreground mb-4">
             Sanity Studio
           </h1>
           <p className="text-[#b0b0b0] mb-6">
@@ -41,7 +41,7 @@ export default function StudioPage() {
           </p>
           <a
             href="/setup"
-            className="inline-block bg-[#d4af37] text-[#0a0a0a] px-8 py-3 rounded-sm font-semibold hover:bg-[#e8d4a0] transition-colors"
+            className="inline-block bg-primary text-[#0a0a0a] px-8 py-3 rounded-sm font-semibold hover:bg-[#e8d4a0] transition-colors"
           >
             Configure Now
           </a>

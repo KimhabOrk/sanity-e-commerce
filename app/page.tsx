@@ -36,7 +36,7 @@ export default async function HomePage() {
   return (
     <>
       <Header />
-      <main className="bg-[#0a0a0a]">
+      <main className="bg-black">
         {/* Hero Banner */}
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
           <HeroBanner
@@ -54,7 +54,7 @@ export default async function HomePage() {
               <h2 className="font-display text-3xl md:text-4xl font-bold text-[#fafafa] mb-2">
                 Featured Collections
               </h2>
-              <div className="w-16 h-1 bg-[#d4af37]" />
+              <div className="w-16 h-1 bg-primary" />
             </div>
 
             {featuredCollections.length > 0 ? (
@@ -78,11 +78,11 @@ export default async function HomePage() {
               <h2 className="font-display text-3xl md:text-4xl font-bold text-[#fafafa] mb-2">
                 New Arrivals
               </h2>
-              <div className="w-16 h-1 bg-[#d4af37]" />
+              <div className="w-16 h-1 bg-primary" />
             </div>
             <Link
               href="/products"
-              className="hidden md:flex items-center gap-2 text-[#d4af37] font-semibold hover:text-[#e8d4a0] smooth-transition group"
+              className="hidden md:flex items-center gap-2 text-foreground font-semibold hover:text-[#e8d4a0] smooth-transition group"
             >
               View All
               <ChevronRight size={20} className="group-hover:translate-x-1 smooth-transition" />
@@ -103,7 +103,7 @@ export default async function HomePage() {
 
           <Link
             href="/products"
-            className="md:hidden flex items-center justify-center gap-2 w-full mt-8 text-[#d4af37] font-semibold hover:text-[#e8d4a0] smooth-transition"
+            className="md:hidden flex items-center justify-center gap-2 w-full mt-8 text-foreground font-semibold hover:text-[#e8d4a0] smooth-transition"
           >
             View All Products
             <ChevronRight size={20} />
@@ -129,8 +129,8 @@ export default async function HomePage() {
             ].map((feature, index) => (
               <div key={index} className="text-center space-y-3">
                 <div className="flex justify-center mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[#d4af37]/10 border border-[#d4af37] flex items-center justify-center">
-                    <div className="w-6 h-6 rounded-full bg-[#d4af37]/20" />
+                  <div className="w-12 h-12 rounded-full bg-primary/10 border border-[#d4af37] flex items-center justify-center">
+                    <div className="w-6 h-6 rounded-full bg-primary/20" />
                   </div>
                 </div>
                 <h3 className="font-semibold text-[#fafafa]">{feature.title}</h3>
@@ -144,10 +144,10 @@ export default async function HomePage() {
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 border-t border-[#2d2d2d]">
           <div className="relative overflow-hidden rounded-sm bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-[#2d2d2d] p-8 md:p-16">
             {/* Decorative element */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[#d4af37]/5 rounded-full blur-3xl -z-10" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10" />
 
             <div className="max-w-2xl space-y-6">
-              <p className="text-xs uppercase tracking-[0.3em] text-[#d4af37] font-semibold">
+              <p className="text-xs uppercase tracking-[0.3em] text-foreground font-semibold">
                 Exclusive Access
               </p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-[#fafafa]">
@@ -162,7 +162,7 @@ export default async function HomePage() {
                   placeholder="Enter your email"
                   className="flex-1 bg-[#2d2d2d] border border-[#3a3a3a] rounded-sm px-4 py-3 text-[#fafafa] placeholder-[#b0b0b0] focus:outline-none focus:border-[#d4af37] smooth-transition"
                 />
-                <button className="bg-[#d4af37] text-[#0a0a0a] px-8 py-3 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition whitespace-nowrap">
+                <button className="bg-primary text-[#0a0a0a] px-8 py-3 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition whitespace-nowrap">
                   Subscribe
                 </button>
               </div>

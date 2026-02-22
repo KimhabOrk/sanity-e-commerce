@@ -53,12 +53,12 @@ export default function ContactPage() {
                 return (
                   <div key={index} className="text-center space-y-3">
                     <div className="flex justify-center mb-4">
-                      <div className="w-12 h-12 rounded-full bg-[#d4af37]/10 border border-[#d4af37] flex items-center justify-center">
-                        <IconComponent size={24} className="text-[#d4af37]" />
+                      <div className="w-12 h-12 rounded-full bg-primary/10 border border-[#d4af37] flex items-center justify-center">
+                        <IconComponent size={24} className="text-foreground" />
                       </div>
                     </div>
                     <h3 className="font-semibold text-[#fafafa]">{item.title}</h3>
-                    <p className="text-[#d4af37] font-semibold">{item.content}</p>
+                    <p className="text-foreground font-semibold">{item.content}</p>
                     <p className="text-sm text-[#b0b0b0]">{item.subtext}</p>
                   </div>
                 )
@@ -130,7 +130,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full bg-[#d4af37] text-[#0a0a0a] py-3 px-6 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition"
+                    className="w-full bg-primary text-[#0a0a0a] py-3 px-6 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition"
                   >
                     Send Message
                   </button>

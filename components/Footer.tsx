@@ -54,7 +54,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
           {/* Brand - Always visible */}
           <div className="space-y-4">
-            <h3 className="font-display text-2xl font-bold text-[#d4af37]">LUXARA</h3>
+            <h3 className="font-display text-2xl font-bold text-foreground">LUXARA</h3>
             <p className="text-sm text-[#b0b0b0]">
               Premium womenswear featuring curated collections of luxury fashion with contemporary designs and timeless elegance.
             </p>
@@ -196,7 +196,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin size={16} className="text-[#d4af37] flex-shrink-0 mt-0.5" />
+                <MapPin size={16} className="text-foreground flex-shrink-0 mt-0.5" />
                 <span>New York, NY 10001</span>
               </li>
             </ul>

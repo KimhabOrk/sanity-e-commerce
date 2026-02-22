@@ -58,11 +58,11 @@ export default function CollectionCard({ collection }: { collection: Collection 
           <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
             <div className="space-y-3">
               {seasonLabel && (
-                <p className="text-xs uppercase tracking-widest text-[#d4af37] font-semibold">
+                <p className="text-xs uppercase tracking-widest text-foreground font-semibold">
                   {seasonLabel}
                 </p>
               )}
-              <h3 className="font-display text-2xl font-semibold group-hover:text-[#d4af37] smooth-transition">
+              <h3 className="font-display text-2xl font-semibold group-hover:text-foreground smooth-transition">
                 {collection.name}
               </h3>
               {collection.description && (
@@ -74,7 +74,7 @@ export default function CollectionCard({ collection }: { collection: Collection 
 
             {/* CTA Button */}
             <div
-              className={`mt-4 flex items-center gap-2 text-[#d4af37] font-medium smooth-transition ${
+              className={`mt-4 flex items-center gap-2 text-foreground font-medium smooth-transition ${
                 isHovered ? 'translate-x-2' : ''
               }`}
             >

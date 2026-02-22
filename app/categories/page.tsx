@@ -77,7 +77,7 @@ export default function CategoriesPage() {
 
                     {/* Content */}
                     <div className="absolute inset-0 flex flex-col justify-end p-6">
-                      <h3 className="font-display text-2xl font-bold text-white group-hover:text-[#d4af37] smooth-transition">
+                      <h3 className="font-display text-2xl font-bold text-white group-hover:text-foreground smooth-transition">
                         {category.name}
                       </h3>
                       {category.description && (
@@ -85,7 +85,7 @@ export default function CategoriesPage() {
                           {category.description}
                         </p>
                       )}
-                      <div className="flex items-center gap-2 text-[#d4af37] font-semibold mt-4 group-hover:translate-x-2 smooth-transition">
+                      <div className="flex items-center gap-2 text-foreground font-semibold mt-4 group-hover:translate-x-2 smooth-transition">
                         <span>Shop</span>
                         <ChevronRight size={18} />
                       </div>

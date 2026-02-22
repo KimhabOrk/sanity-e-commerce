@@ -77,7 +77,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
         <main className="bg-[#0a0a0a] min-h-screen flex items-center justify-center">
           <div className="text-center">
             <p className="text-[#b0b0b0] text-lg mb-4">Product not found</p>
-            <Link href="/products" className="text-[#d4af37] hover:text-[#e8d4a0] smooth-transition">
+            <Link href="/products" className="text-foreground hover:text-[#e8d4a0] smooth-transition">
               Back to Products
             </Link>
           </div>
@@ -155,7 +155,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                 {/* Header */}
                 <div className="space-y-3">
                   {product.category && (
-                    <p className="text-xs uppercase tracking-widest text-[#d4af37] font-semibold">
+                    <p className="text-xs uppercase tracking-widest text-foreground font-semibold">
                       {product.category.name}
                     </p>
                   )}
@@ -168,7 +168,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                 <div className="flex items-end gap-4">
                   {product.salePrice ? (
                     <>
-                      <span className="font-display text-3xl font-bold text-[#d4af37]">
+                      <span className="font-display text-3xl font-bold text-foreground">
                         ${product.salePrice.toFixed(2)}
                       </span>
                       <span className="text-xl line-through text-[#b0b0b0]">
@@ -230,7 +230,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                             onClick={() => setSelectedSize(size._id)}
                             className={`py-2 px-3 rounded-sm border-2 text-sm font-semibold smooth-transition ${
                               selectedSize === size._id
-                                ? 'border-[#d4af37] bg-[#d4af37] text-[#0a0a0a]'
+                                ? 'border-[#d4af37] bg-primary text-[#0a0a0a]'
                                 : 'border-[#2d2d2d] text-[#fafafa] hover:border-[#3a3a3a]'
                             }`}
                           >
@@ -274,7 +274,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                     className={`w-full py-4 px-6 rounded-sm font-semibold text-lg flex items-center justify-center gap-2 smooth-transition ${
                       addedToCart
                         ? 'bg-[#28a745] text-white'
-                        : 'bg-[#d4af37] text-[#0a0a0a] hover:bg-[#e8d4a0]'
+                        : 'bg-primary text-[#0a0a0a] hover:bg-[#e8d4a0]'
                     }`}
                     disabled={!product.inStock}
                   >
@@ -292,7 +292,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                   </button>
                   <button
                     onClick={() => setIsFavorite(!isFavorite)}
-                    className="w-full py-3 px-6 rounded-sm font-semibold border-2 border-[#2d2d2d] text-[#fafafa] hover:border-[#d4af37] hover:text-[#d4af37] smooth-transition flex items-center justify-center gap-2"
+                    className="w-full py-3 px-6 rounded-sm font-semibold border-2 border-[#2d2d2d] text-[#fafafa] hover:border-[#d4af37] hover:text-foreground smooth-transition flex items-center justify-center gap-2"
                   >
                     <Heart
                       size={20}
@@ -346,7 +346,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                           />
                         )}
                       </div>
-                      <h3 className="mt-3 font-semibold text-[#fafafa] group-hover:text-[#d4af37] smooth-transition">
+                      <h3 className="mt-3 font-semibold text-[#fafafa] group-hover:text-foreground smooth-transition">
                         {p.name}
                       </h3>
                       <p className="text-[#b0b0b0] font-semibold">

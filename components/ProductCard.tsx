@@ -68,7 +68,7 @@ export default function ProductCard({ product }: { product: Product }) {
             }`}
           >
             <button
-              className="flex items-center gap-2 flex-1 bg-[#d4af37] text-[#0a0a0a] py-3 px-4 rounded-sm font-medium hover:bg-[#e8d4a0] transition-colors"
+              className="flex items-center gap-2 flex-1 bg-primary text-[#0a0a0a] py-3 px-4 rounded-sm font-medium hover:bg-[#e8d4a0] transition-colors"
               onClick={(e) => {
                 e.preventDefault()
                 // Add to cart logic
@@ -86,7 +86,7 @@ export default function ProductCard({ product }: { product: Product }) {
             >
               <Heart
                 size={18}
-                className={isFavorite ? 'fill-[#d4af37] text-[#d4af37]' : 'text-[#fafafa]'}
+                className={isFavorite ? 'fill-[#d4af37] text-foreground' : 'text-[#fafafa]'}
               />
             </button>
           </div>
@@ -111,7 +111,7 @@ export default function ProductCard({ product }: { product: Product }) {
           <p className="text-xs uppercase tracking-widest text-[#b0b0b0]">
             {product.category?.name || 'Featured'}
           </p>
-          <h3 className="font-display text-lg font-semibold text-[#fafafa] line-clamp-2 group-hover:text-[#d4af37] smooth-transition">
+          <h3 className="font-display text-lg font-semibold text-[#fafafa] line-clamp-2 group-hover:text-foreground smooth-transition">
             {product.name}
           </h3>
 
@@ -119,7 +119,7 @@ export default function ProductCard({ product }: { product: Product }) {
           <div className="flex items-center gap-2 pt-1">
             {product.salePrice ? (
               <>
-                <span className="text-sm font-semibold text-[#d4af37]">
+                <span className="text-sm font-semibold text-foreground">
                   ${product.salePrice.toFixed(2)}
                 </span>
                 <span className="text-sm line-through text-[#b0b0b0]">

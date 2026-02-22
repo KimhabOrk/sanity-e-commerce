@@ -64,7 +64,7 @@ export default function CategoryDetailPage({ params }: CategoryDetailPageProps) 
         <main className="bg-[#0a0a0a] min-h-screen flex items-center justify-center">
           <div className="text-center">
             <p className="text-[#b0b0b0] text-lg mb-4">Category not found</p>
-            <Link href="/categories" className="text-[#d4af37] hover:text-[#e8d4a0] smooth-transition">
+            <Link href="/categories" className="text-foreground hover:text-[#e8d4a0] smooth-transition">
               Back to Categories
             </Link>
           </div>
@@ -132,7 +132,7 @@ export default function CategoryDetailPage({ params }: CategoryDetailPageProps) 
                 <p className="text-[#b0b0b0] text-lg mb-4">No products in this category</p>
                 <Link
                   href="/products"
-                  className="text-[#d4af37] hover:text-[#e8d4a0] smooth-transition"
+                  className="text-foreground hover:text-[#e8d4a0] smooth-transition"
                 >
                   Browse all products
                 </Link>
