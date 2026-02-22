@@ -16,6 +16,10 @@ export default function Header() {
     { label: 'Contact', href: '/contact' },
   ]
 
+  const utilityItems = [
+    { label: 'Setup', href: '/setup' },
+  ]
+
   return (
     <header className="sticky top-0 z-50 border-b border-[#2d2d2d] bg-[#0a0a0a]/95 backdrop-blur-sm">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -23,13 +27,23 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <span className="font-display text-2xl font-bold text-[#d4af37] smooth-transition hover:text-[#e8d4a0]">
-              KIMHAB ORK
+              LUXARA
             </span>
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             {menuItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm uppercase tracking-widest text-[#b0b0b0] smooth-transition hover:text-[#d4af37]"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <div className="h-6 w-px bg-[#2d2d2d]" />
+            {utilityItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -98,6 +112,17 @@ export default function Header() {
         {isMenuOpen && (
           <div className="border-t border-[#2d2d2d] md:hidden py-4 space-y-3">
             {menuItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block text-sm uppercase tracking-widest text-[#b0b0b0] py-2 hover:text-[#d4af37] smooth-transition"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <div className="h-px bg-[#2d2d2d] my-3" />
+            {utilityItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}

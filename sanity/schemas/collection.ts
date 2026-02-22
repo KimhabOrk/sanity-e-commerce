@@ -28,12 +28,6 @@ export default defineType({
       rows: 4,
     }),
     defineField({
-      name: 'longDescription',
-      title: 'Long Description',
-      type: 'array',
-      of: [{type: 'block'}],
-    }),
-    defineField({
       name: 'image',
       title: 'Collection Hero Image',
       type: 'image',

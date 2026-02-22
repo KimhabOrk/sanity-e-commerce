@@ -98,12 +98,6 @@ export default defineType({
       of: [{type: 'reference', to: [{type: 'material'}]}],
     }),
     defineField({
-      name: 'brand',
-      title: 'Brand',
-      type: 'reference',
-      to: [{type: 'brand'}],
-    }),
-    defineField({
       name: 'inStock',
       title: 'In Stock',
       type: 'boolean',

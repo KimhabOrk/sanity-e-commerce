@@ -56,7 +56,6 @@ export const PRODUCT_BY_SLUG_QUERY = `
     colors[]->{_id, name, hex},
     sizes[]->{_id, size, sizeType},
     materials[]->{_id, name, composition, careInstructions},
-    brand->{_id, name, slug, logo{asset->{url}}},
     inStock,
     tags,
   }[0]
@@ -139,7 +138,6 @@ export const COLLECTION_BY_SLUG_QUERY = `
     name,
     slug,
     description,
-    longDescription,
     image {
       asset->{url, alt}
     },
