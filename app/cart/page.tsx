@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { ShoppingBag } from 'lucide-react'
 
 export const metadata = {
-  title: 'Shopping Cart - KIMHAB ORK',
-  description: 'Your shopping cart at KIMHAB ORK.',
+  title: 'Shopping Cart - LUXARA',
+  description: 'Your shopping cart at LUXARA.',
 }
 
 export default function CartPage() {

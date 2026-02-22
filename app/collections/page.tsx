@@ -5,7 +5,7 @@ import { sanityFetch } from '@/lib/sanity.client'
 import { ALL_COLLECTIONS_QUERY } from '@/lib/sanity.queries'
 
 export const metadata = {
-  title: 'Collections - KIMHAB ORK',
+  title: 'Collections - LUXARA',
   description: 'Explore our curated collections of luxury womenswear.',
 }
 

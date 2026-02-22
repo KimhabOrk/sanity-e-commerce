@@ -2,8 +2,8 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'About KIMHAB ORK - Premium Womenswear',
-  description: 'Learn about KIMHAB ORK and our commitment to luxury womenswear.',
+  title: 'About LUXARA - Premium Womenswear',
+  description: 'Learn about LUXARA and our commitment to luxury womenswear.',
 }
 
 export default function AboutPage() {
@@ -22,7 +22,7 @@ export default function AboutPage() {
                 Luxury Redefined
               </h1>
               <p className="text-lg text-[#b0b0b0] leading-relaxed">
-                KIMHAB ORK was founded on the principle that luxury womenswear should be accessible, beautifully designed, and crafted with meticulous attention to detail. Every piece in our collection tells a story of artistry and premium quality.
+                LUXARA was founded on the principle that luxury womenswear should be accessible, beautifully designed, and crafted with meticulous attention to detail. Every piece in our collection tells a story of artistry and premium quality.
               </p>
             </div>
           </div>

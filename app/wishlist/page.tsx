@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { Heart } from 'lucide-react'
 
 export const metadata = {
-  title: 'Wishlist - KIMHAB ORK',
-  description: 'Your saved items at KIMHAB ORK.',
+  title: 'Wishlist - LUXARA',
+  description: 'Your saved items at LUXARA.',
 }
 
 export default function WishlistPage() {
