@@ -16,11 +16,11 @@ export default function CartPage() {
   return (
     <>
       <Header />
-      <main className="bg-[#0a0a0a] min-h-screen">
+      <main className="bg-background min-h-screen">
         {/* Header */}
         <section className="border-b border-[#2d2d2d] py-12">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h1 className="font-display text-4xl font-bold text-[#fafafa]">
+            <h1 className="font-playfair text-4xl font-bold text-foreground">
               Shopping Cart
             </h1>
           </div>
@@ -32,10 +32,10 @@ export default function CartPage() {
             {cartItems.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-20">
                 <ShoppingBag size={64} className="text-foreground mb-4 opacity-50" />
-                <h2 className="font-display text-2xl font-bold text-[#fafafa] mb-2">
+                <h2 className="font-playfair text-2xl font-bold text-foreground mb-2">
                   Your cart is empty
                 </h2>
-                <p className="text-[#b0b0b0] mb-6">
+                <p className="text-foreground mb-6">
                   Discover our beautiful collection of luxury womenswear
                 </p>
                 <Link
@@ -59,22 +59,22 @@ export default function CartPage() {
                 {/* Order Summary */}
                 <div className="lg:col-span-1">
                   <div className="bg-[#1a1a1a] border border-[#2d2d2d] rounded-sm p-6 space-y-6 sticky top-24">
-                    <h2 className="font-semibold text-[#fafafa] text-lg">Order Summary</h2>
+                    <h2 className="font-semibold text-foreground text-lg">Order Summary</h2>
                     <div className="space-y-3 border-t border-b border-[#2d2d2d] py-4">
-                      <div className="flex justify-between text-sm text-[#b0b0b0]">
+                      <div className="flex justify-between text-sm text-foreground">
                         <span>Subtotal</span>
                         <span>$0.00</span>
                       </div>
-                      <div className="flex justify-between text-sm text-[#b0b0b0]">
+                      <div className="flex justify-between text-sm text-foreground">
                         <span>Shipping</span>
                         <span>Free</span>
                       </div>
-                      <div className="flex justify-between text-sm text-[#b0b0b0]">
+                      <div className="flex justify-between text-sm text-foreground">
                         <span>Tax</span>
                         <span>$0.00</span>
                       </div>
                     </div>
-                    <div className="flex justify-between font-semibold text-[#fafafa]">
+                    <div className="flex justify-between font-semibold text-foreground">
                       <span>Total</span>
                       <span className="text-foreground">$0.00</span>
                     </div>

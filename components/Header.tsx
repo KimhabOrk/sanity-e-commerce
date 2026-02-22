@@ -21,12 +21,12 @@ export default function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#2d2d2d] bg-[#0a0a0a]/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-[#2d2d2d] bg-background/95 backdrop-blur-sm">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <span className="font-display text-2xl font-bold text-foreground smooth-transition hover:text-[#e8d4a0]">
+            <span className="font-playfair text-2xl font-bold text-foreground smooth-transition hover:text-[#e8d4a0]">
               LUXARA
             </span>
           </Link>
@@ -37,7 +37,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm uppercase tracking-widest text-[#b0b0b0] smooth-transition hover:text-foreground"
+                className="text-sm uppercase tracking-widest text-foreground smooth-transition hover:text-foreground"
               >
                 {item.label}
               </Link>
@@ -47,7 +47,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm uppercase tracking-widest text-[#b0b0b0] smooth-transition hover:text-foreground"
+                className="text-sm uppercase tracking-widest text-foreground smooth-transition hover:text-foreground"
               >
                 {item.label}
               </Link>
@@ -58,7 +58,7 @@ export default function Header() {
           <div className="flex items-center gap-4">
             {/* Search */}
             <button
-              className="p-2 text-[#b0b0b0] hover:text-foreground smooth-transition"
+              className="p-2 text-foreground hover:text-foreground smooth-transition"
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               aria-label="Search"
             >
@@ -68,7 +68,7 @@ export default function Header() {
             {/* Wishlist */}
             <Link
               href="/wishlist"
-              className="p-2 text-[#b0b0b0] hover:text-foreground smooth-transition hidden sm:block"
+              className="p-2 text-foreground hover:text-foreground smooth-transition hidden sm:block"
               aria-label="Wishlist"
             >
               <Heart size={20} />
@@ -77,7 +77,7 @@ export default function Header() {
             {/* Cart */}
             <Link
               href="/cart"
-              className="relative p-2 text-[#b0b0b0] hover:text-foreground smooth-transition"
+              className="relative p-2 text-foreground hover:text-foreground smooth-transition"
               aria-label="Shopping cart"
             >
               <ShoppingBag size={20} />
@@ -88,7 +88,7 @@ export default function Header() {
 
             {/* Mobile Menu */}
             <button
-              className="md:hidden p-2 text-[#b0b0b0] hover:text-foreground smooth-transition"
+              className="md:hidden p-2 text-foreground hover:text-foreground smooth-transition"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Menu"
             >
@@ -103,7 +103,7 @@ export default function Header() {
             <input
               type="search"
               placeholder="Search products, collections..."
-              className="w-full bg-[#1a1a1a] border border-[#2d2d2d] rounded-sm px-4 py-3 text-[#fafafa] placeholder-[#b0b0b0] focus:outline-none focus:border-[#d4af37] smooth-transition"
+              className="w-full bg-[#1a1a1a] border border-[#2d2d2d] rounded-sm px-4 py-3 text-foreground placeholder-[#b0b0b0] focus:outline-none focus:border-[#d4af37] smooth-transition"
             />
           </div>
         )}
@@ -115,7 +115,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block text-sm uppercase tracking-widest text-[#b0b0b0] py-2 hover:text-foreground smooth-transition"
+                className="block text-sm uppercase tracking-widest text-foreground py-2 hover:text-foreground smooth-transition"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
@@ -126,7 +126,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block text-sm uppercase tracking-widest text-[#b0b0b0] py-2 hover:text-foreground smooth-transition"
+                className="block text-sm uppercase tracking-widest text-foreground py-2 hover:text-foreground smooth-transition"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}

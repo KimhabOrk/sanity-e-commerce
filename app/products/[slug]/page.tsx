@@ -62,8 +62,8 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
     return (
       <>
         <Header />
-        <main className="bg-[#0a0a0a] min-h-screen flex items-center justify-center">
-          <div className="text-[#b0b0b0]">Loading...</div>
+        <main className="bg-background min-h-screen flex items-center justify-center">
+          <div className="text-foreground">Loading...</div>
         </main>
         <Footer />
       </>
@@ -74,9 +74,9 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
     return (
       <>
         <Header />
-        <main className="bg-[#0a0a0a] min-h-screen flex items-center justify-center">
+        <main className="bg-background min-h-screen flex items-center justify-center">
           <div className="text-center">
-            <p className="text-[#b0b0b0] text-lg mb-4">Product not found</p>
+            <p className="text-foreground text-lg mb-4">Product not found</p>
             <Link href="/products" className="text-foreground hover:text-[#e8d4a0] smooth-transition">
               Back to Products
             </Link>
@@ -100,7 +100,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
   return (
     <>
       <Header />
-      <main className="bg-[#0a0a0a] min-h-screen">
+      <main className="bg-background min-h-screen">
         {/* Product Section */}
         <section className="py-12 border-b border-[#2d2d2d]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -159,7 +159,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                       {product.category.name}
                     </p>
                   )}
-                  <h1 className="font-display text-3xl md:text-4xl font-bold text-[#fafafa]">
+                  <h1 className="font-playfair text-3xl md:text-4xl font-bold text-foreground">
                     {product.name}
                   </h1>
                 </div>
@@ -168,15 +168,15 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                 <div className="flex items-end gap-4">
                   {product.salePrice ? (
                     <>
-                      <span className="font-display text-3xl font-bold text-foreground">
+                      <span className="font-playfair text-3xl font-bold text-foreground">
                         ${product.salePrice.toFixed(2)}
                       </span>
-                      <span className="text-xl line-through text-[#b0b0b0]">
+                      <span className="text-xl line-through text-foreground">
                         ${product.price.toFixed(2)}
                       </span>
                     </>
                   ) : (
-                    <span className="font-display text-3xl font-bold text-[#fafafa]">
+                    <span className="font-playfair text-3xl font-bold text-foreground">
                       ${product.price.toFixed(2)}
                     </span>
                   )}
@@ -184,7 +184,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
 
                 {/* Description */}
                 {product.description && (
-                  <p className="text-[#b0b0b0] leading-relaxed">{product.description}</p>
+                  <p className="text-foreground leading-relaxed">{product.description}</p>
                 )}
 
                 {/* Options */}
@@ -192,7 +192,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                   {/* Colors */}
                   {product.colors && product.colors.length > 0 && (
                     <div>
-                      <p className="text-sm font-semibold text-[#fafafa] mb-3 uppercase tracking-widest">
+                      <p className="text-sm font-semibold text-foreground mb-3 uppercase tracking-widest">
                         Color
                       </p>
                       <div className="flex flex-wrap gap-3">
@@ -220,7 +220,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                   {/* Sizes */}
                   {product.sizes && product.sizes.length > 0 && (
                     <div>
-                      <p className="text-sm font-semibold text-[#fafafa] mb-3 uppercase tracking-widest">
+                      <p className="text-sm font-semibold text-foreground mb-3 uppercase tracking-widest">
                         Size
                       </p>
                       <div className="grid grid-cols-4 gap-2">
@@ -231,7 +231,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                             className={`py-2 px-3 rounded-sm border-2 text-sm font-semibold smooth-transition ${
                               selectedSize === size._id
                                 ? 'border-[#d4af37] bg-primary text-[#0a0a0a]'
-                                : 'border-[#2d2d2d] text-[#fafafa] hover:border-[#3a3a3a]'
+                                : 'border-[#2d2d2d] text-foreground hover:border-[#3a3a3a]'
                             }`}
                           >
                             {size.size}
@@ -243,7 +243,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
 
                   {/* Quantity */}
                   <div>
-                    <p className="text-sm font-semibold text-[#fafafa] mb-3 uppercase tracking-widest">
+                    <p className="text-sm font-semibold text-foreground mb-3 uppercase tracking-widest">
                       Quantity
                     </p>
                     <div className="flex items-center gap-4 w-fit">
@@ -292,7 +292,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                   </button>
                   <button
                     onClick={() => setIsFavorite(!isFavorite)}
-                    className="w-full py-3 px-6 rounded-sm font-semibold border-2 border-[#2d2d2d] text-[#fafafa] hover:border-[#d4af37] hover:text-foreground smooth-transition flex items-center justify-center gap-2"
+                    className="w-full py-3 px-6 rounded-sm font-semibold border-2 border-[#2d2d2d] text-foreground hover:border-[#d4af37] hover:text-foreground smooth-transition flex items-center justify-center gap-2"
                   >
                     <Heart
                       size={20}
@@ -305,14 +305,14 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                 {/* Materials */}
                 {product.materials && product.materials.length > 0 && (
                   <div className="space-y-3 pt-6 border-t border-[#2d2d2d]">
-                    <h3 className="font-semibold text-[#fafafa] uppercase tracking-widest text-sm">
+                    <h3 className="font-semibold text-foreground uppercase tracking-widest text-sm">
                       Materials
                     </h3>
                     {product.materials.map((material: any) => (
                       <div key={material._id} className="text-sm">
-                        <p className="font-medium text-[#fafafa]">{material.name}</p>
+                        <p className="font-medium text-foreground">{material.name}</p>
                         {material.composition && (
-                          <p className="text-[#b0b0b0]">{material.composition}</p>
+                          <p className="text-foreground">{material.composition}</p>
                         )}
                       </div>
                     ))}
@@ -328,7 +328,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
           <section className="py-16">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="mb-12">
-                <h2 className="font-display text-3xl font-bold text-[#fafafa]">
+                <h2 className="font-playfair text-3xl font-bold text-foreground">
                   You May Also Like
                 </h2>
               </div>
@@ -346,10 +346,10 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                           />
                         )}
                       </div>
-                      <h3 className="mt-3 font-semibold text-[#fafafa] group-hover:text-foreground smooth-transition">
+                      <h3 className="mt-3 font-semibold text-foreground group-hover:text-foreground smooth-transition">
                         {p.name}
                       </h3>
-                      <p className="text-[#b0b0b0] font-semibold">
+                      <p className="text-foreground font-semibold">
                         ${p.price.toFixed(2)}
                       </p>
                     </div>

@@ -48,34 +48,34 @@ export default function Footer() {
   }
 
   return (
-    <footer className="border-t border-[#2d2d2d] bg-[#0a0a0a]">
+    <footer className="border-t border-[#2d2d2d] bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Grid - 4 columns on desktop, 1 on mobile */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
           {/* Brand - Always visible */}
           <div className="space-y-4">
-            <h3 className="font-display text-2xl font-bold text-foreground">LUXARA</h3>
-            <p className="text-sm text-[#b0b0b0]">
+            <h3 className="font-playfair text-2xl font-bold text-foreground">LUXARA</h3>
+            <p className="text-sm text-foreground">
               Premium womenswear featuring curated collections of luxury fashion with contemporary designs and timeless elegance.
             </p>
             <div className="flex gap-4">
               <a
                 href="#"
-                className="text-[#b0b0b0] hover:text-[#ee1a4e] smooth-transition"
+                className="text-foreground hover:text-[#ee1a4e] smooth-transition"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
               </a>
               <a
                 href="#"
-                className="text-[#b0b0b0] hover:text-[#ee1a4e] smooth-transition"
+                className="text-foreground hover:text-[#ee1a4e] smooth-transition"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
               </a>
               <a
                 href="#"
-                className="text-[#b0b0b0] hover:text-[#ee1a4e] smooth-transition"
+                className="text-foreground hover:text-[#ee1a4e] smooth-transition"
                 aria-label="Twitter"
               >
                 <Twitter size={20} />
@@ -84,11 +84,11 @@ export default function Footer() {
           </div>
 
           {/* Shop Menu - Dropdown on mobile, normal on desktop */}
-          <div className="space-y-2">
+          <div className="space-y-4">
             {isMobile ? (
               <button
                 onClick={() => toggleMenu('shop')}
-                className="w-full flex items-center justify-between font-semibold text-[#fafafa] uppercase tracking-widest text-sm py-3 px-4 hover:border-[#ee1a4e] smooth-transition"
+                className="w-full flex items-center justify-between font-semibold text-foreground uppercase tracking-widest text-sm py-3 px-4 hover:border-[#ee1a4e] smooth-transition"
               >
                 Shop
                 <ChevronDown
@@ -97,7 +97,7 @@ export default function Footer() {
                 />
               </button>
             ) : (
-              <h4 className="font-semibold text-[#fafafa] uppercase tracking-widest text-sm">
+              <h4 className="font-semibold text-foreground uppercase tracking-widest text-sm">
                 Shop
               </h4>
             )}
@@ -111,7 +111,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link
                     href="#"
-                    className="text-sm text-[#b0b0b0] hover:text-[#ee1a4e] smooth-transition block"
+                    className="text-sm text-foreground hover:text-[#ee1a4e] smooth-transition block"
                     onClick={() => isMobile && setOpenMenu(null)}
                   >
                     {item}
@@ -122,11 +122,11 @@ export default function Footer() {
           </div>
 
           {/* Help Menu - Dropdown on mobile, normal on desktop */}
-          <div className="space-y-2">
+          <div className="space-y-4">
             {isMobile ? (
               <button
                 onClick={() => toggleMenu('help')}
-                className="w-full flex items-center justify-between font-semibold text-[#fafafa] uppercase tracking-widest text-sm py-3 px-4 hover:border-[#ee1a4e] smooth-transition"
+                className="w-full flex items-center justify-between font-semibold text-foreground uppercase tracking-widest text-sm py-3 px-4 hover:border-[#ee1a4e] smooth-transition"
               >
                 Help
                 <ChevronDown
@@ -135,7 +135,7 @@ export default function Footer() {
                 />
               </button>
             ) : (
-              <h4 className="font-semibold text-[#fafafa] uppercase tracking-widest text-sm">
+              <h4 className="font-semibold text-foreground uppercase tracking-widest text-sm">
                 Help
               </h4>
             )}
@@ -149,7 +149,7 @@ export default function Footer() {
                 <li key={item}>
                   <Link
                     href="#"
-                    className="text-sm text-[#b0b0b0] hover:text-[#ee1a4e] smooth-transition block"
+                    className="text-sm text-foreground hover:text-[#ee1a4e] smooth-transition block"
                     onClick={() => isMobile && setOpenMenu(null)}
                   >
                     {item}
@@ -164,7 +164,7 @@ export default function Footer() {
             {isMobile ? (
               <button
                 onClick={() => toggleMenu('contact')}
-                className="w-full flex items-center justify-between font-semibold text-[#fafafa] uppercase tracking-widest text-sm py-3 px-4 hover:text-[#ee1a4e] smooth-transition"
+                className="w-full flex items-center justify-between font-semibold text-foreground uppercase tracking-widest text-sm py-3 px-4 hover:text-[#ee1a4e] smooth-transition"
               >
                 Contact
                 <ChevronDown
@@ -173,13 +173,13 @@ export default function Footer() {
                 />
               </button>
             ) : (
-              <h4 className="font-semibold text-[#fafafa] uppercase tracking-widest text-sm">
+              <h4 className="font-semibold text-foreground uppercase tracking-widest text-sm">
                 Contact
               </h4>
             )}
             
             <ul
-              className={`space-y-3 text-sm text-[#b0b0b0] overflow-hidden smooth-transition ${
+              className={`space-y-4 text-sm text-foreground overflow-hidden smooth-transition ${
                 isMobile && openMenu !== 'contact' ? 'max-h-0' : 'max-h-96'
               } ${isMobile ? 'md:max-h-96' : ''}`}
             >
@@ -206,12 +206,12 @@ export default function Footer() {
         {/* Newsletter */}
         <div className="border-t border-b border-[#2d2d2d] py-8">
           <div className="max-w-md">
-            <h3 className="font-semibold text-[#fafafa] mb-3">Subscribe to our newsletter</h3>
+            <h3 className="font-semibold text-foreground mb-3">Subscribe to our newsletter</h3>
             <div className="flex gap-2 flex-col sm:flex-row">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 bg-[#1a1a1a] border border-[#2d2d2d] rounded-sm px-4 py-3 text-[#fafafa] placeholder-[#b0b0b0] focus:outline-none focus:border-[#ee1a4e] text-sm smooth-transition"
+                className="flex-1 bg-[#1a1a1a] border border-[#2d2d2d] rounded-sm px-4 py-3 text-foreground placeholder-[#b0b0b0] focus:outline-none focus:border-[#ee1a4e] text-sm smooth-transition"
               />
               <button className="bg-[#ee1a4e] text-white px-6 py-3 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition whitespace-nowrap">
                 Subscribe
@@ -221,7 +221,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 text-sm text-[#b0b0b0]">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 text-sm text-foreground">
           <p>&copy; {currentYear} LUXARA. All rights reserved.</p>
           <div className="flex gap-6 flex-wrap justify-center md:justify-end">
             <Link href="#" className="hover:text-[#ee1a4e] smooth-transition">

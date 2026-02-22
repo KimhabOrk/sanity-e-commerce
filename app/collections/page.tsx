@@ -23,14 +23,14 @@ export default async function CollectionsPage() {
   return (
     <>
       <Header />
-      <main className="bg-[#0a0a0a] min-h-screen">
+      <main className="bg-background min-h-screen">
         {/* Header */}
         <section className="border-b border-[#2d2d2d] py-12">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-[#fafafa] mb-4">
+            <h1 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
               Collections
             </h1>
-            <p className="text-[#b0b0b0] max-w-2xl">
+            <p className="text-foreground max-w-2xl">
               Discover our seasonal and curated collections, each telling a unique story of artistry, craftsmanship, and contemporary style.
             </p>
           </div>
@@ -47,7 +47,7 @@ export default async function CollectionsPage() {
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center py-20">
-                <p className="text-[#b0b0b0] text-lg mb-4">No collections found</p>
+                <p className="text-foreground text-lg mb-4">No collections found</p>
                 <p className="text-sm text-[#8a8a8a]">Check back soon for new collections</p>
               </div>
             )}

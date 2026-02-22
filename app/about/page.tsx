@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <main className="bg-[#0a0a0a] min-h-screen">
+      <main className="bg-background min-h-screen">
         {/* Hero */}
         <section className="border-b border-[#2d2d2d] py-16 md:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -18,10 +18,10 @@ export default function AboutPage() {
               <p className="text-xs uppercase tracking-[0.3em] text-foreground font-semibold mb-4">
                 Our Story
               </p>
-              <h1 className="font-display text-4xl md:text-5xl font-bold text-[#fafafa] mb-6">
+              <h1 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Luxury Redefined
               </h1>
-              <p className="text-lg text-[#b0b0b0] leading-relaxed">
+              <p className="text-lg text-foreground leading-relaxed">
                 LUXARA was founded on the principle that luxury womenswear should be accessible, beautifully designed, and crafted with meticulous attention to detail. Every piece in our collection tells a story of artistry and premium quality.
               </p>
             </div>
@@ -31,7 +31,7 @@ export default function AboutPage() {
         {/* Values */}
         <section className="py-16 md:py-24 border-b border-[#2d2d2d]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="font-display text-3xl font-bold text-[#fafafa] mb-12">
+            <h2 className="font-playfair text-3xl font-bold text-foreground mb-12">
               Our Values
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -56,7 +56,7 @@ export default function AboutPage() {
                   <h3 className="font-semibold text-foreground text-lg uppercase tracking-widest">
                     {value.title}
                   </h3>
-                  <p className="text-[#b0b0b0] leading-relaxed">
+                  <p className="text-foreground leading-relaxed">
                     {value.description}
                   </p>
                 </div>
@@ -69,10 +69,10 @@ export default function AboutPage() {
         <section className="py-16 md:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h2 className="font-display text-3xl font-bold text-[#fafafa]">
+              <h2 className="font-playfair text-3xl font-bold text-foreground">
                 Our Mission
               </h2>
-              <p className="text-[#b0b0b0] text-lg leading-relaxed">
+              <p className="text-foreground text-lg leading-relaxed">
                 To empower women through fashion by offering luxury womenswear that celebrates individuality, confidence, and timeless elegance. We believe that every woman deserves to feel extraordinary in what she wears.
               </p>
               <div className="pt-8">

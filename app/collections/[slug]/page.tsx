@@ -41,8 +41,8 @@ export default function CollectionDetailPage({ params }: CollectionDetailPagePro
     return (
       <>
         <Header />
-        <main className="bg-[#0a0a0a] min-h-screen flex items-center justify-center">
-          <div className="text-[#b0b0b0]">Loading...</div>
+        <main className="bg-background min-h-screen flex items-center justify-center">
+          <div className="text-foreground">Loading...</div>
         </main>
         <Footer />
       </>
@@ -53,9 +53,9 @@ export default function CollectionDetailPage({ params }: CollectionDetailPagePro
     return (
       <>
         <Header />
-        <main className="bg-[#0a0a0a] min-h-screen flex items-center justify-center">
+        <main className="bg-background min-h-screen flex items-center justify-center">
           <div className="text-center">
-            <p className="text-[#b0b0b0] text-lg mb-4">Collection not found</p>
+            <p className="text-foreground text-lg mb-4">Collection not found</p>
             <Link href="/collections" className="text-foreground hover:text-[#e8d4a0] smooth-transition">
               Back to Collections
             </Link>
@@ -73,7 +73,7 @@ export default function CollectionDetailPage({ params }: CollectionDetailPagePro
   return (
     <>
       <Header />
-      <main className="bg-[#0a0a0a] min-h-screen">
+      <main className="bg-background min-h-screen">
         {/* Hero Section */}
         {collection.image?.asset?.url && (
           <section className="relative w-full h-[400px] md:h-[500px] overflow-hidden rounded-sm">
@@ -92,7 +92,7 @@ export default function CollectionDetailPage({ params }: CollectionDetailPagePro
                     {seasonLabel}
                   </p>
                 )}
-                <h1 className="font-display text-4xl md:text-5xl font-bold text-white">
+                <h1 className="font-playfair text-4xl md:text-5xl font-bold text-white">
                   {collection.name}
                 </h1>
               </div>
@@ -107,10 +107,10 @@ export default function CollectionDetailPage({ params }: CollectionDetailPagePro
               <div className="lg:col-span-2 space-y-6">
                 {collection.description && (
                   <div>
-                    <h2 className="font-semibold text-[#fafafa] mb-3 uppercase tracking-widest text-sm">
+                    <h2 className="font-semibold text-foreground mb-3 uppercase tracking-widest text-sm">
                       About This Collection
                     </h2>
-                    <p className="text-[#b0b0b0] leading-relaxed">
+                    <p className="text-foreground leading-relaxed">
                       {collection.description}
                     </p>
                   </div>
@@ -129,13 +129,13 @@ export default function CollectionDetailPage({ params }: CollectionDetailPagePro
                     <p className="text-xs uppercase tracking-widest text-foreground font-semibold mb-1">
                       Season
                     </p>
-                    <p className="text-[#fafafa] font-semibold">{seasonLabel || 'All Season'}</p>
+                    <p className="text-foreground font-semibold">{seasonLabel || 'All Season'}</p>
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-widest text-foreground font-semibold mb-1">
                       Items
                     </p>
-                    <p className="text-[#fafafa] font-semibold">
+                    <p className="text-foreground font-semibold">
                       {collection.products?.length || 0} pieces
                     </p>
                   </div>
@@ -152,7 +152,7 @@ export default function CollectionDetailPage({ params }: CollectionDetailPagePro
         {collection.products && collection.products.length > 0 && (
           <section className="py-16">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <h2 className="font-display text-3xl font-bold text-[#fafafa] mb-12">
+              <h2 className="font-playfair text-3xl font-bold text-foreground mb-12">
                 Featured Pieces
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">

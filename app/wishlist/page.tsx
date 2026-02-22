@@ -16,14 +16,14 @@ export default function WishlistPage() {
   return (
     <>
       <Header />
-      <main className="bg-[#0a0a0a] min-h-screen">
+      <main className="bg-background min-h-screen">
         {/* Header */}
         <section className="border-b border-[#2d2d2d] py-12">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h1 className="font-display text-4xl font-bold text-[#fafafa]">
+            <h1 className="font-playfair text-4xl font-bold text-foreground">
               Wishlist
             </h1>
-            <p className="text-[#b0b0b0] mt-2">
+            <p className="text-foreground mt-2">
               {wishlistItems.length === 0 ? 'Your wishlist is empty' : `${wishlistItems.length} items saved`}
             </p>
           </div>
@@ -35,10 +35,10 @@ export default function WishlistPage() {
             {wishlistItems.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-20">
                 <Heart size={64} className="text-foreground mb-4 opacity-50" />
-                <h2 className="font-display text-2xl font-bold text-[#fafafa] mb-2">
+                <h2 className="font-playfair text-2xl font-bold text-foreground mb-2">
                   Nothing saved yet
                 </h2>
-                <p className="text-[#b0b0b0] mb-6">
+                <p className="text-foreground mb-6">
                   Save your favorite items for later
                 </p>
                 <Link

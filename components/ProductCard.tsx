@@ -86,7 +86,7 @@ export default function ProductCard({ product }: { product: Product }) {
             >
               <Heart
                 size={18}
-                className={isFavorite ? 'fill-[#d4af37] text-foreground' : 'text-[#fafafa]'}
+                className={isFavorite ? 'fill-[#d4af37] text-foreground' : 'text-foreground'}
               />
             </button>
           </div>
@@ -101,17 +101,17 @@ export default function ProductCard({ product }: { product: Product }) {
           {/* Stock Status */}
           {!product.inStock && (
             <div className="absolute inset-0 flex items-center justify-center bg-black/60 rounded-sm">
-              <p className="text-[#fafafa] font-semibold">Out of Stock</p>
+              <p className="text-foreground font-semibold">Out of Stock</p>
             </div>
           )}
         </div>
 
         {/* Product Info */}
         <div className="mt-4 space-y-2">
-          <p className="text-xs uppercase tracking-widest text-[#b0b0b0]">
+          <p className="text-xs uppercase tracking-widest text-foreground">
             {product.category?.name || 'Featured'}
           </p>
-          <h3 className="font-display text-lg font-semibold text-[#fafafa] line-clamp-2 group-hover:text-foreground smooth-transition">
+          <h3 className="font-playfair text-lg font-semibold text-foreground line-clamp-2 group-hover:text-foreground smooth-transition">
             {product.name}
           </h3>
 
@@ -122,12 +122,12 @@ export default function ProductCard({ product }: { product: Product }) {
                 <span className="text-sm font-semibold text-foreground">
                   ${product.salePrice.toFixed(2)}
                 </span>
-                <span className="text-sm line-through text-[#b0b0b0]">
+                <span className="text-sm line-through text-foreground">
                   ${product.price.toFixed(2)}
                 </span>
               </>
             ) : (
-              <span className="text-sm font-semibold text-[#fafafa]">
+              <span className="text-sm font-semibold text-foreground">
                 ${product.price.toFixed(2)}
               </span>
             )}

@@ -31,12 +31,12 @@ export default function StudioPage() {
 
   if (!projectId) {
     return (
-      <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center p-4">
+      <div className="min-h-screen bg-background flex items-center justify-center p-4">
         <div className="text-center max-w-md">
           <h1 className="text-3xl font-playfair text-foreground mb-4">
             Sanity Studio
           </h1>
-          <p className="text-[#b0b0b0] mb-6">
+          <p className="text-foreground mb-6">
             Project credentials not configured. Please add your environment variables to use Sanity Studio.
           </p>
           <a

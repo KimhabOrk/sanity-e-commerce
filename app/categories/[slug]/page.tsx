@@ -49,8 +49,8 @@ export default function CategoryDetailPage({ params }: CategoryDetailPageProps) 
     return (
       <>
         <Header />
-        <main className="bg-[#0a0a0a] min-h-screen flex items-center justify-center">
-          <div className="text-[#b0b0b0]">Loading...</div>
+        <main className="bg-background min-h-screen flex items-center justify-center">
+          <div className="text-foreground">Loading...</div>
         </main>
         <Footer />
       </>
@@ -61,9 +61,9 @@ export default function CategoryDetailPage({ params }: CategoryDetailPageProps) 
     return (
       <>
         <Header />
-        <main className="bg-[#0a0a0a] min-h-screen flex items-center justify-center">
+        <main className="bg-background min-h-screen flex items-center justify-center">
           <div className="text-center">
-            <p className="text-[#b0b0b0] text-lg mb-4">Category not found</p>
+            <p className="text-foreground text-lg mb-4">Category not found</p>
             <Link href="/categories" className="text-foreground hover:text-[#e8d4a0] smooth-transition">
               Back to Categories
             </Link>
@@ -77,7 +77,7 @@ export default function CategoryDetailPage({ params }: CategoryDetailPageProps) 
   return (
     <>
       <Header />
-      <main className="bg-[#0a0a0a] min-h-screen">
+      <main className="bg-background min-h-screen">
         {/* Hero Section */}
         <section className="relative w-full h-[300px] md:h-[400px] overflow-hidden rounded-sm border-b border-[#2d2d2d]">
           {category.image?.asset?.url ? (
@@ -94,7 +94,7 @@ export default function CategoryDetailPage({ params }: CategoryDetailPageProps) 
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
           <div className="absolute inset-0 flex items-end p-8 md:p-12">
             <div className="space-y-2">
-              <h1 className="font-display text-4xl md:text-5xl font-bold text-white">
+              <h1 className="font-playfair text-4xl md:text-5xl font-bold text-white">
                 {category.name}
               </h1>
               {category.description && (
@@ -110,10 +110,10 @@ export default function CategoryDetailPage({ params }: CategoryDetailPageProps) 
         <section className="py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between mb-12 pb-8 border-b border-[#2d2d2d]">
-              <p className="text-[#b0b0b0]">
+              <p className="text-foreground">
                 Showing {products.length} products
               </p>
-              <select className="bg-[#1a1a1a] border border-[#2d2d2d] text-[#fafafa] px-4 py-2 rounded-sm focus:outline-none focus:border-[#d4af37] smooth-transition text-sm">
+              <select className="bg-[#1a1a1a] border border-[#2d2d2d] text-foreground px-4 py-2 rounded-sm focus:outline-none focus:border-[#d4af37] smooth-transition text-sm">
                 <option>Sort by: Newest</option>
                 <option>Price: Low to High</option>
                 <option>Price: High to Low</option>
@@ -129,7 +129,7 @@ export default function CategoryDetailPage({ params }: CategoryDetailPageProps) 
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center py-20">
-                <p className="text-[#b0b0b0] text-lg mb-4">No products in this category</p>
+                <p className="text-foreground text-lg mb-4">No products in this category</p>
                 <Link
                   href="/products"
                   className="text-foreground hover:text-[#e8d4a0] smooth-transition"

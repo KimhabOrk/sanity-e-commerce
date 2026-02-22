@@ -62,7 +62,7 @@ export default function CollectionCard({ collection }: { collection: Collection 
                   {seasonLabel}
                 </p>
               )}
-              <h3 className="font-display text-2xl font-semibold group-hover:text-foreground smooth-transition">
+              <h3 className="font-playfair text-2xl font-semibold group-hover:text-foreground smooth-transition">
                 {collection.name}
               </h3>
               {collection.description && (

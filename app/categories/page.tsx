@@ -33,14 +33,14 @@ export default function CategoriesPage() {
   return (
     <>
       <Header />
-      <main className="bg-[#0a0a0a] min-h-screen">
+      <main className="bg-background min-h-screen">
         {/* Header */}
         <section className="border-b border-[#2d2d2d] py-12">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-[#fafafa] mb-4">
+            <h1 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
               Categories
             </h1>
-            <p className="text-[#b0b0b0] max-w-2xl">
+            <p className="text-foreground max-w-2xl">
               Browse our expertly curated categories to find exactly what you're looking for.
             </p>
           </div>
@@ -51,7 +51,7 @@ export default function CategoriesPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             {loading ? (
               <div className="flex justify-center py-12">
-                <p className="text-[#b0b0b0]">Loading categories...</p>
+                <p className="text-foreground">Loading categories...</p>
               </div>
             ) : categories.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -77,7 +77,7 @@ export default function CategoriesPage() {
 
                     {/* Content */}
                     <div className="absolute inset-0 flex flex-col justify-end p-6">
-                      <h3 className="font-display text-2xl font-bold text-white group-hover:text-foreground smooth-transition">
+                      <h3 className="font-playfair text-2xl font-bold text-white group-hover:text-foreground smooth-transition">
                         {category.name}
                       </h3>
                       {category.description && (
@@ -95,7 +95,7 @@ export default function CategoriesPage() {
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center py-20">
-                <p className="text-[#b0b0b0] text-lg mb-4">No categories found</p>
+                <p className="text-foreground text-lg mb-4">No categories found</p>
                 <p className="text-sm text-[#8a8a8a]">Check back soon</p>
               </div>
             )}

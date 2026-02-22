@@ -40,7 +40,7 @@ export default function HeroBanner({ title, subtitle, cta, image }: HeroBannerPr
             <p className="text-xs uppercase tracking-[0.3em] text-foreground font-semibold">
               New Collection
             </p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               {title}
             </h1>
           </div>
@@ -55,7 +55,7 @@ export default function HeroBanner({ title, subtitle, cta, image }: HeroBannerPr
             <div className="pt-4">
               <Link
                 href={cta.href}
-                className="inline-flex items-center gap-2 bg-primary text-[#0a0a0a] px-8 py-4 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition group"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition group"
               >
                 {cta.text}
                 <ChevronRight size={20} className="group-hover:translate-x-1 smooth-transition" />

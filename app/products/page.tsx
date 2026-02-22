@@ -23,14 +23,14 @@ export default async function ProductsPage() {
   return (
     <>
       <Header />
-      <main className="bg-[#0a0a0a] min-h-screen">
+      <main className="bg-background min-h-screen">
         {/* Header */}
         <section className="border-b border-[#2d2d2d] py-12">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-[#fafafa] mb-4">
+            <h1 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
               All Products
             </h1>
-            <p className="text-[#b0b0b0] max-w-2xl">
+            <p className="text-foreground max-w-2xl">
               Explore our complete collection of luxury womenswear, carefully curated to reflect contemporary style and premium quality.
             </p>
           </div>
@@ -42,12 +42,12 @@ export default async function ProductsPage() {
             {/* Filter Bar */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12 pb-8 border-b border-[#2d2d2d]">
               <div>
-                <p className="text-[#b0b0b0]">
+                <p className="text-foreground">
                   Showing {products.length} products
                 </p>
               </div>
               <div className="flex gap-3">
-                <select className="bg-[#1a1a1a] border border-[#2d2d2d] text-[#fafafa] px-4 py-2 rounded-sm focus:outline-none focus:border-[#d4af37] smooth-transition text-sm">
+                <select className="bg-[#1a1a1a] border border-[#2d2d2d] text-foreground px-4 py-2 rounded-sm focus:outline-none focus:border-[#d4af37] smooth-transition text-sm">
                   <option>Sort by: Newest</option>
                   <option>Price: Low to High</option>
                   <option>Price: High to Low</option>
@@ -65,7 +65,7 @@ export default async function ProductsPage() {
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center py-20">
-                <p className="text-[#b0b0b0] text-lg mb-4">No products found</p>
+                <p className="text-foreground text-lg mb-4">No products found</p>
                 <p className="text-sm text-[#8a8a8a]">Check back soon for new arrivals</p>
               </div>
             )}

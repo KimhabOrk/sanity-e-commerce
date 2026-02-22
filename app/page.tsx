@@ -43,7 +43,7 @@ export default async function HomePage() {
             title="Spring/Summer Collection"
             subtitle="Discover elegance redefined. Premium fabrics and contemporary designs for the modern woman."
             cta={{ text: 'Shop Now', href: '/collections' }}
-            image="/placeholder.svg?height=700&width=1400"
+            image="https://ik.imagekit.io/kimhabork/assets/IMG_20260222_212408.jpg"
           />
         </div>
 
@@ -51,7 +51,7 @@ export default async function HomePage() {
         {featuredCollections.length > 0 && (
           <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
             <div className="mb-12">
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-[#fafafa] mb-2">
+              <h2 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-2">
                 Featured Collections
               </h2>
               <div className="w-16 h-1 bg-primary" />
@@ -65,7 +65,7 @@ export default async function HomePage() {
               </div>
             ) : (
               <div className="text-center py-12">
-                <p className="text-[#b0b0b0]">No featured collections available yet.</p>
+                <p className="text-muted-foreground">No featured collections available yet.</p>
               </div>
             )}
           </section>
@@ -75,7 +75,7 @@ export default async function HomePage() {
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 border-t border-[#2d2d2d]">
           <div className="flex items-center justify-between mb-12">
             <div>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-[#fafafa] mb-2">
+              <h2 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-2">
                 New Arrivals
               </h2>
               <div className="w-16 h-1 bg-primary" />
@@ -97,7 +97,7 @@ export default async function HomePage() {
             </div>
           ) : (
             <div className="text-center py-12">
-              <p className="text-[#b0b0b0]">No featured products available yet.</p>
+              <p className="text-muted-foreground">No featured products available yet.</p>
             </div>
           )}
 
@@ -133,8 +133,8 @@ export default async function HomePage() {
                     <div className="w-6 h-6 rounded-full bg-primary/20" />
                   </div>
                 </div>
-                <h3 className="font-semibold text-[#fafafa]">{feature.title}</h3>
-                <p className="text-sm text-[#b0b0b0]">{feature.description}</p>
+                <h3 className="font-semibold text-foreground">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -150,17 +150,17 @@ export default async function HomePage() {
               <p className="text-xs uppercase tracking-[0.3em] text-foreground font-semibold">
                 Exclusive Access
               </p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-[#fafafa]">
+              <h2 className="font-playfair text-3xl md:text-4xl font-bold text-foreground">
                 Join Our Inner Circle
               </h2>
-              <p className="text-lg text-[#b0b0b0]">
+              <p className="text-lg text-muted-foreground">
                 Subscribe to our newsletter for early access to new collections, exclusive events, and special offers.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 pt-4">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 bg-[#2d2d2d] border border-[#3a3a3a] rounded-sm px-4 py-3 text-[#fafafa] placeholder-[#b0b0b0] focus:outline-none focus:border-[#d4af37] smooth-transition"
+                  className="flex-1 bg-[#2d2d2d] border border-[#3a3a3a] rounded-sm px-4 py-3 text-foreground placeholder-[#b0b0b0] focus:outline-none focus:border-[#d4af37] smooth-transition"
                 />
                 <button className="bg-primary text-[#0a0a0a] px-8 py-3 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition whitespace-nowrap">
                   Subscribe

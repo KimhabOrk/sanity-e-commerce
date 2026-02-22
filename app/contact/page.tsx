@@ -11,14 +11,14 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-      <main className="bg-[#0a0a0a] min-h-screen">
+      <main className="bg-background min-h-screen">
         {/* Header */}
         <section className="border-b border-[#2d2d2d] py-12">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-[#fafafa] mb-4">
+            <h1 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
               Contact Us
             </h1>
-            <p className="text-[#b0b0b0] max-w-2xl">
+            <p className="text-foreground max-w-2xl">
               We would love to hear from you. Reach out with any questions or feedback.
             </p>
           </div>
@@ -57,9 +57,9 @@ export default function ContactPage() {
                         <IconComponent size={24} className="text-foreground" />
                       </div>
                     </div>
-                    <h3 className="font-semibold text-[#fafafa]">{item.title}</h3>
+                    <h3 className="font-semibold text-foreground">{item.title}</h3>
                     <p className="text-foreground font-semibold">{item.content}</p>
-                    <p className="text-sm text-[#b0b0b0]">{item.subtext}</p>
+                    <p className="text-sm text-foreground">{item.subtext}</p>
                   </div>
                 )
               })}
@@ -68,62 +68,62 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="max-w-2xl mx-auto">
               <div className="bg-[#1a1a1a] border border-[#2d2d2d] rounded-sm p-8 md:p-12">
-                <h2 className="font-display text-2xl font-bold text-[#fafafa] mb-6">
+                <h2 className="font-playfair text-2xl font-bold text-foreground mb-6">
                   Send us a Message
                 </h2>
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-semibold text-[#fafafa] mb-2">
+                      <label className="block text-sm font-semibold text-foreground mb-2">
                         First Name
                       </label>
                       <input
                         type="text"
-                        className="w-full bg-[#2d2d2d] border border-[#3a3a3a] rounded-sm px-4 py-3 text-[#fafafa] placeholder-[#b0b0b0] focus:outline-none focus:border-[#d4af37] smooth-transition"
+                        className="w-full bg-[#2d2d2d] border border-[#3a3a3a] rounded-sm px-4 py-3 text-foreground placeholder-[#b0b0b0] focus:outline-none focus:border-[#d4af37] smooth-transition"
                         placeholder="Jane"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-[#fafafa] mb-2">
+                      <label className="block text-sm font-semibold text-foreground mb-2">
                         Last Name
                       </label>
                       <input
                         type="text"
-                        className="w-full bg-[#2d2d2d] border border-[#3a3a3a] rounded-sm px-4 py-3 text-[#fafafa] placeholder-[#b0b0b0] focus:outline-none focus:border-[#d4af37] smooth-transition"
+                        className="w-full bg-[#2d2d2d] border border-[#3a3a3a] rounded-sm px-4 py-3 text-foreground placeholder-[#b0b0b0] focus:outline-none focus:border-[#d4af37] smooth-transition"
                         placeholder="Doe"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-[#fafafa] mb-2">
+                    <label className="block text-sm font-semibold text-foreground mb-2">
                       Email
                     </label>
                     <input
                       type="email"
-                      className="w-full bg-[#2d2d2d] border border-[#3a3a3a] rounded-sm px-4 py-3 text-[#fafafa] placeholder-[#b0b0b0] focus:outline-none focus:border-[#d4af37] smooth-transition"
+                      className="w-full bg-[#2d2d2d] border border-[#3a3a3a] rounded-sm px-4 py-3 text-foreground placeholder-[#b0b0b0] focus:outline-none focus:border-[#d4af37] smooth-transition"
                       placeholder="jane@example.com"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-[#fafafa] mb-2">
+                    <label className="block text-sm font-semibold text-foreground mb-2">
                       Subject
                     </label>
                     <input
                       type="text"
-                      className="w-full bg-[#2d2d2d] border border-[#3a3a3a] rounded-sm px-4 py-3 text-[#fafafa] placeholder-[#b0b0b0] focus:outline-none focus:border-[#d4af37] smooth-transition"
+                      className="w-full bg-[#2d2d2d] border border-[#3a3a3a] rounded-sm px-4 py-3 text-foreground placeholder-[#b0b0b0] focus:outline-none focus:border-[#d4af37] smooth-transition"
                       placeholder="How can we help?"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-[#fafafa] mb-2">
+                    <label className="block text-sm font-semibold text-foreground mb-2">
                       Message
                     </label>
                     <textarea
                       rows={5}
-                      className="w-full bg-[#2d2d2d] border border-[#3a3a3a] rounded-sm px-4 py-3 text-[#fafafa] placeholder-[#b0b0b0] focus:outline-none focus:border-[#d4af37] smooth-transition resize-none"
+                      className="w-full bg-[#2d2d2d] border border-[#3a3a3a] rounded-sm px-4 py-3 text-foreground placeholder-[#b0b0b0] focus:outline-none focus:border-[#d4af37] smooth-transition resize-none"
                       placeholder="Tell us more..."
                     />
                   </div>
