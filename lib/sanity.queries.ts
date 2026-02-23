@@ -173,7 +173,7 @@ export const PRODUCTS_BY_COLLECTION_QUERY = `
   }
 `
 
-// Brand Queries
+{/** Brand Queries
 export const ALL_BRANDS_QUERY = `
   *[_type == "brand"] | order(name asc) {
     _id,
@@ -197,3 +197,4 @@ export const BRAND_BY_SLUG_QUERY = `
     website,
   }[0]
 `
+**/}
