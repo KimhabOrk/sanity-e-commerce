@@ -7,6 +7,7 @@ import { sanityFetch } from '@/lib/sanity.client'
 import { FEATURED_PRODUCTS_QUERY, FEATURED_COLLECTIONS_QUERY } from '@/lib/sanity.queries'
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
+import { QualityIcon, ReturnIcon, TruckIcon } from '@/components/icons'
 
 export const metadata = {
   title: 'KIMHAB ORK - Premium Womenswear Fashion',
@@ -117,21 +118,22 @@ export default async function HomePage() {
               {
                 title: 'Premium Quality',
                 description: 'Handpicked fabrics and meticulous craftsmanship in every piece.',
+                icon : <QualityIcon size={32} className='text-foreground w-8 h-8 md:w-10 md:h-10' />
               },
               {
                 title: 'Fast Shipping',
                 description: 'Free shipping on orders over $200. Ships within 2-3 business days.',
+                icon : <TruckIcon size={32} className='text-foreground w-8 h-8 md:w-10 md:h-10' />
               },
               {
                 title: '30-Day Returns',
                 description: 'Shop with confidence. Easy returns within 30 days of purchase.',
+                icon : <ReturnIcon size={32} className='text-foreground w-8 h-8 md:w-10 md:h-10' />
               },
             ].map((feature, index) => (
               <div key={index} className="text-center space-y-3">
-                <div className="flex justify-center mb-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 border border-[#d4af37] flex items-center justify-center">
-                    <div className="w-6 h-6 rounded-full bg-primary/20" />
-                  </div>
+                <div className="flex justify-center items-center mx-auto mb-4">
+                  {feature.icon}
                 </div>
                 <h3 className="font-semibold text-foreground">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground">{feature.description}</p>
