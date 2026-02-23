@@ -54,7 +54,7 @@ export default function CategoriesPage() {
                 <p className="text-foreground">Loading categories...</p>
               </div>
             ) : categories.length > 0 ? (
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 md:gap-6">
                 {categories.map((category) => (
                   <Link
                     key={category._id}
@@ -76,15 +76,10 @@ export default function CategoriesPage() {
                     </div>
 
                     {/* Content */}
-                    <div className="absolute inset-0 flex flex-col justify-end p-6">
-                      <h3 className="font-playfair text-2xl font-bold text-white group-hover:text-foreground smooth-transition">
+                    <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+                      <h3 className="font-playfair text-lg md:text-2xl font-semibold text-white group-hover:text-foreground smooth-transition">
                         {category.name}
                       </h3>
-                      {category.description && (
-                        <p className="text-sm text-[#e0e0e0] mt-2 line-clamp-2">
-                          {category.description}
-                        </p>
-                      )}
                       <div className="flex items-center gap-2 text-foreground font-semibold mt-4 group-hover:translate-x-2 smooth-transition">
                         <span>Shop</span>
                         <ChevronRight size={18} />
