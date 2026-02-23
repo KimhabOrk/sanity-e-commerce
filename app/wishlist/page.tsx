@@ -19,7 +19,7 @@ export default function WishlistPage() {
       <main className="bg-background min-h-screen">
         {/* Header */}
         <section className="border-b border-[#2d2d2d] py-12">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             <h1 className="font-playfair text-4xl font-bold text-foreground">
               Wishlist
             </h1>
@@ -31,7 +31,7 @@ export default function WishlistPage() {
 
         {/* Content */}
         <section className="py-16">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             {wishlistItems.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-20">
                 <Heart size={64} className="text-foreground mb-4 opacity-50" />
@@ -49,7 +49,7 @@ export default function WishlistPage() {
                 </Link>
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                 {/* Wishlist items would be rendered here */}
               </div>
             )}

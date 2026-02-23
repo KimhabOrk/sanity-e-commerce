@@ -34,7 +34,7 @@ export default function HeroBanner({ title, subtitle, cta, image }: HeroBannerPr
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
       {/* Content */}
-      <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      <div className="absolute inset-0 flex items-center justify-center px-4 md:px-6 lg:px-8">
         <div className="max-w-2xl text-center space-y-6 animate-fade-in">
           <div className="space-y-2">
             <p className="text-xs uppercase tracking-[0.3em] text-foreground font-semibold">

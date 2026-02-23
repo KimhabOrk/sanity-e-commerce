@@ -26,7 +26,7 @@ export default async function ProductsPage() {
       <main className="bg-background min-h-screen">
         {/* Header */}
         <section className="border-b border-[#2d2d2d] py-12">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             <h1 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
               All Products
             </h1>
@@ -38,7 +38,7 @@ export default async function ProductsPage() {
 
         {/* Filters and Products */}
         <section className="py-16">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             {/* Filter Bar */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12 pb-8 border-b border-[#2d2d2d]">
               <div>
@@ -58,7 +58,7 @@ export default async function ProductsPage() {
 
             {/* Products Grid */}
             {products.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                 {products.map((product) => (
                   <ProductCard key={product._id} product={product} />
                 ))}

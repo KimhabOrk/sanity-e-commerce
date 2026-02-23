@@ -13,7 +13,7 @@ export default function AboutPage() {
       <main className="bg-background min-h-screen">
         {/* Hero */}
         <section className="border-b border-[#2d2d2d] py-16 md:py-24">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             <div className="max-w-3xl">
               <p className="text-xs uppercase tracking-[0.3em] text-foreground font-semibold mb-4">
                 Our Story
@@ -30,7 +30,7 @@ export default function AboutPage() {
 
         {/* Values */}
         <section className="py-16 md:py-24 border-b border-[#2d2d2d]">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             <h2 className="font-playfair text-3xl font-bold text-foreground mb-12">
               Our Values
             </h2>
@@ -67,7 +67,7 @@ export default function AboutPage() {
 
         {/* Mission */}
         <section className="py-16 md:py-24">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <h2 className="font-playfair text-3xl font-bold text-foreground">
                 Our Mission

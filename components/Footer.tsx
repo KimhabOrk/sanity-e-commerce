@@ -49,7 +49,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-[#2d2d2d] bg-background">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-16">
         {/* Main Grid - 4 columns on desktop, 1 on mobile */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
           {/* Brand - Always visible */}
@@ -207,7 +207,7 @@ export default function Footer() {
         <div className="border-t border-b border-[#2d2d2d] py-8">
           <div className="max-w-md">
             <h3 className="font-semibold text-foreground mb-3">Subscribe to our newsletter</h3>
-            <div className="flex gap-2 flex-col sm:flex-row">
+            <div className="flex gap-2 flex-col md:flex-row">
               <input
                 type="email"
                 placeholder="Enter your email"

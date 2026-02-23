@@ -26,7 +26,7 @@ export default async function CollectionsPage() {
       <main className="bg-background min-h-screen">
         {/* Header */}
         <section className="border-b border-[#2d2d2d] py-12">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             <h1 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
               Collections
             </h1>
@@ -38,7 +38,7 @@ export default async function CollectionsPage() {
 
         {/* Collections Grid */}
         <section className="py-16">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             {collections.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                 {collections.map((collection) => (

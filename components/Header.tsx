@@ -22,7 +22,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#2d2d2d] bg-background/95 backdrop-blur-sm">
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <nav className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
@@ -68,7 +68,7 @@ export default function Header() {
             {/* Wishlist */}
             <Link
               href="/wishlist"
-              className="p-2 text-foreground hover:text-foreground smooth-transition hidden sm:block"
+              className="p-2 text-foreground hover:text-foreground smooth-transition hidden md:block"
               aria-label="Wishlist"
             >
               <Heart size={20} />

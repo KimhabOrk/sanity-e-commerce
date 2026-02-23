@@ -36,7 +36,7 @@ export default function CategoriesPage() {
       <main className="bg-background min-h-screen">
         {/* Header */}
         <section className="border-b border-[#2d2d2d] py-12">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             <h1 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
               Categories
             </h1>
@@ -48,13 +48,13 @@ export default function CategoriesPage() {
 
         {/* Categories Grid */}
         <section className="py-16">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             {loading ? (
               <div className="flex justify-center py-12">
                 <p className="text-foreground">Loading categories...</p>
               </div>
             ) : categories.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 {categories.map((category) => (
                   <Link
                     key={category._id}
@@ -67,7 +67,7 @@ export default function CategoriesPage() {
                           src={category.image.asset.url}
                           alt={category.name}
                           fill
-                          className="object-cover group-hover:scale-105 smooth-transition duration-700"
+                          className="object-cover aspect-[3/4] group-hover:scale-105 smooth-transition duration-700"
                         />
                       ) : (
                         <div className="w-full h-full bg-gradient-to-br from-[#2d2d2d] to-[#1a1a1a]" />

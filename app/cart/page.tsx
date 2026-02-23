@@ -19,7 +19,7 @@ export default function CartPage() {
       <main className="bg-background min-h-screen">
         {/* Header */}
         <section className="border-b border-[#2d2d2d] py-12">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             <h1 className="font-playfair text-4xl font-bold text-foreground">
               Shopping Cart
             </h1>
@@ -28,7 +28,7 @@ export default function CartPage() {
 
         {/* Content */}
         <section className="py-16">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             {cartItems.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-20">
                 <ShoppingBag size={64} className="text-foreground mb-4 opacity-50" />

@@ -38,7 +38,7 @@ export default async function HomePage() {
       <Header />
       <main className="bg-black">
         {/* Hero Banner */}
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 pt-8">
           <HeroBanner
             title="Spring/Summer Collection"
             subtitle="Discover elegance redefined. Premium fabrics and contemporary designs for the modern woman."
@@ -49,7 +49,7 @@ export default async function HomePage() {
 
         {/* Featured Collections */}
         {featuredCollections.length > 0 && (
-          <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <section className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-16 md:py-24">
             <div className="mb-12">
               <h2 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-2">
                 Featured Collections
@@ -72,7 +72,7 @@ export default async function HomePage() {
         )}
 
         {/* Featured Products */}
-        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 border-t border-[#2d2d2d]">
+        <section className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-16 md:py-24 border-t border-[#2d2d2d]">
           <div className="flex items-center justify-between mb-12">
             <div>
               <h2 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-2">
@@ -90,7 +90,7 @@ export default async function HomePage() {
           </div>
 
           {featuredProducts.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {featuredProducts.map((product) => (
                 <ProductCard key={product._id} product={product} />
               ))}
@@ -111,7 +111,7 @@ export default async function HomePage() {
         </section>
 
         {/* Features Section */}
-        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 border-t border-[#2d2d2d]">
+        <section className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-16 md:py-24 border-t border-[#2d2d2d]">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -141,7 +141,7 @@ export default async function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24 border-t border-[#2d2d2d]">
+        <section className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-16 md:py-24 border-t border-[#2d2d2d]">
           <div className="relative overflow-hidden rounded-sm bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] border border-[#2d2d2d] p-8 md:p-16">
             {/* Decorative element */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10" />
@@ -156,7 +156,7 @@ export default async function HomePage() {
               <p className="text-lg text-muted-foreground">
                 Subscribe to our newsletter for early access to new collections, exclusive events, and special offers.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 pt-4">
+              <div className="flex flex-col md:flex-row gap-3 pt-4">
                 <input
                   type="email"
                   placeholder="Enter your email"

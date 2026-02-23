@@ -103,7 +103,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
       <main className="bg-background min-h-screen">
         {/* Product Section */}
         <section className="py-12 border-b border-[#2d2d2d]">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
               {/* Gallery */}
               <div className="space-y-4">
@@ -326,13 +326,13 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
         {/* Related Products */}
         {relatedProducts.length > 0 && (
           <section className="py-16">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
               <div className="mb-12">
                 <h2 className="font-playfair text-3xl font-bold text-foreground">
                   You May Also Like
                 </h2>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                 {relatedProducts.map((p) => (
                   <Link key={p._id} href={`/products/${p.slug.current}`}>
                     <div className="cursor-pointer group">
