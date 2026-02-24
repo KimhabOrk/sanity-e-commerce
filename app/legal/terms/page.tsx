@@ -1,4 +1,6 @@
 import { Metadata } from "next"
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Terms & Conditions | Kimhab Ork',
@@ -10,6 +12,8 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
+        <>
+      <Header />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative py-12 md:py-16 lg:py-32 px-6 md:px-8 lg:px-10 bg-background">
@@ -292,5 +296,7 @@ export default function TermsPage() {
           </div>
         </section>
       </main>
+       <Footer />
+      </>
   )
 }

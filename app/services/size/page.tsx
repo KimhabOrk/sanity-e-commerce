@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export default function SizeGuidePage() {
   const sizeData = [
@@ -110,6 +112,8 @@ export default function SizeGuidePage() {
   ];
 
   return (
+        <>
+      <Header />
     <main className="min-h-screen bg-background">
       {/* Hero Header Section */}
       <section className="relative overflow-hidden border-b border-border/50 py-20 md:py-28 lg:py-32">
@@ -299,5 +303,7 @@ export default function SizeGuidePage() {
         </div>
       </section>
     </main>
+     <Footer />
+      </>
   );
 }

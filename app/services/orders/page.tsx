@@ -1,6 +1,8 @@
 import React from "react"
 import { Metadata } from "next"
 import { ChevronDown, Package, Truck, RotateCw } from 'lucide-react'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Orders, Shipping & Returns | Kimhab Ork',
@@ -45,6 +47,8 @@ function AccordionItem({ title, children }: { title: string; children: React.Rea
 
 export default function OrdersShippingReturnsPage() {
   return (
+        <>
+      <Header />
     <main className="flex-1">
       {/* Hero Section */}
       <section className="relative py-12 md:py-16 lg:py-32 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-background to-muted/10">
@@ -364,5 +368,7 @@ export default function OrdersShippingReturnsPage() {
         </div>
       </section>
     </main>
+     <Footer />
+      </>
   )
 }

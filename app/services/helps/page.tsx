@@ -1,6 +1,8 @@
 import { Metadata } from "next"
 import { ChevronDown } from 'lucide-react'
 import Image from 'next/image'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Help & FAQs | Kimhab Ork',
@@ -215,6 +217,8 @@ function CategorySection({ category, faqs }: { category: string; faqs: Array<{ q
 
 export default function HelpFaqsPage() {
   return (
+        <>
+      <Header />
     <main className="flex-1">
       {/* Hero Section */}
       <section className="relative py-12 md:py-16 lg:py-32 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-background to-muted/10">
@@ -261,5 +265,7 @@ export default function HelpFaqsPage() {
         </div>
       </section>
     </main>
+     <Footer />
+      </>
   )
 }

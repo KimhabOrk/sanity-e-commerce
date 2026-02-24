@@ -1,6 +1,8 @@
 import { Metadata } from "next"
 import Image from 'next/image'
 import { HeroGradient } from '@/components/hero-gradient'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'General Sales Conditions | Kimhab Ork',
@@ -12,6 +14,8 @@ export const metadata: Metadata = {
 
 export default function GeneralSalesConditionsPage() {
   return (
+        <>
+      <Header />
     <main className="flex-1">
       {/* Hero Section */}
       <HeroGradient 
@@ -338,5 +342,7 @@ export default function GeneralSalesConditionsPage() {
         </div>
       </section>
     </main>
+     <Footer />
+      </>
   )
 }

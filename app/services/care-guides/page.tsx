@@ -1,5 +1,7 @@
 import { Metadata } from "next"
 import { ChevronDown } from 'lucide-react'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Care Guides | Kimhab Ork',
@@ -79,8 +81,8 @@ function CareGuideCard({ title, content, tips }: { title: string;content: string
 
 export default function CareGuidesPage() {
   return (
-    
-    
+        <>
+      <Header />
     <main className="flex-1">
         {/* Hero Section */}
         <section className="relative py-12 md:py-16 lg:py-32 px-6 md:px-8 lg:px-10 bg-gradient-to-b from-background to-muted/10">
@@ -230,5 +232,7 @@ export default function CareGuidesPage() {
           </div>
         </section>
       </main>
+       <Footer />
+      </>
   )
 }

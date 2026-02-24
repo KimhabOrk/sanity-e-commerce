@@ -98,7 +98,7 @@ function FooterSection({
   );
 }
 
-export function Footer() {
+export default function Footer() {
   const [openSection, setOpenSection] = useState<string | null>(null);
   const pathname = usePathname();
 

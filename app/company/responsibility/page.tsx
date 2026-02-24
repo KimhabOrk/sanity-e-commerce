@@ -1,6 +1,8 @@
 import { Metadata } from "next"
 import { FeatureCard } from '@/components/feature-card'
 import { Leaf, Users, Globe } from 'lucide-react'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Our Commitment to Responsibility | Kimhab Ork',
@@ -13,6 +15,8 @@ export const metadata: Metadata = {
 
 export default function ResponsibilityPage() {
   return (
+        <>
+      <Header />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative py-12 md:py-16 lg:py-32 px-6 md:px-8 lg:px-10 bg-background">
@@ -278,7 +282,7 @@ export default function ResponsibilityPage() {
           </div>
         </section>
       </main>
-      
-    
+     <Footer />
+      </>
   )
 }

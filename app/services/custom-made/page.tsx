@@ -1,3 +1,5 @@
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import { Metadata } from "next";
 import { FeatureCard } from "@/components/feature-card";
 import Link from "next/link";
@@ -68,6 +70,8 @@ export default function CustomMadePage() {
   ];
 
   return (
+        <>
+      <Header />
     <main className="relative min-h-screen container bg-background text-foreground">
       {/* Hero Section with Split Design */}
       <section className="relative flex w-full mx-auto justify-center items-center">
@@ -300,5 +304,7 @@ export default function CustomMadePage() {
         </div>
       </section>
     </main>
+     <Footer />
+      </>
   );
 }

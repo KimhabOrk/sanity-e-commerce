@@ -3,6 +3,8 @@ import { FeatureCard } from '@/components/feature-card'
 import Link from 'next/link'
 import { Crown, Shield, TreePine, Users } from 'lucide-react'
 import { HeroGradient } from '@/components/hero-gradient'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'About Us | Kimhab Ork',
@@ -15,25 +17,26 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   const values = [
-    {
-      title: 'Quality Over Quantity',
-      description: 'We believe in creating pieces that last. Every garment is carefully crafted with premium materials and attention to detail, ensuring you invest in items that remain timeless.',
-    },
-    {
-      title: 'Accessible Luxury',
-      description: 'Luxury fashion should not be exclusive. We make premium womenswear affordable without compromising on design, materials, or craftsmanship.',
-    },
-    {
-      title: 'Sustainable Fashion',
-      description: 'Our commitment to the environment is reflected in our material choices and production practices. We strive to minimize our ecological footprint while maximizing impact.',
-    },
-    {
-      title: 'Empowered Women',
-      description: 'We design for confident, modern women who value both style and substance. Every collection celebrates femininity, strength, and individuality.',
-    },
-  ]
-
+  {
+    title: 'Quality Over Quantity',
+    description: 'We believe in creating pieces that last. Every garment is carefully crafted with premium materials and attention to detail, ensuring you invest in items that remain timeless.',
+  },
+  {
+    title: 'Accessible Luxury',
+    description: 'Luxury fashion should not be exclusive. We make premium womenswear affordable without compromising on design, materials, or craftsmanship.',
+  },
+  {
+    title: 'Sustainable Fashion',
+    description: 'Our commitment to the environment is reflected in our material choices and production practices. We strive to minimize our ecological footprint while maximizing impact.',
+  },
+  {
+    title: 'Empowered Women',
+    description: 'We design for confident, modern women who value both style and substance. Every collection celebrates femininity, strength, and individuality.',
+  }, ]
+  
   return (
+    <>
+      <Header />
       <main className="flex-1">
         <HeroGradient 
           title="Affordable Luxury for Modern Women"
@@ -203,5 +206,7 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
+      <Footer />
+      </>
   )
 }

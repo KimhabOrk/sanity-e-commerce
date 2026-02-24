@@ -3,6 +3,8 @@ import { FeatureCard } from '@/components/feature-card'
 import { Award, Sparkles, Heart, Globe } from 'lucide-react'
 import Image from 'next/image'
 import { HeroGradient } from '@/components/hero-gradient'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Creative Director | Kimhab ORK',
@@ -16,6 +18,8 @@ export const metadata: Metadata = {
 
 export default function CreativeDirector() {
   return (
+    <>
+      <Header />
       <main>
         <HeroGradient
           title="Meet Our Creative Director"
@@ -224,5 +228,7 @@ export default function CreativeDirector() {
           </div>
         </section>
       </main>
+      <Footer />
+      </>
   )
 }
