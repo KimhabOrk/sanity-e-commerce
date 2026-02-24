@@ -120,7 +120,7 @@ export default function GeneralSalesConditionsPage() {
                       <span className="font-semibold text-foreground">
                         Email:
                       </span>{" "}
-                      customerservice@kimhabork.com
+                      customer@kimhabork.com
                     </p>
                   </div>
                 </div>
@@ -433,7 +433,7 @@ export default function GeneralSalesConditionsPage() {
                     In the event of any dispute arising from these Conditions or
                     your purchase, you agree to first attempt resolution through
                     direct communication with Kimhab Ork's customer service team
-                    at customerservice@kimhabork.com.
+                    at customer@kimhabork.com.
                   </p>
                   <p className="mt-2">
                     If disputes cannot be resolved through negotiation, they
@@ -506,9 +506,9 @@ export default function GeneralSalesConditionsPage() {
                 <p>Kimhab Ork</p>
                 <p>
                   Email:
-                  <a href="mailto:customerservice@kimhabork.com">
+                  <a href="mailto:customer@kimhabork.com">
                     {" "}
-                    customerservice@kimhabork.com
+                    customer@kimhabork.com
                   </a>
                 </p>
                 <p>

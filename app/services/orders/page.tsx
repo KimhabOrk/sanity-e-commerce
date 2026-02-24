@@ -168,7 +168,7 @@ export default function OrdersShippingReturnsPage() {
               <AccordionItem title="Do you charge taxes and duties?">
                 <p className="text-foreground/75">
                   The price displayed on our website is the final price for
-                  orders within the EU. For international orders, local taxes
+                  orders within Cambodia. For international orders, local taxes
                   and import duties may apply. These additional charges will be
                   calculated at checkout based on your destination country.
                 </p>
@@ -209,7 +209,7 @@ export default function OrdersShippingReturnsPage() {
                       Free Shipping
                     </h4>
                     <p className="text-foreground/75">
-                      Orders over €100 to EU countries. Calculated at checkout.
+                      Orders over $200. Calculated at checkout.
                       Conditions apply.
                     </p>
                   </div>
@@ -224,7 +224,7 @@ export default function OrdersShippingReturnsPage() {
                 </p>
                 <div className="bg-muted p-4 rounded border border-border/40">
                   <p className="text-sm text-foreground/70">
-                    <span className="font-semibold">Example rates:</span> EU
+                    <span className="font-semibold">Example rates:</span> Cambodia
                     €5-15, UK €8-20, USA €12-30. Actual rates depend on your
                     specific location and order weight.
                   </p>
@@ -339,7 +339,7 @@ export default function OrdersShippingReturnsPage() {
               </AccordionItem>
               <AccordionItem title="How much does return shipping cost?">
                 <p className="text-foreground/75">
-                  Return shipping is free for most orders within the EU. For
+                  Return shipping is free for most orders within Cambodia. For
                   international returns, shipping costs may apply depending on
                   your location. The cost, if any, will be clearly communicated
                   when you initiate the return.

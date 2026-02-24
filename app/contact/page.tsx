@@ -34,7 +34,7 @@ export default function ContactPage() {
                 {
                   icon: Mail,
                   title: "Email",
-                  content: "hello@kimhab.com",
+                  content: "hello@kimhabork.com",
                   subtext: "We reply within 24 hours",
                 },
                 {

@@ -19,8 +19,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "KIMHAB ORK - Premium Womenswear Fashion",
-  description:
-    "Discover curated collections of luxury womenswear featuring premium fabrics and contemporary designs.",
+  description: "Discover curated collections of luxury womenswear featuring premium fabrics and contemporary designs.",
   generator: "v0.app",
   keywords: [
     "luxury fashion",
@@ -28,37 +27,149 @@ export const metadata: Metadata = {
     "designer clothing",
     "premium fashion",
   ],
+  openGraph: {
+    title: "KIMHAB ORK - Premium Womenswear Fashion",
+    siteName: "KIMHAB ORK - Premium Womenswear Fashion",
+    description: "Discover curated collections of luxury womenswear featuring premium fabrics and contemporary designs.",
+    images: {
+      url: "https://ik.imagekit.io/kimhabork/assets/kimhab_ork_og.png?updatedAt=1771357781893",
+      width: 1920,
+      height: 1080,
+    },
+    url: "https://kimhabork.com",
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    title: "KIMHAB ORK - Premium Womenswear Fashion",
+    card: "summary_large_image",
+    creator: "@kimhabork_official",
+    description: "Discover curated collections of luxury womenswear featuring premium fabrics and contemporary designs.",
+    images: ["https://ik.imagekit.io/kimhabork/assets/kimhab_ork_og.png?updatedAt=1771357781893"],
+  },
+  alternates: {
+    canonical: "https://www.kimhabork.com",
+  },
   icons: {
+    shortcut: { url: "/favicon.ico", type: "image/x-icon" },
     icon: [
+      { url: "/favicon/favicon.ico", type: "image/x-icon" },
+      new URL("/favicon/favicon.ico", "https://kimhabork.com/favicon.ico"),
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
+        url: "/favicon.svg",
+        type: "image/svg",
+        sizes: "1000x1000",
       },
       {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
+        url: "/favicon/favicon-16x16.png",
+        type: "image/png",
+        sizes: "16x16",
       },
       {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "/favicon/favicon-32x32.png",
+        type: "image/png",
+        sizes: "32x32",
+      },
+      {
+        url: "/favicon/favicon-96x96.png",
+        type: "image/png",
+        sizes: "96x96",
+      },
+      {
+        url: "/favicon/andriod-icon-36x36.png",
+        type: "image/png",
+        sizes: "36x36",
+      },
+      {
+        url: "/favicon/andriod-icon-38x38.png",
+        type: "image/png",
+        sizes: "38x38",
+      },
+      {
+        url: "/favicon/andriod-icon-96x96.png",
+        type: "image/png",
+        sizes: "96x96",
+      },
+      {
+        url: "/favicon/andriod-icon-114x114.png",
+        type: "image/png",
+        sizes: "114x114",
+      },
+      {
+        url: "/favicon/andriod-icon-192x192.png",
+        type: "image/png",
+        sizes: "192x192",
+      },
+      {
+        url: "/favicon/andriod-icon-512x512.png",
+        type: "image/png",
+        sizes: "192x192",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: [
+    {
+      url: "/favicon/apple-icon.png",
+      type: "image/png",
+    },
+    {
+      url: "/favicon/apple-icon-57x57.png",
+      sizes: "57x57",
+      type: "image/png",
+    },
+    {
+      url: "/favicon/apple-icon-60x60.png",
+      sizes: "60x60",
+      type: "image/png",
+    },
+    {
+      url: "/favicon/apple-icon-72x72.png",
+      sizes: "72x72",
+      type: "image/png",
+    },
+    {
+      url: "/favicon/apple-icon-76x76.png",
+      sizes: "76x76",
+      type: "image/png",
+    },
+    {
+      url: "/favicon/apple-icon-114x114.png",
+      sizes: "114x114",
+      type: "image/png",
+    },
+    {
+      url: "/favicon/apple-icon-120x120.png",
+      sizes: "120x120",
+      type: "image/png",
+    },
+    {
+      url: "/favicon/apple-icon-144x144.png",
+      sizes: "144x144",
+      type: "image/png",
+    },
+    {
+      url: "/favicon/apple-icon-152x152.png",
+      sizes: "152x152",
+      type: "image/png",
+    },
+    {
+      url: "/favicon/apple-icon-180x180.png",
+      sizes: "180x180",
+      type: "image/png",
+    }, ],
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://kimhab.com",
+    url: "https://kimhabork.com",
     title: "KIMHAB ORK - Premium Womenswear Fashion",
     description: "Discover curated collections of luxury womenswear",
     images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "KIMHAB ORK Fashion",
-      },
-    ],
+    {
+      url: "https://ik.imagekit.io/kimhabork/assets/kimhab_ork_og.png?updatedAt=1771357781893",
+      width: 1920,
+      height: 1080,
+      alt: "KIMHAB ORK",
+    }, ],
   },
 };
 
@@ -72,9 +183,9 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: Readonly < {
   children: React.ReactNode;
-}>) {
+} > ) {
   return (
     <html lang="en" className="dark">
       <head>

@@ -263,9 +263,9 @@ export default function LegalNotesPage() {
               <p>Kimhab Ork Co</p>
               <p>
                 {" "}
-                Email:
-                <a href="mailto:customerservice@kimhabork.com">
-                  customerservice@kimhabork.com
+                Email: 
+                <a href="mailto:customer@kimhabork.com">
+                  customer@kimhabork.com
                 </a>
               </p>
               <p>
