@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface ReturnIconProps {
   size?: number;
@@ -6,10 +6,10 @@ interface ReturnIconProps {
   className?: string;
 }
 
-export function ReturnIcon({ 
-  size = 24, 
-  color = 'currentColor',
-  className = ''
+export function ReturnIcon({
+  size = 24,
+  color = "currentColor",
+  className = "",
 }: ReturnIconProps) {
   return (
     <svg

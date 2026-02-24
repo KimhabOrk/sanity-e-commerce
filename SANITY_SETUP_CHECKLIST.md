@@ -19,19 +19,22 @@ Follow this checklist to get your KIMHAB ORK Sanity CMS up and running with samp
 ## Phase 2: Create Base Data
 
 ### Brands
+
 Create at least 2 brands:
+
 - [ ] **Brand 1**
   - Name: "KIMHAB ORK Originals"
   - Logo: (optional image)
   - Description: "Our signature collection"
-  
 - [ ] **Brand 2**
   - Name: "Designer Collaborations"
   - Logo: (optional image)
   - Description: "Exclusive partnerships"
 
 ### Colors
+
 Create color options:
+
 - [ ] Black (#000000)
 - [ ] White (#FFFFFF)
 - [ ] Cream (#f5f1ed)
@@ -42,7 +45,9 @@ Create color options:
 - [ ] Blush (#f0a5a5)
 
 ### Sizes
+
 Create size options:
+
 - [ ] XS (Extra Small)
 - [ ] S (Small)
 - [ ] M (Medium)
@@ -52,23 +57,21 @@ Create size options:
 - [ ] One Size
 
 ### Materials
+
 Create at least 5 materials:
+
 - [ ] **Silk**
   - Composition: "100% Mulberry Silk"
   - Care: "Hand wash cold. Hang dry."
-  
 - [ ] **Cashmere**
   - Composition: "100% Pure Cashmere"
   - Care: "Dry clean only."
-  
 - [ ] **Cotton**
   - Composition: "100% Organic Cotton"
   - Care: "Machine wash cold."
-  
 - [ ] **Linen**
   - Composition: "100% Linen"
   - Care: "Hand wash. Line dry."
-  
 - [ ] **Wool**
   - Composition: "100% Virgin Wool"
   - Care: "Dry clean. Professional care recommended."
@@ -76,22 +79,19 @@ Create at least 5 materials:
 ## Phase 3: Create Categories
 
 Create main categories:
+
 - [ ] **Dresses**
   - Add image
   - Description: "Elegant dresses for every occasion"
-  
 - [ ] **Tops**
   - Add image
   - Description: "Luxurious tops and blouses"
-  
 - [ ] **Bottoms**
   - Add image
   - Description: "Premium pants, skirts, and trousers"
-  
 - [ ] **Outerwear**
   - Add image
   - Description: "Sophisticated jackets and coats"
-  
 - [ ] **Accessories**
   - Add image
   - Description: "Elegant accessories and finishing touches"
@@ -99,18 +99,17 @@ Create main categories:
 ## Phase 4: Create Collections
 
 Create at least 2-3 collections:
+
 - [ ] **Spring/Summer 2024**
   - Season: Spring/Summer
   - Featured: Yes
   - Add description and hero image
   - Add 4-6 products (create below)
-  
 - [ ] **Fall/Winter 2024**
   - Season: Fall/Winter
   - Featured: Yes
   - Add description and hero image
   - Add 4-6 products (create below)
-  
 - [ ] **Timeless Classics**
   - Season: Capsule
   - Featured: No
@@ -122,6 +121,7 @@ Create at least 2-3 collections:
 Create a minimum of 8-12 products (2-3 per category):
 
 ### Sample Product 1: Silk Dress
+
 - [ ] Name: "Flowing Silk Maxi Dress"
 - [ ] Slug: flowing-silk-maxi-dress
 - [ ] Price: $450
@@ -140,6 +140,7 @@ Create a minimum of 8-12 products (2-3 per category):
 - [ ] Add 3-4 images to gallery
 
 ### Sample Product 2: Cashmere Sweater
+
 - [ ] Name: "Premium Cashmere Crewneck"
 - [ ] Slug: premium-cashmere-crewneck
 - [ ] Price: $550
@@ -157,6 +158,7 @@ Create a minimum of 8-12 products (2-3 per category):
 - [ ] Add 3-4 images
 
 ### Sample Product 3: Tailored Trousers
+
 - [ ] Name: "High-Waisted Wool Trousers"
 - [ ] Slug: high-waisted-wool-trousers
 - [ ] Price: $380
@@ -174,12 +176,14 @@ Create a minimum of 8-12 products (2-3 per category):
 - [ ] Add 3-4 images
 
 ### Continue creating 5-9 more products
+
 - [ ] Various dresses (2-3 more)
 - [ ] Various tops (2 more)
 - [ ] Various outerwear (2-3)
 - [ ] Accessories (1-2)
 
 **Pro Tips:**
+
 - Use realistic product names
 - Write compelling descriptions
 - Price items appropriately for luxury market
@@ -190,23 +194,27 @@ Create a minimum of 8-12 products (2-3 per category):
 ## Phase 6: Verify Data
 
 ### Homepage Check
+
 - [ ] Visit http://localhost:3000
 - [ ] See featured products
 - [ ] See featured collections
 - [ ] Navigation works
 
 ### Product Pages
+
 - [ ] Click products to see detail pages
 - [ ] Images load correctly
 - [ ] Colors/sizes display properly
 - [ ] Price shows correctly
 
 ### Category Pages
+
 - [ ] Visit /categories
 - [ ] Click categories to see filtered products
 - [ ] Products listed correctly
 
 ### Collection Pages
+
 - [ ] Visit /collections
 - [ ] Click collections
 - [ ] See all products in collection
@@ -236,6 +244,7 @@ Create a minimum of 8-12 products (2-3 per category):
 ### Common Issues
 
 **Schema not deploying:**
+
 ```bash
 npx sanity deploy
 # If issues persist:
@@ -243,21 +252,25 @@ npx sanity init
 ```
 
 **Environment variables not loading:**
+
 - Check `.env.local` file exists
 - Restart dev server: `npm run dev`
 - Variables must start with `NEXT_PUBLIC_` to be accessible in browser
 
 **Sanity Studio not accessible:**
+
 - Visit http://localhost:3000/studio
 - Or http://your-project-id.sanity.studio
 - Check Project ID in `.env.local`
 
 **Images not showing:**
+
 - Ensure images are uploaded to Sanity (not external)
 - Check image asset is referenced in schema
 - Verify CDN is enabled in Sanity
 
 **Products not appearing:**
+
 - Verify products have `slug` and `name` filled
 - Check collection references are correct
 - Ensure product is published (not draft)
@@ -280,8 +293,8 @@ Once content is created, test these GROQ queries in Sanity Vision:
 *[_type == "collection"] { name, "productCount": count(products) }
 
 // Get product with all details
-*[_type == "product" && slug.current == "flowing-silk-maxi-dress"][0] { 
-  name, price, colors[]->name, sizes[]->size, materials[]->name 
+*[_type == "product" && slug.current == "flowing-silk-maxi-dress"][0] {
+  name, price, colors[]->name, sizes[]->size, materials[]->name
 }
 ```
 

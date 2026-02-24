@@ -1,33 +1,33 @@
-'use client'
+"use client";
 
-import { useMemo } from 'react'
-import { defineConfig } from 'sanity'
-import { structureTool } from 'sanity/structure'
-import { visionTool } from '@sanity/vision'
-import { schemaTypes } from '@/sanity/schemas'
-import { NextStudio } from 'next-sanity/studio'
+import { useMemo } from "react";
+import { defineConfig } from "sanity";
+import { structureTool } from "sanity/structure";
+import { visionTool } from "@sanity/vision";
+import { schemaTypes } from "@/sanity/schemas";
+import { NextStudio } from "next-sanity/studio";
 
 export default function StudioPage() {
-  const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'qpz2y6on'
-  const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
+  const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "qpz2y6on";
+  const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
 
   // Create config only once when component mounts
   const config = useMemo(() => {
     if (!projectId) {
-      return null
+      return null;
     }
 
     return defineConfig({
-      name: 'luxury-womenswear',
-      title: 'Luxury Womenswear Fashion',
+      name: "luxury-womenswear",
+      title: "Luxury Womenswear Fashion",
       projectId,
       dataset,
       plugins: [structureTool(), visionTool()],
       schema: {
         types: schemaTypes,
       },
-    })
-  }, [projectId, dataset])
+    });
+  }, [projectId, dataset]);
 
   if (!projectId) {
     return (
@@ -37,7 +37,8 @@ export default function StudioPage() {
             Sanity Studio
           </h1>
           <p className="text-foreground mb-6">
-            Project credentials not configured. Please add your environment variables to use Sanity Studio.
+            Project credentials not configured. Please add your environment
+            variables to use Sanity Studio.
           </p>
           <a
             href="/setup"
@@ -47,7 +48,7 @@ export default function StudioPage() {
           </a>
         </div>
       </div>
-    )
+    );
   }
 
   if (!config) {
@@ -55,8 +56,8 @@ export default function StudioPage() {
       <div className="min-h-screen bg-white flex items-center justify-center">
         <p className="text-gray-600">Initializing Sanity Studio...</p>
       </div>
-    )
+    );
   }
 
-  return <NextStudio config={config} />
+  return <NextStudio config={config} />;
 }

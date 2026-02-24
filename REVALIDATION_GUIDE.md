@@ -71,6 +71,7 @@ SANITY_WEBHOOK_SECRET=your-secure-webhook-secret
 ```
 
 Generate a secure webhook secret:
+
 ```bash
 openssl rand -base64 32
 ```
@@ -127,6 +128,7 @@ Body: {
 ```
 
 Response:
+
 ```json
 {
   "success": true,
@@ -160,13 +162,15 @@ Edit `lib/sanity.client.ts` and update the `revalidate` value:
 
 ```typescript
 const cachedFetch = unstable_cache(
-  async () => { /* ... */ },
+  async () => {
+    /* ... */
+  },
   [query, JSON.stringify(params)],
   {
     tags: tags,
     revalidate: 7200, // Change to 2 hours
-  }
-)
+  },
+);
 ```
 
 ## Using Cache Tags in Components
@@ -213,15 +217,18 @@ View these in your server logs or Vercel dashboard.
 ### Common Issues
 
 **Issue**: Webhook not triggering
+
 - Solution: Verify the URL is correct and publicly accessible
 - Solution: Check that the webhook secret matches
 
 **Issue**: Changes not appearing
+
 - Solution: Visit `/admin/revalidate` and manually trigger revalidation
 - Solution: Check browser cache (Ctrl+Shift+Delete)
 - Solution: Verify content was published in Sanity
 
 **Issue**: Webhook receiving 401 Unauthorized
+
 - Solution: Verify `X-Sanity-Webhook-Secret` header matches `SANITY_WEBHOOK_SECRET` env var
 
 ## Performance Tips
@@ -263,11 +270,11 @@ You can add custom revalidation logic in `lib/revalidate.ts`:
 ```typescript
 export async function revalidateSpecificProduct(productId: string) {
   try {
-    revalidateTag(`product-${productId}`)
-    revalidatePath(`/products/${productId}`)
-    return { success: true }
+    revalidateTag(`product-${productId}`);
+    revalidatePath(`/products/${productId}`);
+    return { success: true };
   } catch (error) {
-    return { success: false }
+    return { success: false };
   }
 }
 ```

@@ -1,23 +1,23 @@
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import ProductCard from '@/components/ProductCard'
-import { sanityFetch } from '@/lib/sanity.client'
-import { ALL_PRODUCTS_QUERY } from '@/lib/sanity.queries'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ProductCard from "@/components/ProductCard";
+import { sanityFetch } from "@/lib/sanity.client";
+import { ALL_PRODUCTS_QUERY } from "@/lib/sanity.queries";
 
 export const metadata = {
-  title: 'All Products - LUXARA',
-  description: 'Shop our complete collection of premium womenswear.',
-}
+  title: "All Products - LUXARA",
+  description: "Shop our complete collection of premium womenswear.",
+};
 
 export default async function ProductsPage() {
-  let products = []
+  let products = [];
 
   try {
     products = await sanityFetch({
       query: ALL_PRODUCTS_QUERY,
-    })
+    });
   } catch (error) {
-    console.error('Error fetching products:', error)
+    console.error("Error fetching products:", error);
   }
 
   return (
@@ -31,7 +31,8 @@ export default async function ProductsPage() {
               All Products
             </h1>
             <p className="text-foreground max-w-2xl">
-              Explore our complete collection of luxury womenswear, carefully curated to reflect contemporary style and premium quality.
+              Explore our complete collection of luxury womenswear, carefully
+              curated to reflect contemporary style and premium quality.
             </p>
           </div>
         </section>
@@ -65,8 +66,12 @@ export default async function ProductsPage() {
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center py-20">
-                <p className="text-foreground text-lg mb-4">No products found</p>
-                <p className="text-sm text-[#8a8a8a]">Check back soon for new arrivals</p>
+                <p className="text-foreground text-lg mb-4">
+                  No products found
+                </p>
+                <p className="text-sm text-[#8a8a8a]">
+                  Check back soon for new arrivals
+                </p>
               </div>
             )}
           </div>
@@ -74,5 +79,5 @@ export default async function ProductsPage() {
       </main>
       <Footer />
     </>
-  )
+  );
 }

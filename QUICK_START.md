@@ -35,18 +35,19 @@ npm run dev
 
 ## Step 5: Access the App
 
-| Resource | URL |
-|----------|-----|
-| App | http://localhost:3000 |
-| Sanity Studio | http://localhost:3000/studio |
-| Products | http://localhost:3000/products |
-| Collections | http://localhost:3000/collections |
+| Resource      | URL                               |
+| ------------- | --------------------------------- |
+| App           | http://localhost:3000             |
+| Sanity Studio | http://localhost:3000/studio      |
+| Products      | http://localhost:3000/products    |
+| Collections   | http://localhost:3000/collections |
 
 ---
 
 ## Key Shortcuts
 
 ### Create Your First Product
+
 1. Visit http://localhost:3000/studio
 2. Go to Products
 3. Click "Create" → "Product"
@@ -59,6 +60,7 @@ npm run dev
 6. Check home page!
 
 ### Check If It Works
+
 - [ ] Home page shows featured products
 - [ ] Product page loads
 - [ ] Collections appear
@@ -69,12 +71,14 @@ npm run dev
 ## Troubleshooting
 
 **"Can't find .env.local"**
+
 ```bash
 cp .env.example .env.local
 # Then edit with your Project ID
 ```
 
 **"Sanity Studio blank"**
+
 ```bash
 npx sanity deploy
 # Restart dev server
@@ -82,6 +86,7 @@ npm run dev
 ```
 
 **"Images not showing"**
+
 - Upload images to Sanity (not external URLs)
 - Images must be in Sanity Studio
 - Check image field is filled in product
@@ -101,6 +106,7 @@ npm run dev
 ## Next: Add Content
 
 See `SANITY_SETUP_CHECKLIST.md` for detailed steps to:
+
 1. Create brands
 2. Create materials
 3. Create colors

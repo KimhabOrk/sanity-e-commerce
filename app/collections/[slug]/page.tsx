@@ -1,41 +1,43 @@
-'use client'
+"use client";
 
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import ProductCard from '@/components/ProductCard'
-import { sanityFetch } from '@/lib/sanity.client'
-import { COLLECTION_BY_SLUG_QUERY } from '@/lib/sanity.queries'
-import Image from 'next/image'
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { PortableText } from '@portabletext/react'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ProductCard from "@/components/ProductCard";
+import { sanityFetch } from "@/lib/sanity.client";
+import { COLLECTION_BY_SLUG_QUERY } from "@/lib/sanity.queries";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { PortableText } from "@portabletext/react";
 
 interface CollectionDetailPageProps {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }
 
-export default function CollectionDetailPage({ params }: CollectionDetailPageProps) {
-  const [collection, setCollection] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
+export default function CollectionDetailPage({
+  params,
+}: CollectionDetailPageProps) {
+  const [collection, setCollection] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadCollection = async () => {
       try {
-        const { slug } = await params
+        const { slug } = await params;
         const data = await sanityFetch({
           query: COLLECTION_BY_SLUG_QUERY,
           params: { slug },
-        })
-        setCollection(data)
+        });
+        setCollection(data);
       } catch (error) {
-        console.error('Error loading collection:', error)
+        console.error("Error loading collection:", error);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
+    };
 
-    loadCollection()
-  }, [params])
+    loadCollection();
+  }, [params]);
 
   if (loading) {
     return (
@@ -46,7 +48,7 @@ export default function CollectionDetailPage({ params }: CollectionDetailPagePro
         </main>
         <Footer />
       </>
-    )
+    );
   }
 
   if (!collection) {
@@ -56,19 +58,25 @@ export default function CollectionDetailPage({ params }: CollectionDetailPagePro
         <main className="bg-background min-h-screen flex items-center justify-center">
           <div className="text-center">
             <p className="text-foreground text-lg mb-4">Collection not found</p>
-            <Link href="/collections" className="text-foreground hover:text-[#e8d4a0] smooth-transition">
+            <Link
+              href="/collections"
+              className="text-foreground hover:text-[#e8d4a0] smooth-transition"
+            >
               Back to Collections
             </Link>
           </div>
         </main>
         <Footer />
       </>
-    )
+    );
   }
 
   const seasonLabel = collection.season
-    ? collection.season.split('-').map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-    : ''
+    ? collection.season
+        .split("-")
+        .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ")
+    : "";
 
   return (
     <>
@@ -129,7 +137,9 @@ export default function CollectionDetailPage({ params }: CollectionDetailPagePro
                     <p className="text-xs uppercase tracking-widest text-foreground font-semibold mb-1">
                       Season
                     </p>
-                    <p className="text-foreground font-semibold">{seasonLabel || 'All Season'}</p>
+                    <p className="text-foreground font-semibold">
+                      {seasonLabel || "All Season"}
+                    </p>
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-widest text-foreground font-semibold mb-1">
@@ -166,5 +176,5 @@ export default function CollectionDetailPage({ params }: CollectionDetailPagePro
       </main>
       <Footer />
     </>
-  )
+  );
 }

@@ -1,62 +1,67 @@
-'use client'
+"use client";
 
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import { sanityFetch } from '@/lib/sanity.client'
-import { PRODUCT_BY_SLUG_QUERY, ALL_PRODUCTS_QUERY } from '@/lib/sanity.queries'
-import Image from 'next/image'
-import { useState, useEffect } from 'react'
-import { Heart, ShoppingBag, Check, Minus, Plus } from 'lucide-react'
-import Link from 'next/link'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { sanityFetch } from "@/lib/sanity.client";
+import {
+  PRODUCT_BY_SLUG_QUERY,
+  ALL_PRODUCTS_QUERY,
+} from "@/lib/sanity.queries";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { Heart, ShoppingBag, Check, Minus, Plus } from "lucide-react";
+import Link from "next/link";
 
 interface ProductDetailPageProps {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }
 
 export default function ProductDetailPage({ params }: ProductDetailPageProps) {
-  const [product, setProduct] = useState<any>(null)
-  const [relatedProducts, setRelatedProducts] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
-  const [selectedColor, setSelectedColor] = useState<string>('')
-  const [selectedSize, setSelectedSize] = useState<string>('')
-  const [quantity, setQuantity] = useState(1)
-  const [isFavorite, setIsFavorite] = useState(false)
-  const [addedToCart, setAddedToCart] = useState(false)
-  const [imageIndex, setImageIndex] = useState(0)
+  const [product, setProduct] = useState<any>(null);
+  const [relatedProducts, setRelatedProducts] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [selectedColor, setSelectedColor] = useState<string>("");
+  const [selectedSize, setSelectedSize] = useState<string>("");
+  const [quantity, setQuantity] = useState(1);
+  const [isFavorite, setIsFavorite] = useState(false);
+  const [addedToCart, setAddedToCart] = useState(false);
+  const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
     const loadProduct = async () => {
       try {
-        const { slug } = await params
+        const { slug } = await params;
         const data = await sanityFetch({
           query: PRODUCT_BY_SLUG_QUERY,
           params: { slug },
-        })
+        });
 
         if (data) {
-          setProduct(data)
+          setProduct(data);
           if (data.colors && data.colors.length > 0) {
-            setSelectedColor(data.colors[0]._id)
+            setSelectedColor(data.colors[0]._id);
           }
           if (data.sizes && data.sizes.length > 0) {
-            setSelectedSize(data.sizes[0]._id)
+            setSelectedSize(data.sizes[0]._id);
           }
 
           // Load related products
           const related = await sanityFetch({
             query: ALL_PRODUCTS_QUERY,
-          })
-          setRelatedProducts(related.filter((p: any) => p._id !== data._id).slice(0, 4))
+          });
+          setRelatedProducts(
+            related.filter((p: any) => p._id !== data._id).slice(0, 4),
+          );
         }
       } catch (error) {
-        console.error('Error loading product:', error)
+        console.error("Error loading product:", error);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
+    };
 
-    loadProduct()
-  }, [params])
+    loadProduct();
+  }, [params]);
 
   if (loading) {
     return (
@@ -67,7 +72,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
         </main>
         <Footer />
       </>
-    )
+    );
   }
 
   if (!product) {
@@ -77,25 +82,29 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
         <main className="bg-background min-h-screen flex items-center justify-center">
           <div className="text-center">
             <p className="text-foreground text-lg mb-4">Product not found</p>
-            <Link href="/products" className="text-foreground hover:text-[#e8d4a0] smooth-transition">
+            <Link
+              href="/products"
+              className="text-foreground hover:text-[#e8d4a0] smooth-transition"
+            >
               Back to Products
             </Link>
           </div>
         </main>
         <Footer />
       </>
-    )
+    );
   }
 
   const discount = product.salePrice
     ? Math.round(((product.price - product.salePrice) / product.price) * 100)
-    : 0
+    : 0;
 
-  const galleryImages = product.gallery && product.gallery.length > 0
-    ? [product.image, ...product.gallery]
-    : [product.image]
+  const galleryImages =
+    product.gallery && product.gallery.length > 0
+      ? [product.image, ...product.gallery]
+      : [product.image];
 
-  const currentImage = galleryImages[imageIndex]
+  const currentImage = galleryImages[imageIndex];
 
   return (
     <>
@@ -133,7 +142,9 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                         key={idx}
                         onClick={() => setImageIndex(idx)}
                         className={`relative aspect-square overflow-hidden rounded-sm border-2 smooth-transition ${
-                          imageIndex === idx ? 'border-[#d4af37]' : 'border-[#2d2d2d] hover:border-[#3a3a3a]'
+                          imageIndex === idx
+                            ? "border-[#d4af37]"
+                            : "border-[#2d2d2d] hover:border-[#3a3a3a]"
                         }`}
                       >
                         {img?.asset?.url && (
@@ -184,7 +195,9 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
 
                 {/* Description */}
                 {product.description && (
-                  <p className="text-foreground leading-relaxed">{product.description}</p>
+                  <p className="text-foreground leading-relaxed">
+                    {product.description}
+                  </p>
                 )}
 
                 {/* Options */}
@@ -202,14 +215,17 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                             onClick={() => setSelectedColor(color._id)}
                             className={`w-10 h-10 rounded-full border-2 smooth-transition hover:scale-110 flex items-center justify-center ${
                               selectedColor === color._id
-                                ? 'border-[#d4af37] ring-2 ring-[#d4af37]/50'
-                                : 'border-[#2d2d2d]'
+                                ? "border-[#d4af37] ring-2 ring-[#d4af37]/50"
+                                : "border-[#2d2d2d]"
                             }`}
                             style={{ backgroundColor: color.hex }}
                             title={color.name}
                           >
                             {selectedColor === color._id && (
-                              <Check size={16} className="text-white drop-shadow-lg" />
+                              <Check
+                                size={16}
+                                className="text-white drop-shadow-lg"
+                              />
                             )}
                           </button>
                         ))}
@@ -230,8 +246,8 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                             onClick={() => setSelectedSize(size._id)}
                             className={`py-2 px-3 rounded-sm border-2 text-sm font-semibold smooth-transition ${
                               selectedSize === size._id
-                                ? 'border-[#d4af37] bg-primary text-[#0a0a0a]'
-                                : 'border-[#2d2d2d] text-foreground hover:border-[#3a3a3a]'
+                                ? "border-[#d4af37] bg-primary text-[#0a0a0a]"
+                                : "border-[#2d2d2d] text-foreground hover:border-[#3a3a3a]"
                             }`}
                           >
                             {size.size}
@@ -253,7 +269,9 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                       >
                         <Minus size={16} />
                       </button>
-                      <span className="w-8 text-center font-semibold">{quantity}</span>
+                      <span className="w-8 text-center font-semibold">
+                        {quantity}
+                      </span>
                       <button
                         onClick={() => setQuantity(quantity + 1)}
                         className="p-2 border border-[#2d2d2d] rounded-sm hover:border-[#d4af37] smooth-transition"
@@ -268,13 +286,13 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                 <div className="space-y-3">
                   <button
                     onClick={() => {
-                      setAddedToCart(true)
-                      setTimeout(() => setAddedToCart(false), 2000)
+                      setAddedToCart(true);
+                      setTimeout(() => setAddedToCart(false), 2000);
                     }}
                     className={`w-full py-4 px-6 rounded-sm font-semibold text-lg flex items-center justify-center gap-2 smooth-transition ${
                       addedToCart
-                        ? 'bg-[#28a745] text-white'
-                        : 'bg-primary text-[#0a0a0a] hover:bg-[#e8d4a0]'
+                        ? "bg-[#28a745] text-white"
+                        : "bg-primary text-[#0a0a0a] hover:bg-[#e8d4a0]"
                     }`}
                     disabled={!product.inStock}
                   >
@@ -286,7 +304,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                     ) : (
                       <>
                         <ShoppingBag size={20} />
-                        {product.inStock ? 'Add to Cart' : 'Out of Stock'}
+                        {product.inStock ? "Add to Cart" : "Out of Stock"}
                       </>
                     )}
                   </button>
@@ -296,9 +314,9 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                   >
                     <Heart
                       size={20}
-                      className={isFavorite ? 'fill-[#d4af37]' : ''}
+                      className={isFavorite ? "fill-[#d4af37]" : ""}
                     />
-                    {isFavorite ? 'Saved' : 'Save for Later'}
+                    {isFavorite ? "Saved" : "Save for Later"}
                   </button>
                 </div>
 
@@ -310,9 +328,13 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                     </h3>
                     {product.materials.map((material: any) => (
                       <div key={material._id} className="text-sm">
-                        <p className="font-medium text-foreground">{material.name}</p>
+                        <p className="font-medium text-foreground">
+                          {material.name}
+                        </p>
                         {material.composition && (
-                          <p className="text-foreground">{material.composition}</p>
+                          <p className="text-foreground">
+                            {material.composition}
+                          </p>
                         )}
                       </div>
                     ))}
@@ -362,5 +384,5 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
       </main>
       <Footer />
     </>
-  )
+  );
 }

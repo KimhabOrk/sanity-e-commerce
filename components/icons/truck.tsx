@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface TruckIconProps {
   size?: number;
@@ -6,10 +6,10 @@ interface TruckIconProps {
   className?: string;
 }
 
-export function TruckIcon({ 
-  size = 36, 
-  color = 'currentColor',
-  className = ''
+export function TruckIcon({
+  size = 36,
+  color = "currentColor",
+  className = "",
 }: TruckIconProps) {
   return (
     <svg

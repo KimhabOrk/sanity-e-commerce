@@ -1,44 +1,51 @@
-import { Metadata } from "next"
-import { FeatureCard } from '@/components/feature-card'
-import Link from 'next/link'
-import { Crown, Shield, TreePine, Users } from 'lucide-react'
-import { HeroGradient } from '@/components/hero-gradient'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import { Metadata } from "next";
+import { FeatureCard } from "@/components/feature-card";
+import Link from "next/link";
+import { Crown, Shield, TreePine, Users } from "lucide-react";
+import { HeroGradient } from "@/components/hero-gradient";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: 'About Us | Kimhab Ork',
-  description: 'Discover Kimhab Ork\'s story. An affordable luxury womenswear brand dedicated to quality, sustainability, and empowering women through fashion.',
+  title: "About Us | Kimhab Ork",
+  description:
+    "Discover Kimhab Ork's story. An affordable luxury womenswear brand dedicated to quality, sustainability, and empowering women through fashion.",
   openGraph: {
-    title: 'About Us | Kimhab Ork',
-    description: 'Learn about our commitment to affordable luxury and sustainable fashion',
+    title: "About Us | Kimhab Ork",
+    description:
+      "Learn about our commitment to affordable luxury and sustainable fashion",
   },
-}
+};
 
 export default function AboutPage() {
   const values = [
-  {
-    title: 'Quality Over Quantity',
-    description: 'We believe in creating pieces that last. Every garment is carefully crafted with premium materials and attention to detail, ensuring you invest in items that remain timeless.',
-  },
-  {
-    title: 'Accessible Luxury',
-    description: 'Luxury fashion should not be exclusive. We make premium womenswear affordable without compromising on design, materials, or craftsmanship.',
-  },
-  {
-    title: 'Sustainable Fashion',
-    description: 'Our commitment to the environment is reflected in our material choices and production practices. We strive to minimize our ecological footprint while maximizing impact.',
-  },
-  {
-    title: 'Empowered Women',
-    description: 'We design for confident, modern women who value both style and substance. Every collection celebrates femininity, strength, and individuality.',
-  }, ]
-  
+    {
+      title: "Quality Over Quantity",
+      description:
+        "We believe in creating pieces that last. Every garment is carefully crafted with premium materials and attention to detail, ensuring you invest in items that remain timeless.",
+    },
+    {
+      title: "Accessible Luxury",
+      description:
+        "Luxury fashion should not be exclusive. We make premium womenswear affordable without compromising on design, materials, or craftsmanship.",
+    },
+    {
+      title: "Sustainable Fashion",
+      description:
+        "Our commitment to the environment is reflected in our material choices and production practices. We strive to minimize our ecological footprint while maximizing impact.",
+    },
+    {
+      title: "Empowered Women",
+      description:
+        "We design for confident, modern women who value both style and substance. Every collection celebrates femininity, strength, and individuality.",
+    },
+  ];
+
   return (
     <>
       <Header />
       <main className="flex-1">
-        <HeroGradient 
+        <HeroGradient
           title="Affordable Luxury for Modern Women"
           description="Kimhab Ork reimagines womenswear by combining exquisite design, premium quality materials, and sustainable practices at prices that celebrate accessibility."
         />
@@ -54,7 +61,7 @@ export default function AboutPage() {
           </div>
         </section>
         */}
-        
+
         {/* Our Story Section */}
         <section className="py-12 md:py-16 px-6 md:px-8 lg:px-10">
           <div className="mx-auto max-w-4xl">
@@ -63,13 +70,24 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-6 text-foreground/75 leading-relaxed">
               <p>
-                Kimhab Ork was born from a simple belief: premium fashion should be accessible to everyone. Founded with a vision to bridge the gap between high fashion and everyday elegance, we create womenswear that empowers women to express themselves without compromise.
+                Kimhab Ork was born from a simple belief: premium fashion should
+                be accessible to everyone. Founded with a vision to bridge the
+                gap between high fashion and everyday elegance, we create
+                womenswear that empowers women to express themselves without
+                compromise.
               </p>
               <p>
-                Every piece in our collection is thoughtfully designed with the modern woman in mind. We draw inspiration from contemporary style, timeless elegance, and the diverse needs of women who refuse to choose between quality, design, and affordability.
+                Every piece in our collection is thoughtfully designed with the
+                modern woman in mind. We draw inspiration from contemporary
+                style, timeless elegance, and the diverse needs of women who
+                refuse to choose between quality, design, and affordability.
               </p>
               <p>
-                Our name reflects our commitment: Kimhab carries the essence of Khmer culture and heritage, while Ork symbolizes new beginnings and growth. Together, they represent our vision of creating something beautiful that resonates across cultures and generations.
+                Our name reflects our commitment: Kimhab carries the essence of
+                Khmer culture and heritage, while Ork symbolizes new beginnings
+                and growth. Together, they represent our vision of creating
+                something beautiful that resonates across cultures and
+                generations.
               </p>
             </div>
           </div>
@@ -132,7 +150,9 @@ export default function AboutPage() {
                     Premium Materials
                   </h3>
                   <p className="text-foreground/75">
-                    We source the finest fabrics and materials, including organic cotton, sustainable silk, and responsibly-sourced textiles that feel luxurious and last longer.
+                    We source the finest fabrics and materials, including
+                    organic cotton, sustainable silk, and responsibly-sourced
+                    textiles that feel luxurious and last longer.
                   </p>
                 </div>
               </div>
@@ -148,7 +168,9 @@ export default function AboutPage() {
                     Timeless Design
                   </h3>
                   <p className="text-foreground/75">
-                    Our collections focus on versatile, classic silhouettes with modern details. Pieces that work today and remain relevant for years to come.
+                    Our collections focus on versatile, classic silhouettes with
+                    modern details. Pieces that work today and remain relevant
+                    for years to come.
                   </p>
                 </div>
               </div>
@@ -164,7 +186,9 @@ export default function AboutPage() {
                     Ethical Production
                   </h3>
                   <p className="text-foreground/75">
-                    We partner with manufacturers who prioritize fair wages, safe working conditions, and environmental responsibility throughout our supply chain.
+                    We partner with manufacturers who prioritize fair wages,
+                    safe working conditions, and environmental responsibility
+                    throughout our supply chain.
                   </p>
                 </div>
               </div>
@@ -180,7 +204,9 @@ export default function AboutPage() {
                     Exceptional Value
                   </h3>
                   <p className="text-foreground/75">
-                    Quality womenswear at accessible prices. We believe you shouldn't have to compromise on quality or pay luxury prices for great fashion.
+                    Quality womenswear at accessible prices. We believe you
+                    shouldn't have to compromise on quality or pay luxury prices
+                    for great fashion.
                   </p>
                 </div>
               </div>
@@ -195,7 +221,9 @@ export default function AboutPage() {
               Discover Our Collections
             </h2>
             <p className="text-lg mb-8 opacity-95 text-balance max-w-2xl mx-auto leading-relaxed">
-              Explore our thoughtfully curated womenswear collections designed for the modern woman who values quality, style, and sustainability.
+              Explore our thoughtfully curated womenswear collections designed
+              for the modern woman who values quality, style, and
+              sustainability.
             </p>
             <Link
               href="/"
@@ -207,6 +235,6 @@ export default function AboutPage() {
         </section>
       </main>
       <Footer />
-      </>
-  )
+    </>
+  );
 }

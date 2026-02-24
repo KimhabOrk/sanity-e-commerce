@@ -1,31 +1,30 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { ChevronRight } from 'lucide-react'
+import Image from "next/image";
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 
 interface HeroBannerProps {
-  title: string
-  subtitle?: string
+  title: string;
+  subtitle?: string;
   cta?: {
-    text: string
-    href: string
-  }
-  image?: string
+    text: string;
+    href: string;
+  };
+  image?: string;
 }
 
-export default function HeroBanner({ title, subtitle, cta, image }: HeroBannerProps) {
+export default function HeroBanner({
+  title,
+  subtitle,
+  cta,
+  image,
+}: HeroBannerProps) {
   return (
     <section className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden rounded-sm">
       {/* Background Image */}
       {image ? (
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover"
-          priority
-        />
+        <Image src={image} alt={title} fill className="object-cover" priority />
       ) : (
         <div className="w-full h-full bg-gradient-to-br from-[#2d2d2d] to-[#1a1a1a]" />
       )}
@@ -58,12 +57,15 @@ export default function HeroBanner({ title, subtitle, cta, image }: HeroBannerPr
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition group"
               >
                 {cta.text}
-                <ChevronRight size={20} className="group-hover:translate-x-1 smooth-transition" />
+                <ChevronRight
+                  size={20}
+                  className="group-hover:translate-x-1 smooth-transition"
+                />
               </Link>
             </div>
           )}
         </div>
       </div>
     </section>
-  )
+  );
 }

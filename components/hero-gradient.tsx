@@ -1,16 +1,13 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
 interface HeroGradientProps {
   title: string;
   description?: string;
 }
 
-export function HeroGradient({
-  title,
-  description,
-}: HeroGradientProps) {
+export function HeroGradient({ title, description }: HeroGradientProps) {
   return (
     <div className="relative w-full overflow-hidden bg-black">
       {/* Animated background gradient elements */}

@@ -1,21 +1,22 @@
-import { Metadata } from "next"
-import { FeatureCard } from '@/components/feature-card'
-import { Leaf, Users, Globe } from 'lucide-react'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import { Metadata } from "next";
+import { FeatureCard } from "@/components/feature-card";
+import { Leaf, Users, Globe } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: 'Our Commitment to Responsibility | Kimhab Ork',
-  description: 'Discover Kimhab Ork\'s commitment to sustainable fashion, ethical sourcing, and responsible production practices.',
+  title: "Our Commitment to Responsibility | Kimhab Ork",
+  description:
+    "Discover Kimhab Ork's commitment to sustainable fashion, ethical sourcing, and responsible production practices.",
   openGraph: {
-    title: 'Our Commitment to Responsibility | Kimhab Ork',
-    description: 'Sustainable and ethical practices in fashion',
+    title: "Our Commitment to Responsibility | Kimhab Ork",
+    description: "Sustainable and ethical practices in fashion",
   },
-}
+};
 
 export default function ResponsibilityPage() {
   return (
-        <>
+    <>
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
@@ -25,7 +26,9 @@ export default function ResponsibilityPage() {
               Our Commitment to Responsibility
             </h1>
             <p className="text-lg text-foreground/75 mb-8 text-balance max-w-2xl mx-auto leading-relaxed">
-              At Kimhab Ork, we believe that sustainable fashion and ethical practices are not optional—they are fundamental to who we are as a brand.
+              At Kimhab Ork, we believe that sustainable fashion and ethical
+              practices are not optional—they are fundamental to who we are as a
+              brand.
             </p>
           </div>
         </section>
@@ -38,7 +41,12 @@ export default function ResponsibilityPage() {
             </h2>
             <div className="bg-card p-8 rounded-lg border border-border/70">
               <p className="text-foreground/75 leading-relaxed text-lg">
-                Kimhab Ork is committed to embedding sustainability as a fundamental part of our strategic development for a more responsible, net-positive future across climate, nature, and people. We are accountable as a business, as part of society, and as individuals contributing to the biodiversity that shares our planet.
+                Kimhab Ork is committed to embedding sustainability as a
+                fundamental part of our strategic development for a more
+                responsible, net-positive future across climate, nature, and
+                people. We are accountable as a business, as part of society,
+                and as individuals contributing to the biodiversity that shares
+                our planet.
               </p>
             </div>
           </div>
@@ -77,7 +85,10 @@ export default function ResponsibilityPage() {
         </section>
 
         {/* Responsible Sourcing Details */}
-        <section className="py-12 md:py-16 px-6 md:px-8 lg:px-10 bg-background" id="sourcing">
+        <section
+          className="py-12 md:py-16 px-6 md:px-8 lg:px-10 bg-background"
+          id="sourcing"
+        >
           <div className="mx-auto max-w-4xl">
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-8">
               Our Material Standards
@@ -85,7 +96,9 @@ export default function ResponsibilityPage() {
             <div className="bg-muted p-8 rounded-lg border border-border/70">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-semibold text-primary mb-3">Regeneratively-Grown</h4>
+                  <h4 className="font-semibold text-primary mb-3">
+                    Regeneratively-Grown
+                  </h4>
                   <ul className="space-y-2 text-foreground/75 text-sm">
                     <li className="flex gap-2">
                       <span className="text-accent">•</span>
@@ -98,7 +111,9 @@ export default function ResponsibilityPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary mb-3">Organically-Produced</h4>
+                  <h4 className="font-semibold text-primary mb-3">
+                    Organically-Produced
+                  </h4>
                   <ul className="space-y-2 text-foreground/70 text-sm">
                     <li className="flex gap-2">
                       <span className="text-accent">•</span>
@@ -111,7 +126,9 @@ export default function ResponsibilityPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary mb-3">Recycled Materials</h4>
+                  <h4 className="font-semibold text-primary mb-3">
+                    Recycled Materials
+                  </h4>
                   <ul className="space-y-2 text-foreground/70 text-sm">
                     <li className="flex gap-2">
                       <span className="text-accent">•</span>
@@ -124,7 +141,9 @@ export default function ResponsibilityPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary mb-3">Other Certifications</h4>
+                  <h4 className="font-semibold text-primary mb-3">
+                    Other Certifications
+                  </h4>
                   <ul className="space-y-2 text-foreground/70 text-sm">
                     <li className="flex gap-2">
                       <span className="text-accent">•</span>
@@ -149,28 +168,46 @@ export default function ResponsibilityPage() {
             </h2>
             <div className="space-y-6">
               <p className="text-foreground/70 leading-relaxed">
-                We are committed to driving positive impact on people throughout our supply chain. We go beyond minimum compliance to ensure rigorous social, ethical, and environmental standards are maintained.
+                We are committed to driving positive impact on people throughout
+                our supply chain. We go beyond minimum compliance to ensure
+                rigorous social, ethical, and environmental standards are
+                maintained.
               </p>
 
               <div className="space-y-4">
                 <div className="border-l-4 border-primary pl-6 py-4">
-                  <h3 className="font-semibold text-foreground mb-2">Fair Labor Practices</h3>
+                  <h3 className="font-semibold text-foreground mb-2">
+                    Fair Labor Practices
+                  </h3>
                   <p className="text-foreground/70">
-                    We monitor and enforce fair wages, safe working conditions, and proper treatment of workers throughout our supply chain. We are committed to strengthening the protections of all artisans involved in our production.
+                    We monitor and enforce fair wages, safe working conditions,
+                    and proper treatment of workers throughout our supply chain.
+                    We are committed to strengthening the protections of all
+                    artisans involved in our production.
                   </p>
                 </div>
 
                 <div className="border-l-4 border-accent pl-6 py-4">
-                  <h3 className="font-semibold text-foreground mb-2">Worker Welfare & Safety</h3>
+                  <h3 className="font-semibold text-foreground mb-2">
+                    Worker Welfare & Safety
+                  </h3>
                   <p className="text-foreground/70">
-                    Health and safety, welfare standards, fair pay, human rights protection, and prevention of forced labor and discrimination are non-negotiable priorities in our operations.
+                    Health and safety, welfare standards, fair pay, human rights
+                    protection, and prevention of forced labor and
+                    discrimination are non-negotiable priorities in our
+                    operations.
                   </p>
                 </div>
 
                 <div className="border-l-4 border-secondary pl-6 py-4">
-                  <h3 className="font-semibold text-foreground mb-2">Supply Chain Accountability</h3>
+                  <h3 className="font-semibold text-foreground mb-2">
+                    Supply Chain Accountability
+                  </h3>
                   <p className="text-foreground/70">
-                    We routinely audit and monitor our suppliers to ensure compliance with our standards. We provide training and support to help partners meet and exceed ethical requirements.
+                    We routinely audit and monitor our suppliers to ensure
+                    compliance with our standards. We provide training and
+                    support to help partners meet and exceed ethical
+                    requirements.
                   </p>
                 </div>
               </div>
@@ -179,39 +216,64 @@ export default function ResponsibilityPage() {
         </section>
 
         {/* Environmental Impact */}
-        <section className="py-12 md:py-16 px-6 md:px-8 lg:px-10 bg-background" id="environmental">
+        <section
+          className="py-12 md:py-16 px-6 md:px-8 lg:px-10 bg-background"
+          id="environmental"
+        >
           <div className="mx-auto max-w-4xl">
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">
               Reducing Environmental Impact
             </h2>
             <div className="space-y-8">
               <p className="text-foreground/70 leading-relaxed">
-                We are designing and implementing creative solutions to facilitate the use of traceable, low-impact, responsibly sourced, and recyclable materials across our products. Our goal is to mainstream these materials within our collections and minimize waste throughout our operations.
+                We are designing and implementing creative solutions to
+                facilitate the use of traceable, low-impact, responsibly
+                sourced, and recyclable materials across our products. Our goal
+                is to mainstream these materials within our collections and
+                minimize waste throughout our operations.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="p-6 bg-muted rounded-lg">
-                  <h3 className="font-semibold text-primary mb-4">Restricted Materials</h3>
+                  <h3 className="font-semibold text-primary mb-4">
+                    Restricted Materials
+                  </h3>
                   <p className="text-sm text-foreground/70">
-                    We have restricted the use of certain high-impact and ethically challenging materials. Animal fur is excluded from our collections, and we continuously evaluate new restrictions to minimize harm.
+                    We have restricted the use of certain high-impact and
+                    ethically challenging materials. Animal fur is excluded from
+                    our collections, and we continuously evaluate new
+                    restrictions to minimize harm.
                   </p>
                 </div>
                 <div className="p-6 bg-muted rounded-lg">
-                  <h3 className="font-semibold text-primary mb-4">Carbon Footprint Reduction</h3>
+                  <h3 className="font-semibold text-primary mb-4">
+                    Carbon Footprint Reduction
+                  </h3>
                   <p className="text-sm text-foreground/70">
-                    We prioritize materials and processes with lower carbon footprints. Our sourcing team evaluates the environmental impact of every material choice in our collections.
+                    We prioritize materials and processes with lower carbon
+                    footprints. Our sourcing team evaluates the environmental
+                    impact of every material choice in our collections.
                   </p>
                 </div>
                 <div className="p-6 bg-muted rounded-lg">
-                  <h3 className="font-semibold text-primary mb-4">Water Conservation</h3>
+                  <h3 className="font-semibold text-primary mb-4">
+                    Water Conservation
+                  </h3>
                   <p className="text-sm text-foreground/70">
-                    We work with suppliers to minimize water usage in production. Organic and responsibly-sourced materials significantly reduce water consumption compared to conventional methods.
+                    We work with suppliers to minimize water usage in
+                    production. Organic and responsibly-sourced materials
+                    significantly reduce water consumption compared to
+                    conventional methods.
                   </p>
                 </div>
                 <div className="p-6 bg-muted rounded-lg">
-                  <h3 className="font-semibold text-primary mb-4">Waste Reduction</h3>
+                  <h3 className="font-semibold text-primary mb-4">
+                    Waste Reduction
+                  </h3>
                   <p className="text-sm text-foreground/70">
-                    Through circular design practices and responsible production methods, we minimize waste. We encourage customers to care for and maintain their pieces for longevity.
+                    Through circular design practices and responsible production
+                    methods, we minimize waste. We encourage customers to care
+                    for and maintain their pieces for longevity.
                   </p>
                 </div>
               </div>
@@ -227,17 +289,22 @@ export default function ResponsibilityPage() {
             </h2>
             <div className="space-y-4">
               {[
-                'We have developed a comprehensive social responsibility program ensuring rigorous standards throughout our supply chain',
-                'Responsible Sourcing Internal Guidance supports our sourcing, product development, and design teams in making effective daily choices',
-                'Our Sustainability, Communications, and Digital departments work closely to ensure accurate information is presented for each product',
-                'We track the percentage of responsibly-sourced styles in each collection containing over 50% responsibly sourced materials by weight',
-                'We remain committed to transparency and openly communicate our progress, achievements, and areas for improvement',
+                "We have developed a comprehensive social responsibility program ensuring rigorous standards throughout our supply chain",
+                "Responsible Sourcing Internal Guidance supports our sourcing, product development, and design teams in making effective daily choices",
+                "Our Sustainability, Communications, and Digital departments work closely to ensure accurate information is presented for each product",
+                "We track the percentage of responsibly-sourced styles in each collection containing over 50% responsibly sourced materials by weight",
+                "We remain committed to transparency and openly communicate our progress, achievements, and areas for improvement",
               ].map((policy, index) => (
-                <div key={index} className="flex gap-4 p-4 bg-muted rounded-lg border border-border/40">
+                <div
+                  key={index}
+                  className="flex gap-4 p-4 bg-muted rounded-lg border border-border/40"
+                >
                   <span className="text-primary font-semibold text-xl mt-0.5 flex-shrink-0">
                     {index + 1}
                   </span>
-                  <p className="text-muted-foreground/80 leading-relaxed">{policy}</p>
+                  <p className="text-muted-foreground/80 leading-relaxed">
+                    {policy}
+                  </p>
                 </div>
               ))}
             </div>
@@ -252,13 +319,22 @@ export default function ResponsibilityPage() {
             </h2>
             <div className="space-y-6 text-foreground/70 bg-muted/60 leading-relaxed p-5 rounded-lg">
               <p>
-                At Kimhab Ork, we understand that responsibility is a journey, not a destination. We are on this journey and look forward to sharing our progress with you. Our targets are continually assessed to ensure they remain both ambitious and achievable.
+                At Kimhab Ork, we understand that responsibility is a journey,
+                not a destination. We are on this journey and look forward to
+                sharing our progress with you. Our targets are continually
+                assessed to ensure they remain both ambitious and achievable.
               </p>
               <p>
-                We are increasing supplier engagement, training, and upskilling our internal teams on low-impact, responsible sourcing and design. We are laying the foundation for what's to come while remaining open and honest about our progress and challenges.
+                We are increasing supplier engagement, training, and upskilling
+                our internal teams on low-impact, responsible sourcing and
+                design. We are laying the foundation for what's to come while
+                remaining open and honest about our progress and challenges.
               </p>
               <p>
-                Through increasing the use of responsibly sourced materials, partnering with ethical manufacturers, and maintaining transparency with our customers, we are building a more sustainable future for affordable luxury fashion.
+                Through increasing the use of responsibly sourced materials,
+                partnering with ethical manufacturers, and maintaining
+                transparency with our customers, we are building a more
+                sustainable future for affordable luxury fashion.
               </p>
             </div>
           </div>
@@ -271,7 +347,8 @@ export default function ResponsibilityPage() {
               Join Us in Building a Better Future
             </h2>
             <p className="text-lg mb-8 opacity-90 text-balance max-w-2xl mx-auto leading-relaxed">
-              By choosing Kimhab Ork, you're supporting sustainable fashion and ethical practices. Every purchase matters.
+              By choosing Kimhab Ork, you're supporting sustainable fashion and
+              ethical practices. Every purchase matters.
             </p>
             <a
               href="/"
@@ -282,7 +359,7 @@ export default function ResponsibilityPage() {
           </div>
         </section>
       </main>
-     <Footer />
-      </>
-  )
+      <Footer />
+    </>
+  );
 }

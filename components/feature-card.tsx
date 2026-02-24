@@ -1,14 +1,14 @@
-'use client'
+"use client";
 
-import React from 'react'
+import React from "react";
 
 interface FeatureCardProps {
-  icon?: React.ReactNode
-  title: string
-  description: string
-  ctaText: string
-  ctaHref: string
-  className?: string
+  icon?: React.ReactNode;
+  title: string;
+  description: string;
+  ctaText: string;
+  ctaHref: string;
+  className?: string;
 }
 
 export function FeatureCard({
@@ -17,7 +17,7 @@ export function FeatureCard({
   description,
   ctaText,
   ctaHref,
-  className = '',
+  className = "",
 }: FeatureCardProps) {
   return (
     <a
@@ -44,8 +44,10 @@ export function FeatureCard({
       {/* CTA */}
       <span className="inline-flex items-center text-primary font-semibold text-sm md:text-base group-hover:gap-2 transition-all gap-1">
         {ctaText}
-        <span className="transition-transform group-hover:translate-x-1">→</span>
+        <span className="transition-transform group-hover:translate-x-1">
+          →
+        </span>
       </span>
     </a>
-  )
+  );
 }

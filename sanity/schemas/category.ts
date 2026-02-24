@@ -1,44 +1,44 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: 'category',
-  title: 'Category',
-  type: 'document',
+  name: "category",
+  title: "Category",
+  type: "document",
   fields: [
     defineField({
-      name: 'name',
-      title: 'Category Name',
-      type: 'string',
+      name: "name",
+      title: "Category Name",
+      type: "string",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'slug',
-      title: 'URL Slug',
-      type: 'slug',
+      name: "slug",
+      title: "URL Slug",
+      type: "slug",
       options: {
-        source: 'name',
+        source: "name",
         maxLength: 96,
       },
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'text',
+      name: "description",
+      title: "Description",
+      type: "text",
     }),
     defineField({
-      name: 'image',
-      title: 'Category Image',
-      type: 'image',
+      name: "image",
+      title: "Category Image",
+      type: "image",
       options: {
         hotspot: true,
       },
     }),
     defineField({
-      name: 'parent',
-      title: 'Parent Category',
-      type: 'reference',
-      to: [{type: 'category'}],
+      name: "parent",
+      title: "Parent Category",
+      type: "reference",
+      to: [{ type: "category" }],
     }),
   ],
-})
+});

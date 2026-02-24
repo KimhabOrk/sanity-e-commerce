@@ -18,7 +18,7 @@ export const ALL_PRODUCTS_QUERY = `
     inStock,
     featured,
   }
-`
+`;
 
 export const FEATURED_PRODUCTS_QUERY = `
   *[_type == "product" && featured == true] | order(publishedAt desc) {
@@ -34,7 +34,7 @@ export const FEATURED_PRODUCTS_QUERY = `
     category->{_id, name, slug},
     inStock,
   }
-`
+`;
 
 export const PRODUCT_BY_SLUG_QUERY = `
   *[_type == "product" && slug.current == $slug] {
@@ -59,7 +59,7 @@ export const PRODUCT_BY_SLUG_QUERY = `
     inStock,
     tags,
   }[0]
-`
+`;
 
 export const PRODUCTS_BY_CATEGORY_QUERY = `
   *[_type == "product" && category->slug.current == $categorySlug] | order(publishedAt desc) {
@@ -75,7 +75,7 @@ export const PRODUCTS_BY_CATEGORY_QUERY = `
     category->{_id, name, slug},
     inStock,
   }
-`
+`;
 
 // Category Queries
 export const ALL_CATEGORIES_QUERY = `
@@ -89,7 +89,7 @@ export const ALL_CATEGORIES_QUERY = `
     },
     parent->{_id, name, slug},
   }
-`
+`;
 
 export const CATEGORY_BY_SLUG_QUERY = `
   *[_type == "category" && slug.current == $slug] {
@@ -102,7 +102,7 @@ export const CATEGORY_BY_SLUG_QUERY = `
     },
     parent->{_id, name, slug},
   }[0]
-`
+`;
 
 // Collection Queries
 export const ALL_COLLECTIONS_QUERY = `
@@ -117,7 +117,7 @@ export const ALL_COLLECTIONS_QUERY = `
     season,
     featured,
   }
-`
+`;
 
 export const FEATURED_COLLECTIONS_QUERY = `
   *[_type == "collection" && featured == true] | order(publishedAt desc) {
@@ -130,7 +130,7 @@ export const FEATURED_COLLECTIONS_QUERY = `
     },
     season,
   }
-`
+`;
 
 export const COLLECTION_BY_SLUG_QUERY = `
   *[_type == "collection" && slug.current == $slug] {
@@ -156,7 +156,7 @@ export const COLLECTION_BY_SLUG_QUERY = `
     season,
     featured,
   }[0]
-`
+`;
 
 export const PRODUCTS_BY_COLLECTION_QUERY = `
   *[_type == "product" && $collectionId in collections[]._ref] | order(publishedAt desc) {
@@ -171,9 +171,10 @@ export const PRODUCTS_BY_COLLECTION_QUERY = `
     },
     inStock,
   }
-`
+`;
 
-{/** Brand Queries
+{
+  /** Brand Queries
 export const ALL_BRANDS_QUERY = `
   *[_type == "brand"] | order(name asc) {
     _id,
@@ -197,4 +198,5 @@ export const BRAND_BY_SLUG_QUERY = `
     website,
   }[0]
 `
-**/}
+**/
+}

@@ -69,8 +69,9 @@ function FooterSection({
       >
         <h4 className="font-semibold text-sm md:text-base">{section.title}</h4>
         <ChevronDown
-          className={`h-4 w-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""
-            }`}
+          className={`h-4 w-4 transition-transform duration-200 ${
+            isOpen ? "rotate-180" : ""
+          }`}
         />
       </button>
 
@@ -79,8 +80,9 @@ function FooterSection({
       </h4>
 
       <ul
-        className={`overflow-hidden transition-all duration-300 md:transition-none md:max-h-none space-y-2 text-sm text-foreground/75 md:space-y-3 ${isOpen ? "max-h-96 md:max-h-none pb-4" : "max-h-0 md:max-h-none"
-          }`}
+        className={`overflow-hidden transition-all duration-300 md:transition-none md:max-h-none space-y-2 text-sm text-foreground/75 md:space-y-3 ${
+          isOpen ? "max-h-96 md:max-h-none pb-4" : "max-h-0 md:max-h-none"
+        }`}
       >
         {section.links.map((link) => (
           <li key={link.href}>
@@ -128,7 +130,9 @@ export default function Footer() {
               alt="Logo"
               className="h-full w-[160px] md:w-32 object-cover mb-2"
             />
-            <p className="text-sm md:text-lg">Affordable Luxury Fashion For Bold Modern Women.</p>
+            <p className="text-sm md:text-lg">
+              Affordable Luxury Fashion For Bold Modern Women.
+            </p>
           </div>
         </div>
 

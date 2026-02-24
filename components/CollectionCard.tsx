@@ -1,34 +1,41 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
-import { useState } from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { useState } from "react";
 
 interface CollectionImage {
   asset?: {
-    url: string
-    alt?: string
-  }
+    url: string;
+    alt?: string;
+  };
 }
 
 interface Collection {
-  _id: string
-  name: string
+  _id: string;
+  name: string;
   slug: {
-    current: string
-  }
-  description?: string
-  image?: CollectionImage
-  season?: string
+    current: string;
+  };
+  description?: string;
+  image?: CollectionImage;
+  season?: string;
 }
 
-export default function CollectionCard({ collection }: { collection: Collection }) {
-  const [isHovered, setIsHovered] = useState(false)
+export default function CollectionCard({
+  collection,
+}: {
+  collection: Collection;
+}) {
+  const [isHovered, setIsHovered] = useState(false);
 
   const seasonLabel = collection.season
-    ? collection.season.split('-').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-    : ''
+    ? collection.season
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ")
+    : "";
 
   return (
     <Link href={`/collections/${collection.slug.current}`}>
@@ -75,7 +82,7 @@ export default function CollectionCard({ collection }: { collection: Collection 
             {/* CTA Button */}
             <div
               className={`mt-4 flex items-center gap-2 text-foreground font-medium smooth-transition ${
-                isHovered ? 'translate-x-2' : ''
+                isHovered ? "translate-x-2" : ""
               }`}
             >
               <span>Explore</span>
@@ -85,5 +92,5 @@ export default function CollectionCard({ collection }: { collection: Collection 
         </div>
       </div>
     </Link>
-  )
+  );
 }

@@ -1,37 +1,41 @@
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import HeroBanner from '@/components/HeroBanner'
-import ProductCard from '@/components/ProductCard'
-import CollectionCard from '@/components/CollectionCard'
-import { sanityFetch } from '@/lib/sanity.client'
-import { FEATURED_PRODUCTS_QUERY, FEATURED_COLLECTIONS_QUERY } from '@/lib/sanity.queries'
-import Link from 'next/link'
-import { ChevronRight } from 'lucide-react'
-import { QualityIcon, ReturnIcon, TruckIcon } from '@/components/icons'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import HeroBanner from "@/components/HeroBanner";
+import ProductCard from "@/components/ProductCard";
+import CollectionCard from "@/components/CollectionCard";
+import { sanityFetch } from "@/lib/sanity.client";
+import {
+  FEATURED_PRODUCTS_QUERY,
+  FEATURED_COLLECTIONS_QUERY,
+} from "@/lib/sanity.queries";
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
+import { QualityIcon, ReturnIcon, TruckIcon } from "@/components/icons";
 
 export const metadata = {
-  title: 'KIMHAB ORK - Premium Womenswear Fashion',
-  description: 'Discover curated collections of luxury womenswear featuring premium fabrics and contemporary designs.',
-}
+  title: "KIMHAB ORK - Premium Womenswear Fashion",
+  description:
+    "Discover curated collections of luxury womenswear featuring premium fabrics and contemporary designs.",
+};
 
 export default async function HomePage() {
-  let featuredProducts = []
-  let featuredCollections = []
+  let featuredProducts = [];
+  let featuredCollections = [];
 
   try {
     featuredProducts = await sanityFetch({
       query: FEATURED_PRODUCTS_QUERY,
-    })
+    });
   } catch (error) {
-    console.error('Error fetching featured products:', error)
+    console.error("Error fetching featured products:", error);
   }
 
   try {
     featuredCollections = await sanityFetch({
       query: FEATURED_COLLECTIONS_QUERY,
-    })
+    });
   } catch (error) {
-    console.error('Error fetching featured collections:', error)
+    console.error("Error fetching featured collections:", error);
   }
 
   return (
@@ -43,7 +47,7 @@ export default async function HomePage() {
           <HeroBanner
             title="Spring/Summer Collection"
             subtitle="Discover elegance redefined. Premium fabrics and contemporary designs for the modern woman."
-            cta={{ text: 'Shop Now', href: '/collections' }}
+            cta={{ text: "Shop Now", href: "/collections" }}
             image="https://ik.imagekit.io/kimhabork/assets/IMG_20260222_212408.jpg"
           />
         </div>
@@ -61,12 +65,17 @@ export default async function HomePage() {
             {featuredCollections.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {featuredCollections.map((collection) => (
-                  <CollectionCard key={collection._id} collection={collection} />
+                  <CollectionCard
+                    key={collection._id}
+                    collection={collection}
+                  />
                 ))}
               </div>
             ) : (
               <div className="text-center py-12">
-                <p className="text-muted-foreground">No featured collections available yet.</p>
+                <p className="text-muted-foreground">
+                  No featured collections available yet.
+                </p>
               </div>
             )}
           </section>
@@ -86,7 +95,10 @@ export default async function HomePage() {
               className="hidden md:flex items-center gap-2 text-foreground font-semibold hover:text-[#e8d4a0] smooth-transition group"
             >
               View All
-              <ChevronRight size={20} className="group-hover:translate-x-1 smooth-transition" />
+              <ChevronRight
+                size={20}
+                className="group-hover:translate-x-1 smooth-transition"
+              />
             </Link>
           </div>
 
@@ -98,7 +110,9 @@ export default async function HomePage() {
             </div>
           ) : (
             <div className="text-center py-12">
-              <p className="text-muted-foreground">No featured products available yet.</p>
+              <p className="text-muted-foreground">
+                No featured products available yet.
+              </p>
             </div>
           )}
 
@@ -116,27 +130,49 @@ export default async function HomePage() {
           <div className="grid grid-cols-3 gap-4 md:gap-8">
             {[
               {
-                title: 'Premium Quality',
-                description: 'Handpicked fabrics and meticulous craftsmanship in every piece.',
-                icon : <QualityIcon size={32} className='text-foreground w-8 h-8 md:w-10 md:h-10' />
+                title: "Premium Quality",
+                description:
+                  "Handpicked fabrics and meticulous craftsmanship in every piece.",
+                icon: (
+                  <QualityIcon
+                    size={32}
+                    className="text-foreground w-8 h-8 md:w-10 md:h-10"
+                  />
+                ),
               },
               {
-                title: 'Fast Shipping',
-                description: 'Free shipping on orders over $200. Ships within 2-3 business days.',
-                icon : <TruckIcon size={32} className='text-foreground w-8 h-8 md:w-10 md:h-10' />
+                title: "Fast Shipping",
+                description:
+                  "Free shipping on orders over $200. Ships within 2-3 business days.",
+                icon: (
+                  <TruckIcon
+                    size={32}
+                    className="text-foreground w-8 h-8 md:w-10 md:h-10"
+                  />
+                ),
               },
               {
-                title: '30-Day Returns',
-                description: 'Shop with confidence. Easy returns within 30 days of purchase.',
-                icon : <ReturnIcon size={32} className='text-foreground w-8 h-8 md:w-10 md:h-10' />
+                title: "30-Day Returns",
+                description:
+                  "Shop with confidence. Easy returns within 30 days of purchase.",
+                icon: (
+                  <ReturnIcon
+                    size={32}
+                    className="text-foreground w-8 h-8 md:w-10 md:h-10"
+                  />
+                ),
               },
             ].map((feature, index) => (
               <div key={index} className="text-center space-y-3">
                 <div className="flex justify-center items-center mx-auto mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="font-semibold text-foreground">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
+                <h3 className="font-semibold text-foreground">
+                  {feature.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -156,7 +192,8 @@ export default async function HomePage() {
                 Join Our Inner Circle
               </h2>
               <p className="text-lg text-muted-foreground">
-                Subscribe to our newsletter for early access to new collections, exclusive events, and special offers.
+                Subscribe to our newsletter for early access to new collections,
+                exclusive events, and special offers.
               </p>
               <div className="flex flex-col md:flex-row gap-3 pt-4">
                 <input
@@ -174,5 +211,5 @@ export default async function HomePage() {
       </main>
       <Footer />
     </>
-  )
+  );
 }

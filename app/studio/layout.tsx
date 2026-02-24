@@ -1,12 +1,12 @@
 export const metadata = {
-  title: 'Sanity Studio - LUXARA',
-  description: 'Content management for LUXARA Fashion',
-}
+  title: "Sanity Studio - LUXARA",
+  description: "Content management for LUXARA Fashion",
+};
 
 export default function StudioLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html>
@@ -15,5 +15,5 @@ export default function StudioLayout({
       </head>
       <body>{children}</body>
     </html>
-  )
+  );
 }

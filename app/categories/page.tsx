@@ -1,34 +1,34 @@
-'use client'
+"use client";
 
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import { sanityFetch } from '@/lib/sanity.client'
-import { ALL_CATEGORIES_QUERY } from '@/lib/sanity.queries'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useState, useEffect } from 'react'
-import { ChevronRight } from 'lucide-react'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { sanityFetch } from "@/lib/sanity.client";
+import { ALL_CATEGORIES_QUERY } from "@/lib/sanity.queries";
+import Image from "next/image";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { ChevronRight } from "lucide-react";
 
 export default function CategoriesPage() {
-  const [categories, setCategories] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
+  const [categories, setCategories] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadCategories = async () => {
       try {
         const data = await sanityFetch({
           query: ALL_CATEGORIES_QUERY,
-        })
-        setCategories(data)
+        });
+        setCategories(data);
       } catch (error) {
-        console.error('Error fetching categories:', error)
+        console.error("Error fetching categories:", error);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
+    };
 
-    loadCategories()
-  }, [])
+    loadCategories();
+  }, []);
 
   return (
     <>
@@ -41,7 +41,8 @@ export default function CategoriesPage() {
               Categories
             </h1>
             <p className="text-foreground max-w-2xl">
-              Browse our expertly curated categories to find exactly what you're looking for.
+              Browse our expertly curated categories to find exactly what you're
+              looking for.
             </p>
           </div>
         </section>
@@ -90,7 +91,9 @@ export default function CategoriesPage() {
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center py-20">
-                <p className="text-foreground text-lg mb-4">No categories found</p>
+                <p className="text-foreground text-lg mb-4">
+                  No categories found
+                </p>
                 <p className="text-sm text-[#8a8a8a]">Check back soon</p>
               </div>
             )}
@@ -99,5 +102,5 @@ export default function CategoriesPage() {
       </main>
       <Footer />
     </>
-  )
+  );
 }

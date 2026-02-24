@@ -1,17 +1,17 @@
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import Link from 'next/link'
-import { ShoppingBag } from 'lucide-react'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Link from "next/link";
+import { ShoppingBag } from "lucide-react";
 
 export const metadata = {
-  title: 'Shopping Cart - LUXARA',
-  description: 'Your shopping cart at LUXARA.',
-}
+  title: "Shopping Cart - LUXARA",
+  description: "Your shopping cart at LUXARA.",
+};
 
 export default function CartPage() {
   // Cart would be managed via state/context/database
   // This is a placeholder template
-  const cartItems = []
+  const cartItems = [];
 
   return (
     <>
@@ -31,7 +31,10 @@ export default function CartPage() {
           <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             {cartItems.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-20">
-                <ShoppingBag size={64} className="text-foreground mb-4 opacity-50" />
+                <ShoppingBag
+                  size={64}
+                  className="text-foreground mb-4 opacity-50"
+                />
                 <h2 className="font-playfair text-2xl font-bold text-foreground mb-2">
                   Your cart is empty
                 </h2>
@@ -50,7 +53,10 @@ export default function CartPage() {
                 {/* Cart Items */}
                 <div className="lg:col-span-2 space-y-4">
                   {cartItems.map((item: any) => (
-                    <div key={item.id} className="border border-[#2d2d2d] rounded-sm p-6 flex gap-6">
+                    <div
+                      key={item.id}
+                      className="border border-[#2d2d2d] rounded-sm p-6 flex gap-6"
+                    >
                       {/* Item preview would go here */}
                     </div>
                   ))}
@@ -59,7 +65,9 @@ export default function CartPage() {
                 {/* Order Summary */}
                 <div className="lg:col-span-1">
                   <div className="bg-[#1a1a1a] border border-[#2d2d2d] rounded-sm p-6 space-y-6 sticky top-24">
-                    <h2 className="font-semibold text-foreground text-lg">Order Summary</h2>
+                    <h2 className="font-semibold text-foreground text-lg">
+                      Order Summary
+                    </h2>
                     <div className="space-y-3 border-t border-b border-[#2d2d2d] py-4">
                       <div className="flex justify-between text-sm text-foreground">
                         <span>Subtotal</span>
@@ -96,5 +104,5 @@ export default function CartPage() {
       </main>
       <Footer />
     </>
-  )
+  );
 }

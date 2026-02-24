@@ -1,11 +1,11 @@
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import { Mail, Phone, MapPin, Clock } from 'lucide-react'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export const metadata = {
-  title: 'Contact Us - KIMHAB ORK',
-  description: 'Get in touch with KIMHAB ORK customer service.',
-}
+  title: "Contact Us - KIMHAB ORK",
+  description: "Get in touch with KIMHAB ORK customer service.",
+};
 
 export default function ContactPage() {
   return (
@@ -19,7 +19,8 @@ export default function ContactPage() {
               Contact Us
             </h1>
             <p className="text-foreground max-w-2xl">
-              We would love to hear from you. Reach out with any questions or feedback.
+              We would love to hear from you. Reach out with any questions or
+              feedback.
             </p>
           </div>
         </section>
@@ -32,24 +33,24 @@ export default function ContactPage() {
               {[
                 {
                   icon: Mail,
-                  title: 'Email',
-                  content: 'hello@kimhab.com',
-                  subtext: 'We reply within 24 hours',
+                  title: "Email",
+                  content: "hello@kimhab.com",
+                  subtext: "We reply within 24 hours",
                 },
                 {
                   icon: Phone,
-                  title: 'Phone',
-                  content: '+1 (234) 567-890',
-                  subtext: 'Monday - Friday, 10am - 6pm EST',
+                  title: "Phone",
+                  content: "+1 (234) 567-890",
+                  subtext: "Monday - Friday, 10am - 6pm EST",
                 },
                 {
                   icon: MapPin,
-                  title: 'Address',
-                  content: '123 Fashion Avenue',
-                  subtext: 'New York, NY 10001, USA',
+                  title: "Address",
+                  content: "123 Fashion Avenue",
+                  subtext: "New York, NY 10001, USA",
                 },
               ].map((item, index) => {
-                const IconComponent = item.icon
+                const IconComponent = item.icon;
                 return (
                   <div key={index} className="text-center space-y-3">
                     <div className="flex justify-center mb-4">
@@ -57,11 +58,15 @@ export default function ContactPage() {
                         <IconComponent size={24} className="text-foreground" />
                       </div>
                     </div>
-                    <h3 className="font-semibold text-foreground">{item.title}</h3>
-                    <p className="text-foreground font-semibold">{item.content}</p>
+                    <h3 className="font-semibold text-foreground">
+                      {item.title}
+                    </h3>
+                    <p className="text-foreground font-semibold">
+                      {item.content}
+                    </p>
                     <p className="text-sm text-foreground">{item.subtext}</p>
                   </div>
-                )
+                );
               })}
             </div>
 
@@ -142,5 +147,5 @@ export default function ContactPage() {
       </main>
       <Footer />
     </>
-  )
+  );
 }

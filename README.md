@@ -50,13 +50,15 @@ A beautifully designed, fully responsive e-commerce platform for luxury womenswe
 
 3. **Set up Sanity**
 
-   ```bash
+   ````bash
 
    npx sanity init
 
    ```txt
    - Follow the prompts to create a new Sanity project
    - Choose your project name, dataset name (usually "production"), and API visibility
+
+   ````
 
 4. **Environment Variables**
    Create a `.env.local` file in the project root:

@@ -7,6 +7,7 @@ KIMHAB ORK is a fully functional, production-ready luxury womenswear e-commerce 
 ## What's Included
 
 ### ✅ Sanity CMS Schema
+
 Complete headless CMS configuration with 7 schema types:
 
 1. **Product Schema**
@@ -38,6 +39,7 @@ Complete headless CMS configuration with 7 schema types:
 ### ✅ Frontend Implementation
 
 #### Pages Built
+
 - **Home** (`/`): Featured products, collections, hero banner, newsletter signup
 - **Products** (`/products`): All products listing with sorting
 - **Product Detail** (`/products/[slug]`): Full product page with gallery, colors, sizes, materials
@@ -51,6 +53,7 @@ Complete headless CMS configuration with 7 schema types:
 - **Contact** (`/contact`): Contact form, contact information
 
 #### Components Built
+
 - **Header**: Sticky navigation with search, wishlist, cart, mobile menu
 - **Footer**: Multi-column footer with links, social, newsletter, contact info
 - **ProductCard**: Product display with hover effects, favorites, add to cart
@@ -58,7 +61,8 @@ Complete headless CMS configuration with 7 schema types:
 - **HeroBanner**: Full-width hero with overlay, title, and CTA
 
 ### ✅ Dark Theme Design
-- **Primary Colors**: 
+
+- **Primary Colors**:
   - Background: #0a0a0a (deep black)
   - Foreground: #fafafa (off-white)
   - Primary Accent: #d4af37 (gold)
@@ -77,12 +81,14 @@ Complete headless CMS configuration with 7 schema types:
   - Glass-morphism effects on overlays
 
 ### ✅ Sanity Integration
+
 - Configured `sanity.client.ts` for client-side queries
 - Created `sanity.queries.ts` with comprehensive GROQ queries
 - Implemented server-side data fetching with Next.js
 - Support for both static and dynamic routes
 
 ### ✅ Code Quality
+
 - TypeScript support with complete type definitions
 - Responsive design (mobile-first)
 - Accessibility compliance (semantic HTML, ARIA labels)
@@ -92,6 +98,7 @@ Complete headless CMS configuration with 7 schema types:
 ## Setup Instructions
 
 ### Step 1: Environment Setup
+
 ```bash
 npm install
 # or
@@ -99,25 +106,31 @@ pnpm install
 ```
 
 ### Step 2: Sanity Configuration
+
 1. Create a free account at [sanity.io](https://sanity.io)
 2. Create a new project
 3. Choose "Single dataset" with default name "production"
 4. Note your **Project ID**
 
 ### Step 3: Environment Variables
+
 Create `.env.local`:
+
 ```env
 NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
 NEXT_PUBLIC_SANITY_DATASET=production
 ```
 
 ### Step 4: Deploy Schemas
+
 ```bash
 npx sanity deploy
 ```
 
 ### Step 5: Add Content
+
 Access Sanity Studio at `http://localhost:3000/studio` and:
+
 1. Create at least 1-2 brands
 2. Create materials (silk, cotton, etc.)
 3. Create colors
@@ -127,6 +140,7 @@ Access Sanity Studio at `http://localhost:3000/studio` and:
 7. Create collections
 
 ### Step 6: Run Development Server
+
 ```bash
 npm run dev
 # or
@@ -138,6 +152,7 @@ Visit `http://localhost:3000`
 ## Key Features
 
 ### Product Management
+
 - ✅ Multi-image gallery with thumbnail selector
 - ✅ Color selection with hex display
 - ✅ Size selection with predefined options
@@ -148,6 +163,7 @@ Visit `http://localhost:3000`
 - ✅ Product tagging system
 
 ### Collection Management
+
 - ✅ Seasonal collections (Spring/Summer, Fall/Winter, Capsule, Limited)
 - ✅ Hero image and description
 - ✅ Product grouping
@@ -155,6 +171,7 @@ Visit `http://localhost:3000`
 - ✅ Rich text descriptions
 
 ### User Interface
+
 - ✅ Responsive design (mobile, tablet, desktop)
 - ✅ Smooth animations and transitions
 - ✅ Hover effects on all interactive elements
@@ -163,6 +180,7 @@ Visit `http://localhost:3000`
 - ✅ Newsletter signup integration points
 
 ### Shopping Features (Ready for Integration)
+
 - ✅ Product detail pages with all specifications
 - ✅ Cart page structure
 - ✅ Wishlist page structure
@@ -173,6 +191,7 @@ Visit `http://localhost:3000`
 ## Future Enhancement Roadmap
 
 ### Phase 1: Core E-Commerce
+
 - [ ] Shopping cart state management (React Context/Redux)
 - [ ] Wishlist persistence (localStorage/database)
 - [ ] User authentication (NextAuth.js)
@@ -180,6 +199,7 @@ Visit `http://localhost:3000`
 - [ ] Payment processing (Stripe)
 
 ### Phase 2: Advanced Features
+
 - [ ] Product search with filters
 - [ ] Advanced filtering (price range, color, size, material)
 - [ ] Product reviews and ratings
@@ -188,6 +208,7 @@ Visit `http://localhost:3000`
 - [ ] Saved payment methods
 
 ### Phase 3: Inventory & Admin
+
 - [ ] Inventory management system
 - [ ] Admin dashboard
 - [ ] Analytics and reporting
@@ -195,6 +216,7 @@ Visit `http://localhost:3000`
 - [ ] Order management
 
 ### Phase 4: Marketing & Engagement
+
 - [ ] Email marketing integration
 - [ ] Live chat support
 - [ ] Blog/lookbook section
@@ -202,6 +224,7 @@ Visit `http://localhost:3000`
 - [ ] Loyalty program
 
 ### Phase 5: Global & Advanced
+
 - [ ] Multi-language support (i18n)
 - [ ] Multi-currency support
 - [ ] International shipping
@@ -251,21 +274,25 @@ KIMHAB ORK/
 ## Customization Guide
 
 ### Change Brand Name
+
 1. Update `KIMHAB ORK` text in components (`Header.tsx`, `Footer.tsx`)
 2. Update metadata in `app/layout.tsx`
 3. Update `sanity.config.ts`
 
 ### Adjust Colors
+
 Edit `app/globals.css`:
+
 ```css
 :root {
-  --background: #0a0a0a;      /* Change these values */
+  --background: #0a0a0a; /* Change these values */
   --primary: #d4af37;
   /* ... more colors */
 }
 ```
 
 ### Add New Product Fields
+
 1. Edit `sanity/schemas/product.ts`
 2. Add field definition
 3. Run `npx sanity deploy`
@@ -273,7 +300,9 @@ Edit `app/globals.css`:
 5. Update queries in `lib/sanity.queries.ts`
 
 ### Modify Product Display
+
 Edit `components/ProductCard.tsx`:
+
 - Change layout
 - Modify hover effects
 - Adjust typography

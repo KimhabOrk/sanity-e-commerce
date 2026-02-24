@@ -1,18 +1,18 @@
-import { Metadata } from "next"
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import { Metadata } from "next";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions | Kimhab Ork',
-  description: 'Terms and conditions for using Kimhab Ork website and services',
+  title: "Terms & Conditions | Kimhab Ork",
+  description: "Terms and conditions for using Kimhab Ork website and services",
   openGraph: {
-    title: 'Terms & Conditions | Kimhab Ork',
+    title: "Terms & Conditions | Kimhab Ork",
   },
-}
+};
 
 export default function TermsPage() {
   return (
-        <>
+    <>
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
@@ -36,7 +36,10 @@ export default function TermsPage() {
                 Agreement to Terms
               </h2>
               <p className="text-foreground/70 leading-relaxed">
-                By accessing and using this website and purchasing products from Kimhab Ork Co., Ltd., you agree to be bound by these Terms & Conditions. If you do not agree to these terms, you must discontinue use of our website and services immediately.
+                By accessing and using this website and purchasing products from
+                Kimhab Ork Co., Ltd., you agree to be bound by these Terms &
+                Conditions. If you do not agree to these terms, you must
+                discontinue use of our website and services immediately.
               </p>
             </div>
 
@@ -47,7 +50,11 @@ export default function TermsPage() {
               </h2>
               <div className="space-y-4 text-foreground/70">
                 <p>
-                  Permission is granted to temporarily download one copy of materials (information or software) from Kimhab Ork's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+                  Permission is granted to temporarily download one copy of
+                  materials (information or software) from Kimhab Ork's website
+                  for personal, non-commercial transitory viewing only. This is
+                  the grant of a license, not a transfer of title, and under
+                  this license you may not:
                 </p>
                 <ul className="space-y-2 ml-4">
                   <li className="flex gap-3">
@@ -56,19 +63,31 @@ export default function TermsPage() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary font-semibold">•</span>
-                    <span>Use the materials for any commercial purpose or for any public display</span>
+                    <span>
+                      Use the materials for any commercial purpose or for any
+                      public display
+                    </span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary font-semibold">•</span>
-                    <span>Attempt to reverse engineer any software contained on the website</span>
+                    <span>
+                      Attempt to reverse engineer any software contained on the
+                      website
+                    </span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary font-semibold">•</span>
-                    <span>Remove any copyright or other proprietary notations from the materials</span>
+                    <span>
+                      Remove any copyright or other proprietary notations from
+                      the materials
+                    </span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary font-semibold">•</span>
-                    <span>Transfer the materials to another person or "mirror" the materials on any other server</span>
+                    <span>
+                      Transfer the materials to another person or "mirror" the
+                      materials on any other server
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -81,11 +100,12 @@ export default function TermsPage() {
               </h2>
               <div className="space-y-4 text-foreground/70">
                 <p>
-                  Kimhab Ork strives to provide accurate descriptions and pricing for all products on our website. However, we do not warrant that product descriptions, pricing, or other content is accurate, complete, or error-free.
+                  Kimhab Ork strives to provide accurate descriptions and
+                  pricing for all products on our website. However, we do not
+                  warrant that product descriptions, pricing, or other content
+                  is accurate, complete, or error-free.
                 </p>
-                <p>
-                  We reserve the right to:
-                </p>
+                <p>We reserve the right to:</p>
                 <ul className="space-y-2 ml-4">
                   <li className="flex gap-3">
                     <span className="text-primary font-semibold">•</span>
@@ -110,21 +130,36 @@ export default function TermsPage() {
               </h2>
               <div className="space-y-4 text-foreground/70">
                 <div>
-                  <h3 className="font-semibold text-foreground mb-2">Order Acceptance</h3>
+                  <h3 className="font-semibold text-foreground mb-2">
+                    Order Acceptance
+                  </h3>
                   <p>
-                    Placing an order on our website constitutes an offer to purchase. All orders are subject to acceptance by Kimhab Ork. We reserve the right to refuse or cancel any order at our sole discretion.
+                    Placing an order on our website constitutes an offer to
+                    purchase. All orders are subject to acceptance by Kimhab
+                    Ork. We reserve the right to refuse or cancel any order at
+                    our sole discretion.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-2 mt-4">Payment Terms</h3>
+                  <h3 className="font-semibold text-foreground mb-2 mt-4">
+                    Payment Terms
+                  </h3>
                   <p>
-                    By providing payment information, you represent that you are authorized to use the payment method. You agree to pay all charges incurred in connection with your purchase, including applicable taxes and shipping fees.
+                    By providing payment information, you represent that you are
+                    authorized to use the payment method. You agree to pay all
+                    charges incurred in connection with your purchase, including
+                    applicable taxes and shipping fees.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-2 mt-4">Price Changes</h3>
+                  <h3 className="font-semibold text-foreground mb-2 mt-4">
+                    Price Changes
+                  </h3>
                   <p>
-                    Kimhab Ork reserves the right to change prices at any time. Price changes apply to orders placed after the change takes effect. We will notify you of price changes before processing your order.
+                    Kimhab Ork reserves the right to change prices at any time.
+                    Price changes apply to orders placed after the change takes
+                    effect. We will notify you of price changes before
+                    processing your order.
                   </p>
                 </div>
               </div>
@@ -137,13 +172,19 @@ export default function TermsPage() {
               </h2>
               <div className="space-y-4 text-foreground/70">
                 <p>
-                  Kimhab Ork ships to addresses specified at checkout. Shipping times are estimates and not guaranteed. We are not responsible for delays caused by shipping carriers or customs authorities.
+                  Kimhab Ork ships to addresses specified at checkout. Shipping
+                  times are estimates and not guaranteed. We are not responsible
+                  for delays caused by shipping carriers or customs authorities.
                 </p>
                 <p>
-                  Risk of loss or damage to products passes to you upon delivery to the shipping carrier. For international orders, you are responsible for customs duties, taxes, and any import/export compliance.
+                  Risk of loss or damage to products passes to you upon delivery
+                  to the shipping carrier. For international orders, you are
+                  responsible for customs duties, taxes, and any import/export
+                  compliance.
                 </p>
                 <p>
-                  We recommend purchasing shipping insurance for high-value items. Packages should be inspected upon receipt for damage.
+                  We recommend purchasing shipping insurance for high-value
+                  items. Packages should be inspected upon receipt for damage.
                 </p>
               </div>
             </div>
@@ -154,17 +195,20 @@ export default function TermsPage() {
                 Returns & Refunds
               </h2>
               <div className="space-y-4 text-foreground/70">
-                <p>
-                  Our return policy is as follows:
-                </p>
+                <p>Our return policy is as follows:</p>
                 <ul className="space-y-2 ml-4">
                   <li className="flex gap-3">
                     <span className="text-primary font-semibold">•</span>
-                    <span>Products must be returned within 30 days of purchase</span>
+                    <span>
+                      Products must be returned within 30 days of purchase
+                    </span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary font-semibold">•</span>
-                    <span>Items must be unworn, unwashed, and in original condition with tags attached</span>
+                    <span>
+                      Items must be unworn, unwashed, and in original condition
+                      with tags attached
+                    </span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary font-semibold">•</span>
@@ -172,15 +216,21 @@ export default function TermsPage() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary font-semibold">•</span>
-                    <span>Customer is responsible for return shipping costs</span>
+                    <span>
+                      Customer is responsible for return shipping costs
+                    </span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-primary font-semibold">•</span>
-                    <span>Refunds are processed within 7-10 business days after receipt</span>
+                    <span>
+                      Refunds are processed within 7-10 business days after
+                      receipt
+                    </span>
                   </li>
                 </ul>
                 <p className="mt-4">
-                  Final sale items, undergarments, and swimwear cannot be returned unless defective.
+                  Final sale items, undergarments, and swimwear cannot be
+                  returned unless defective.
                 </p>
               </div>
             </div>
@@ -192,7 +242,9 @@ export default function TermsPage() {
               </h2>
               <div className="space-y-4 text-foreground/70">
                 <p>
-                  Kimhab Ork warrants that products are free from defects in materials and workmanship for 90 days from purchase. This warranty does not cover:
+                  Kimhab Ork warrants that products are free from defects in
+                  materials and workmanship for 90 days from purchase. This
+                  warranty does not cover:
                 </p>
                 <ul className="space-y-2 ml-4">
                   <li className="flex gap-3">
@@ -222,10 +274,15 @@ export default function TermsPage() {
               </h2>
               <div className="space-y-4 text-foreground/70">
                 <p>
-                  In no event shall Kimhab Ork, its owners, employees, or agents be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use our website or products, even if we have been advised of the possibility of such damages.
+                  In no event shall Kimhab Ork, its owners, employees, or agents
+                  be liable for any indirect, incidental, special,
+                  consequential, or punitive damages arising from your use of or
+                  inability to use our website or products, even if we have been
+                  advised of the possibility of such damages.
                 </p>
                 <p>
-                  Our total liability to you for any claim shall not exceed the amount paid for the product that is the subject of the claim.
+                  Our total liability to you for any claim shall not exceed the
+                  amount paid for the product that is the subject of the claim.
                 </p>
               </div>
             </div>
@@ -243,7 +300,9 @@ export default function TermsPage() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary font-semibold">•</span>
-                  <span>Not use our website for illegal or harmful purposes</span>
+                  <span>
+                    Not use our website for illegal or harmful purposes
+                  </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary font-semibold">•</span>
@@ -251,7 +310,9 @@ export default function TermsPage() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary font-semibold">•</span>
-                  <span>Not attempt to gain unauthorized access to our systems</span>
+                  <span>
+                    Not attempt to gain unauthorized access to our systems
+                  </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary font-semibold">•</span>
@@ -266,7 +327,9 @@ export default function TermsPage() {
                 Governing Law
               </h2>
               <p className="text-foreground/70">
-                These Terms & Conditions shall be governed by and construed in accordance with the laws of Cambodia. Any legal action shall be subject to the exclusive jurisdiction of the courts of Cambodia.
+                These Terms & Conditions shall be governed by and construed in
+                accordance with the laws of Cambodia. Any legal action shall be
+                subject to the exclusive jurisdiction of the courts of Cambodia.
               </p>
             </div>
 
@@ -276,7 +339,10 @@ export default function TermsPage() {
                 Changes to Terms
               </h2>
               <p className="text-foreground/70">
-                Kimhab Ork reserves the right to modify these Terms & Conditions at any time. Changes are effective upon posting to our website. Continued use of the website constitutes acceptance of modified terms.
+                Kimhab Ork reserves the right to modify these Terms & Conditions
+                at any time. Changes are effective upon posting to our website.
+                Continued use of the website constitutes acceptance of modified
+                terms.
               </p>
             </div>
 
@@ -296,7 +362,7 @@ export default function TermsPage() {
           </div>
         </section>
       </main>
-       <Footer />
-      </>
-  )
+      <Footer />
+    </>
+  );
 }

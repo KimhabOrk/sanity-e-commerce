@@ -1,49 +1,54 @@
-'use client'
+"use client";
 
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import ProductCard from '@/components/ProductCard'
-import { sanityFetch } from '@/lib/sanity.client'
-import { PRODUCTS_BY_CATEGORY_QUERY, CATEGORY_BY_SLUG_QUERY } from '@/lib/sanity.queries'
-import Image from 'next/image'
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ProductCard from "@/components/ProductCard";
+import { sanityFetch } from "@/lib/sanity.client";
+import {
+  PRODUCTS_BY_CATEGORY_QUERY,
+  CATEGORY_BY_SLUG_QUERY,
+} from "@/lib/sanity.queries";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 
 interface CategoryDetailPageProps {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }
 
-export default function CategoryDetailPage({ params }: CategoryDetailPageProps) {
-  const [category, setCategory] = useState<any>(null)
-  const [products, setProducts] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
+export default function CategoryDetailPage({
+  params,
+}: CategoryDetailPageProps) {
+  const [category, setCategory] = useState<any>(null);
+  const [products, setProducts] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadCategory = async () => {
       try {
-        const { slug } = await params
+        const { slug } = await params;
         const categoryData = await sanityFetch({
           query: CATEGORY_BY_SLUG_QUERY,
           params: { slug },
-        })
-        setCategory(categoryData)
+        });
+        setCategory(categoryData);
 
         if (categoryData) {
           const productsData = await sanityFetch({
             query: PRODUCTS_BY_CATEGORY_QUERY,
             params: { categorySlug: slug },
-          })
-          setProducts(productsData)
+          });
+          setProducts(productsData);
         }
       } catch (error) {
-        console.error('Error loading category:', error)
+        console.error("Error loading category:", error);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
+    };
 
-    loadCategory()
-  }, [params])
+    loadCategory();
+  }, [params]);
 
   if (loading) {
     return (
@@ -54,7 +59,7 @@ export default function CategoryDetailPage({ params }: CategoryDetailPageProps) 
         </main>
         <Footer />
       </>
-    )
+    );
   }
 
   if (!category) {
@@ -64,14 +69,17 @@ export default function CategoryDetailPage({ params }: CategoryDetailPageProps) 
         <main className="bg-background min-h-screen flex items-center justify-center">
           <div className="text-center">
             <p className="text-foreground text-lg mb-4">Category not found</p>
-            <Link href="/categories" className="text-foreground hover:text-[#e8d4a0] smooth-transition">
+            <Link
+              href="/categories"
+              className="text-foreground hover:text-[#e8d4a0] smooth-transition"
+            >
               Back to Categories
             </Link>
           </div>
         </main>
         <Footer />
       </>
-    )
+    );
   }
 
   return (
@@ -129,7 +137,9 @@ export default function CategoryDetailPage({ params }: CategoryDetailPageProps) 
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center py-20">
-                <p className="text-foreground text-lg mb-4">No products in this category</p>
+                <p className="text-foreground text-lg mb-4">
+                  No products in this category
+                </p>
                 <Link
                   href="/products"
                   className="text-foreground hover:text-[#e8d4a0] smooth-transition"
@@ -143,5 +153,5 @@ export default function CategoryDetailPage({ params }: CategoryDetailPageProps) 
       </main>
       <Footer />
     </>
-  )
+  );
 }

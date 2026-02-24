@@ -1,23 +1,23 @@
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import CollectionCard from '@/components/CollectionCard'
-import { sanityFetch } from '@/lib/sanity.client'
-import { ALL_COLLECTIONS_QUERY } from '@/lib/sanity.queries'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import CollectionCard from "@/components/CollectionCard";
+import { sanityFetch } from "@/lib/sanity.client";
+import { ALL_COLLECTIONS_QUERY } from "@/lib/sanity.queries";
 
 export const metadata = {
-  title: 'Collections - LUXARA',
-  description: 'Explore our curated collections of luxury womenswear.',
-}
+  title: "Collections - LUXARA",
+  description: "Explore our curated collections of luxury womenswear.",
+};
 
 export default async function CollectionsPage() {
-  let collections = []
+  let collections = [];
 
   try {
     collections = await sanityFetch({
       query: ALL_COLLECTIONS_QUERY,
-    })
+    });
   } catch (error) {
-    console.error('Error fetching collections:', error)
+    console.error("Error fetching collections:", error);
   }
 
   return (
@@ -31,7 +31,8 @@ export default async function CollectionsPage() {
               Collections
             </h1>
             <p className="text-foreground max-w-2xl">
-              Discover our seasonal and curated collections, each telling a unique story of artistry, craftsmanship, and contemporary style.
+              Discover our seasonal and curated collections, each telling a
+              unique story of artistry, craftsmanship, and contemporary style.
             </p>
           </div>
         </section>
@@ -42,13 +43,20 @@ export default async function CollectionsPage() {
             {collections.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                 {collections.map((collection) => (
-                  <CollectionCard key={collection._id} collection={collection} />
+                  <CollectionCard
+                    key={collection._id}
+                    collection={collection}
+                  />
                 ))}
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center py-20">
-                <p className="text-foreground text-lg mb-4">No collections found</p>
-                <p className="text-sm text-[#8a8a8a]">Check back soon for new collections</p>
+                <p className="text-foreground text-lg mb-4">
+                  No collections found
+                </p>
+                <p className="text-sm text-[#8a8a8a]">
+                  Check back soon for new collections
+                </p>
               </div>
             )}
           </div>
@@ -56,5 +64,5 @@ export default async function CollectionsPage() {
       </main>
       <Footer />
     </>
-  )
+  );
 }

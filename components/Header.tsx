@@ -1,21 +1,21 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import Image from 'next/image'
-import { Search, Heart, ShoppingBag, Menu, X } from 'lucide-react'
-import { useState } from 'react'
+import Link from "next/link";
+import Image from "next/image";
+import { Search, Heart, ShoppingBag, Menu, X } from "lucide-react";
+import { useState } from "react";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const menuItems = [
-    { label: 'New Arrivals', href: '/products?sort=new' },
-    { label: 'Collections', href: '/collections' },
-    { label: 'Categories', href: '/categories' },
-    { label: 'About', href: '/about' },
-    { label: 'Contact', href: '/contact' },
-  ]
+    { label: "New Arrivals", href: "/products?sort=new" },
+    { label: "Collections", href: "/collections" },
+    { label: "Categories", href: "/categories" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
+  ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#2d2d2d] bg-background/95 backdrop-blur-sm">
@@ -128,5 +128,5 @@ export default function Header() {
         )}
       </nav>
     </header>
-  )
+  );
 }
