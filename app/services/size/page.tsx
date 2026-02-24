@@ -177,7 +177,7 @@ export default function SizeGuidePage() {
                       key={idx}
                       className={`border-b border-border/30 transition-colors ${
                         idx % 2 === 0
-                          ? "bg-muted/80 hover:bg-muted/90"
+                          ? "bg-muted/60 hover:bg-muted/70"
                           : "bg-muted hover:bg-muted/80"
                       }`}
                     >
@@ -223,7 +223,7 @@ export default function SizeGuidePage() {
               </p>
             </div>
 
-            <div className="flex justify-center bg-muted rounded-lg border border-border/50 mx-4">
+            <div className="flex justify-center items-center bg-muted rounded-lg border border-border/50 mx-auto">
               <div className="relative w-full max-w-6xl">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_20260223_195656_0000-fmiQguIfhwYTKz8WmU6CuynWhzbp1Y.png"
