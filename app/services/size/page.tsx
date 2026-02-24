@@ -224,13 +224,13 @@ export default function SizeGuidePage() {
             </div>
 
             <div className="flex justify-center items-center bg-muted rounded-lg border border-border/50 mx-auto">
-              <div className="relative w-full max-w-6xl">
+              <div className="relative h-auto w-full max-w-6xl">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_20260223_195656_0000-fmiQguIfhwYTKz8WmU6CuynWhzbp1Y.png"
                   alt="Measurement points guide showing where to measure shoulders, bust, underarm, waist, hip, and length on a woman wearing a red dress"
                   width={500}
                   height={700}
-                  className="rounded-lg object-cover"
+                  className="rounded-lg w-full object-cover"
                   priority
                 />
               </div>
