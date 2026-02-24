@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Search, Heart, ShoppingBag, Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
@@ -16,34 +17,25 @@ export default function Header() {
     { label: 'Contact', href: '/contact' },
   ]
 
-  const utilityItems = [
-    { label: 'Setup', href: '/setup' },
-  ]
-
   return (
     <header className="sticky top-0 z-50 border-b border-[#2d2d2d] bg-background/95 backdrop-blur-sm">
       <nav className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <span className="font-playfair text-2xl font-bold text-foreground smooth-transition hover:text-[#e8d4a0]">
-              LUXARA
-            </span>
+            <Image
+              src="/logo-dark.png"
+              alt="Kimhab Ork"
+              width={140}
+              height={28}
+              priority
+              className="h-full w-full object-cover"
+            />
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             {menuItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-sm uppercase tracking-widest text-foreground smooth-transition hover:text-foreground"
-              >
-                {item.label}
-              </Link>
-            ))}
-            <div className="h-6 w-px bg-[#2d2d2d]" />
-            {utilityItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
