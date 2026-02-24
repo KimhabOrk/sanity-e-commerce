@@ -113,17 +113,6 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <div className="h-px bg-[#2d2d2d] my-3" />
-            {utilityItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="block text-sm uppercase tracking-widest text-foreground py-2 hover:text-foreground smooth-transition"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
           </div>
         )}
       </nav>
