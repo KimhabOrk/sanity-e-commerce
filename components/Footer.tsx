@@ -1,241 +1,199 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { Mail, Phone, MapPin, Instagram, Facebook, Twitter, ChevronDown } from 'lucide-react'
-import { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
+import Link from "next/link";
+import Image from "next/image";
+import { ChevronDown } from "lucide-react";
+import { useState, useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation";
 
-interface FooterMenu {
-  title: string
-  items: string[]
+type FooterSection = {
+  title: string;
+  links: { label: string; href: string }[];
+};
+
+const footerSections: FooterSection[] = [
+  {
+    title: "Shop",
+    links: [
+      { label: "All Products", href: "/shop" },
+      { label: "Collections", href: "/collections" },
+      { label: "New Arrivals", href: "/shop?sort=newest" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "About Us", href: "/company/about" },
+      { label: "Creative Director", href: "/company/creative-director" },
+      { label: "Responsibilities", href: "/company/responsibility" },
+      { label: "Contact Us", href: "/contact" },
+    ],
+  },
+  {
+    title: "Service",
+    links: [
+      { label: "Custom Made", href: "/services/custom-made" },
+      { label: "Care Guides", href: "/services/care-guides" },
+      { label: "Size Guide", href: "/services/size" },
+      { label: "Shipping & Return", href: "/services/orders" },
+      { label: "Helps & FAQs", href: "/services/helps" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { label: "Legal Notes", href: "/legal/notes" },
+      { label: "General Sales Conditions", href: "/legal/sales" },
+      { label: "Privacy Policy", href: "/legal/privacy" },
+      { label: "Terms of Service", href: "/legal/terms" },
+    ],
+  },
+];
+
+function FooterSection({
+  section,
+  isOpen,
+  onToggle,
+  onClose,
+}: {
+  section: FooterSection;
+  isOpen: boolean;
+  onToggle: () => void;
+  onClose: () => void;
+}) {
+  return (
+    <div className="border-b border-border md:border-b-0">
+      <button
+        onClick={onToggle}
+        className="md:hidden w-full flex items-center justify-between py-4 text-left"
+      >
+        <h4 className="font-semibold text-sm md:text-base">{section.title}</h4>
+        <ChevronDown
+          className={`h-4 w-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""
+            }`}
+        />
+      </button>
+
+      <h4 className="hidden md:block font-semibold text-sm md:text-base mb-4">
+        {section.title}
+      </h4>
+
+      <ul
+        className={`overflow-hidden transition-all duration-300 md:transition-none md:max-h-none space-y-2 text-sm text-foreground/75 md:space-y-3 ${isOpen ? "max-h-96 md:max-h-none pb-4" : "max-h-0 md:max-h-none"
+          }`}
+      >
+        {section.links.map((link) => (
+          <li key={link.href}>
+            <Link
+              href={link.href}
+              onClick={onClose}
+              className="hover:text-foreground transition-colors duration-200"
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
-export default function Footer() {
-  const currentYear = new Date().getFullYear()
-  const pathname = usePathname()
-  
-  const [openMenu, setOpenMenu] = useState<string | null>(null)
-  const [isMobile, setIsMobile] = useState(false)
+export function Footer() {
+  const [openSection, setOpenSection] = useState<string | null>(null);
+  const pathname = usePathname();
 
-  // Close dropdowns on route change
+  // Close dropdown when pathname changes (navigation occurs)
   useEffect(() => {
-    setOpenMenu(null)
-  }, [pathname])
+    setOpenSection(null);
+  }, [pathname]);
 
-  // Detect mobile screen
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
-  }, [])
+  const handleToggle = (sectionTitle: string) => {
+    setOpenSection(openSection === sectionTitle ? null : sectionTitle);
+  };
 
-  const menus: FooterMenu[] = [
-    {
-      title: 'Shop',
-      items: ['New Arrivals', 'Collections', 'Categories', 'Sale', 'Trending']
-    },
-    {
-      title: 'Help',
-      items: ['Contact Us', 'Shipping Info', 'Returns', 'FAQ', 'Size Guide']
-    }
-  ]
-
-  const toggleMenu = (menu: string) => {
-    setOpenMenu(openMenu === menu ? null : menu)
-  }
+  const handleClose = () => {
+    setOpenSection(null);
+  };
 
   return (
-    <footer className="border-t border-[#2d2d2d] bg-background">
-      <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-16">
-        {/* Main Grid - 4 columns on desktop, 1 on mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-          {/* Brand - Always visible */}
-          <div className="space-y-4">
-            <h3 className="font-playfair text-2xl font-bold text-foreground">LUXARA</h3>
-            <p className="text-sm text-foreground">
-              Premium womenswear featuring curated collections of luxury fashion with contemporary designs and timeless elegance.
-            </p>
-            <div className="flex gap-4">
-              <a
-                href="#"
-                className="text-foreground hover:text-[#ee1a4e] smooth-transition"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="#"
-                className="text-foreground hover:text-[#ee1a4e] smooth-transition"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="#"
-                className="text-foreground hover:text-[#ee1a4e] smooth-transition"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </a>
-            </div>
-          </div>
-
-          {/* Shop Menu - Dropdown on mobile, normal on desktop */}
-          <div className="space-y-4">
-            {isMobile ? (
-              <button
-                onClick={() => toggleMenu('shop')}
-                className="w-full flex items-center justify-between font-semibold text-foreground uppercase tracking-widest text-sm py-3 px-4 hover:border-[#ee1a4e] smooth-transition"
-              >
-                Shop
-                <ChevronDown
-                  size={18}
-                  className={`smooth-transition ${openMenu === 'shop' ? 'rotate-180' : ''}`}
-                />
-              </button>
-            ) : (
-              <h4 className="font-semibold text-foreground uppercase tracking-widest text-sm">
-                Shop
-              </h4>
-            )}
-            
-            <ul
-              className={`space-y-2 overflow-hidden smooth-transition ${
-                isMobile && openMenu !== 'shop' ? 'max-h-0' : 'max-h-96'
-              } ${isMobile ? 'md:max-h-96' : ''}`}
-            >
-              {menus[0].items.map((item) => (
-                <li key={item}>
-                  <Link
-                    href="#"
-                    className="text-sm text-foreground hover:text-[#ee1a4e] smooth-transition block"
-                    onClick={() => isMobile && setOpenMenu(null)}
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Help Menu - Dropdown on mobile, normal on desktop */}
-          <div className="space-y-4">
-            {isMobile ? (
-              <button
-                onClick={() => toggleMenu('help')}
-                className="w-full flex items-center justify-between font-semibold text-foreground uppercase tracking-widest text-sm py-3 px-4 hover:border-[#ee1a4e] smooth-transition"
-              >
-                Help
-                <ChevronDown
-                  size={18}
-                  className={`smooth-transition ${openMenu === 'help' ? 'rotate-180' : ''}`}
-                />
-              </button>
-            ) : (
-              <h4 className="font-semibold text-foreground uppercase tracking-widest text-sm">
-                Help
-              </h4>
-            )}
-            
-            <ul
-              className={`space-y-2 overflow-hidden smooth-transition ${
-                isMobile && openMenu !== 'help' ? 'max-h-0' : 'max-h-96'
-              } ${isMobile ? 'md:max-h-96' : ''}`}
-            >
-              {menus[1].items.map((item) => (
-                <li key={item}>
-                  <Link
-                    href="#"
-                    className="text-sm text-foreground hover:text-[#ee1a4e] smooth-transition block"
-                    onClick={() => isMobile && setOpenMenu(null)}
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact - Dropdown on mobile, normal on desktop */}
-          <div className="space-y-4">
-            {isMobile ? (
-              <button
-                onClick={() => toggleMenu('contact')}
-                className="w-full flex items-center justify-between font-semibold text-foreground uppercase tracking-widest text-sm py-3 px-4 hover:text-[#ee1a4e] smooth-transition"
-              >
-                Contact
-                <ChevronDown
-                  size={18}
-                  className={`smooth-transition ${openMenu === 'contact' ? 'rotate-180' : ''}`}
-                />
-              </button>
-            ) : (
-              <h4 className="font-semibold text-foreground uppercase tracking-widest text-sm">
-                Contact
-              </h4>
-            )}
-            
-            <ul
-              className={`space-y-4 text-sm text-foreground overflow-hidden smooth-transition ${
-                isMobile && openMenu !== 'contact' ? 'max-h-0' : 'max-h-96'
-              } ${isMobile ? 'md:max-h-96' : ''}`}
-            >
-              <li className="flex items-start gap-3">
-                <Mail size={16} className="text-[#ee1a4e] flex-shrink-0 mt-0.5" />
-                <a href="mailto:hello@luxara.com" className="hover:text-white smooth-transition">
-                  hello@luxara.com
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Phone size={16} className="text-[#ee1a4e] flex-shrink-0 mt-0.5" />
-                <a href="tel:+1234567890" className="hover:text-white smooth-transition">
-                  +1 (234) 567-890
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin size={16} className="text-foreground flex-shrink-0 mt-0.5" />
-                <span>New York, NY 10001</span>
-              </li>
-            </ul>
+    <footer className="border-t border-border/50 mt-16 md:mt-24 bg-background/60">
+      <div className="container mx-auto px-4 md:px-8 py-8 md:py-12 lg:py-16">
+        {/* Main Content */}
+        <div className="mb-6 md:mb-12">
+          <div className="flex flex-col text-foreground text-start text-balance">
+            <Image
+              src="https://ik.imagekit.io/kimhabork/assets/kho-dark.png?updatedAt=1771854445628"
+              width={160}
+              height={26}
+              alt="Logo"
+              className="h-full w-[160px] md:w-32 object-cover mb-2"
+            />
+            <p className="text-sm md:text-lg">Affordable Luxury Fashion For Bold Modern Women.</p>
           </div>
         </div>
 
-        {/* Newsletter */}
-        <div className="border-t border-b border-[#2d2d2d] py-8">
-          <div className="max-w-md">
-            <h3 className="font-semibold text-foreground mb-3">Subscribe to our newsletter</h3>
-            <div className="flex gap-2 flex-col md:flex-row">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 bg-[#1a1a1a] border border-[#2d2d2d] rounded-sm px-4 py-3 text-foreground placeholder-[#b0b0b0] focus:outline-none focus:border-[#ee1a4e] text-sm smooth-transition"
+        {/* Footer Sections Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-0 md:gap-8 mb-6 md:mb-12">
+          {footerSections.map((section) => (
+            <FooterSection
+              key={section.title}
+              section={section}
+              isOpen={openSection === section.title}
+              onToggle={() => handleToggle(section.title)}
+              onClose={handleClose}
+            />
+          ))}
+        </div>
+
+        {/* Bottom Section */}
+        <div className="pt-4 md:pt-6">
+          <div className="flex mx-auto justify-evenly gap-3 items-center mb-4 md:mb-8">
+            <Link href="https://facebook.com/kimhaborkofficial">
+              <Image
+                src="https://ik.imagekit.io/kimhabork/assets/socials/facebook.png?updatedAt=1767797839119"
+                width={32}
+                height={32}
+                alt="Facebook Logo"
+                className="object-cover md:w-10 md:h-10"
               />
-              <button className="bg-[#ee1a4e] text-white px-6 py-3 rounded-sm font-semibold hover:bg-[#e8d4a0] smooth-transition whitespace-nowrap">
-                Subscribe
-              </button>
-            </div>
+            </Link>
+            <Link href="https://www.instagram.com/kimhabork_official">
+              <Image
+                src="https://ik.imagekit.io/kimhabork/assets/socials/instagram.png?updatedAt=1767797839255"
+                width={32}
+                height={32}
+                alt="Instagram Logo"
+                className="object-cover md:w-10 md:h-10"
+              />
+            </Link>
+            <Link href="https://www.tiktok.com/@kimhabork_official">
+              <Image
+                src="https://ik.imagekit.io/kimhabork/assets/socials/tiktok.png?updatedAt=1769794402290"
+                width={32}
+                height={32}
+                alt="Tiktok Logo"
+                className="object-cover md:w-10 md:h-10"
+              />
+            </Link>
+            <Link href="https://www.linkedin.com/in/kimhab-ork">
+              <Image
+                src="https://ik.imagekit.io/kimhabork/assets/socials/linkedin.png?updatedAt=1767797838945"
+                width={32}
+                height={32}
+                alt="LinkedIn Logo"
+                className="object-cover md:w-10 md:h-10"
+              />
+            </Link>
           </div>
-        </div>
 
-        {/* Bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 text-sm text-foreground">
-          <p>&copy; {currentYear} LUXARA. All rights reserved.</p>
-          <div className="flex gap-6 flex-wrap justify-center md:justify-end">
-            <Link href="#" className="hover:text-[#ee1a4e] smooth-transition">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="hover:text-[#ee1a4e] smooth-transition">
-              Terms of Service
-            </Link>
-            <Link href="#" className="hover:text-[#ee1a4e] smooth-transition">
-              Cookies
-            </Link>
+          {/* Copyright */}
+          <div className="pt-4 md:pt-6 text-center mx-auto flex justify-center items-center">
+            <p className="text-xs text-muted-foreground">
+              &copy; {new Date().getFullYear()} Kimhab Ork. All rights reserved.
+            </p>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
