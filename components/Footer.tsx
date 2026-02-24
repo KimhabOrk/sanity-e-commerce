@@ -44,6 +44,7 @@ const footerSections: FooterSection[] = [
     links: [
       { label: "Legal Notes", href: "/legal/notes" },
       { label: "General Sales Conditions", href: "/legal/sales" },
+      { label: "Cookie Policy", href: "/legal/cookie" },
       { label: "Privacy Policy", href: "/legal/privacy" },
       { label: "Terms of Service", href: "/legal/terms" },
     ],
@@ -124,7 +125,7 @@ export default function Footer() {
         <div className="mb-6 md:mb-12">
           <div className="flex flex-col text-foreground text-start text-balance">
             <Image
-              src="https://ik.imagekit.io/kimhabork/assets/kho-dark.png?updatedAt=1771854445628"
+              src="/logo-dark.png"
               width={160}
               height={26}
               alt="Logo"

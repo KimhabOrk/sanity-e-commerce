@@ -13,7 +13,7 @@ export default function Header() {
     { label: "New Arrivals", href: "/products?sort=new" },
     { label: "Collections", href: "/collections" },
     { label: "Categories", href: "/categories" },
-    { label: "About", href: "/about" },
+    { label: "About", href: "/company/about" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -29,12 +29,12 @@ export default function Header() {
               width={140}
               height={28}
               priority
-              className="h-8 w-full object-cover"
+              className="h-7 w-full object-cover"
             />
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-4 md:gap-6">
             {menuItems.map((item) => (
               <Link
                 key={item.href}
@@ -47,7 +47,7 @@ export default function Header() {
           </div>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             {/* Search */}
             <button
               className="p-2 text-foreground hover:text-foreground smooth-transition"

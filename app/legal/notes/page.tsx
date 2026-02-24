@@ -252,7 +252,7 @@ export default function LegalNotesPage() {
             </div>
 
             {/* Contact */}
-            <div className="bg-muted/80 p-8 rounded-lg border border-border/40">
+            <div className="bg-muted/80 p-4 md:p-8 rounded-lg border border-border/40">
               <h2 className="font-serif text-2xl font-bold text-primary mb-4">
                 Questions?
               </h2>
@@ -262,14 +262,11 @@ export default function LegalNotesPage() {
               </p>
               <p>Kimhab Ork Co</p>
               <p>
-                {" "}
-                Email: 
                 <a href="mailto:customer@kimhabork.com">
                   customer@kimhabork.com
                 </a>
               </p>
               <p>
-                Telephone:
                 <a href="tel:+855 (23) 123-4567">+855 (23) 123-4567</a>
               </p>
               <p>

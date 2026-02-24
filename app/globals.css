@@ -7,13 +7,13 @@
 :root {
   --background: #000;
   --foreground: #fff;
-  --card: #262626;
+  --card: #444444;
   --card-foreground: #ebebeb;
-  --popover: #262626;
+  --popover: #444444;
   --popover-foreground: #ebebeb;
   --primary: #ee1a4e;
   --primary-foreground: #fff;
-  --secondary: #2f2f2f;
+  --secondary: #3E3B3B;
   --secondary-foreground: #fafafa;
   --muted: #303030;
   --muted-foreground: #f2f2f2;
@@ -43,13 +43,13 @@
 .dark {
   --background: #000;
   --foreground: #fff;
-  --card: #262626;
+  --card: #444444;
   --card-foreground: #ebebeb;
-  --popover: #262626;
+  --popover: #444444;
   --popover-foreground: #ebebeb;
   --primary: #ee1a4e;
   --primary-foreground: #fff;
-  --secondary: #2f2f2f;
+  --secondary: #3E3B3B;
   --secondary-foreground: #fafafa;
   --muted: #303030;
   --muted-foreground: #f2f2f2;
