@@ -20,7 +20,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[#2d2d2d] bg-background/95 backdrop-blur-sm">
       <nav className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-        <div className="flex h-12 md:h-16 items-center justify-between">
+        <div className="flex h-18 md:h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center transition-opacity hover:opacity-80">
             <Image
@@ -29,7 +29,7 @@ export default function Header() {
               width={140}
               height={28}
               priority
-              className="h-8 w-full object-cover"
+              className="h-12 w-full object-cover"
             />
           </Link>
 
