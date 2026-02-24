@@ -177,7 +177,7 @@ export default function SizeGuidePage() {
                       key={idx}
                       className={`border-b border-border/30 transition-colors ${
                         idx % 2 === 0
-                          ? "bg-muted/60 hover:bg-muted/70"
+                          ? "bg-secondary/70 hover:bg-secondary/80"
                           : "bg-muted hover:bg-muted/80"
                       }`}
                     >
